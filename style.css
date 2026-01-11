@@ -67,9 +67,8 @@ header .container {
 }
 
 .logo span {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-color);
+    /* Fallback */
 }
 
 /* Header Navigation */
@@ -177,12 +176,28 @@ section>.container>p.lead-text {
     align-items: center;
 }
 
-.text-content h1 {
-    font-size: 3.5rem;
+.hero-title {
+    font-size: 5rem;
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.04em;
+}
+
+.brand-list {
+    color: var(--primary-color);
+}
+
+.brand-kart {
+    color: var(--accent-color);
+}
+
+.hero-tagline {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-color);
     margin-bottom: 1.5rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
 }
 
 .highlight {
