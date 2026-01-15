@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Redirecting to ListKart...</title>
+    <meta http-equiv="refresh"
+        content="0; url=https://play.google.com/store/apps/details?id=com.smartsupermarket.app" />
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f2f5;
+        }
+
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007bff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+            margin-right: 15px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader"></div>
+    <p>Redirecting to ListKart on Play Store...</p>
+    <script>
+        // Extract code from URL path
+        const path = window.location.pathname;
+        const parts = path.split('/');
+        const code = parts[parts.length - 1] || parts[parts.length - 2];
+
+        if (code && code !== 'join') {
+            const cleanCode = code.toUpperCase();
+            // Try to open the app via custom scheme first
+            window.location.href = "listkart://join/" + cleanCode;
+
+            // If they are still here after 1500ms, let the meta refresh or JS take them to Play Store
+            setTimeout(() => {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.smartsupermarket.app";
+            }, 1500);
+        } else {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.smartsupermarket.app";
+        }
+    </script>
+</body>
+
+</html>
