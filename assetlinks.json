@@ -1,0 +1,15 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.smartsupermarket.app",
+                "sha256_cert_fingerprints": [
+                    "A3:DF:20:D9:47:C9:DC:7A:C5:57:D8:9E:2B:93:32:92:24:9C:5F:E8:BA:01:73:31:96:2C:18:C5:F3:4D:DF:26"
+                ]
+
+        }
+    }
+]
