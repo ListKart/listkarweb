@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ListKart</title>
     <style>
-        body {
-            background-color: #2e7d32;
-            margin: 0;
-            height: 100vh;
-        }
+        body { background-color: #2e7d32; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
     </style>
 </head>
 <body>
+    <script>
+        (function() {
+            const path = window.location.pathname;
+            const host = window.location.hostname;
+            const parts = path.split('/');
+            const code = parts[parts.length - 1] || parts[parts.length - 2];
+            
+            if (code && code.length === 6 && code !== 'join') {
+                const cleanCode = code.toUpperCase();
+                const appScheme = "listkart://join/" + cleanCode;
+                const playStoreUrl = "https://play.google.com/store/apps/details?id=com.smartsupermarket.app";
+
+                // Try to launch app
+                window.location.href = appScheme;
+
+                // Safety redirect to Play Store if still here after 3 seconds
+                setTimeout(function() {
+                    window.location.replace(playStoreUrl);
+                }, 3000);
+            } else {
+                window.location.replace("https://play.google.com/store/apps/details?id=com.smartsupermarket.app");
+            }
+        })();
+    </script>
 </body>
 </html>
