@@ -696,8 +696,12 @@ footer {
     display: inline-flex;
     gap: 1.5rem;
     white-space: nowrap;
-    animation: scroll 60s linear infinite;
-    /* Slow smooth scroll */
+    animation: scroll 120s linear infinite;
+    /* Slower scroll for better readability */
+    will-change: transform;
+    transform: translateZ(0);
+    /* Force hardware acceleration to reduce blur */
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Hover to pause functionality - optional */
