@@ -671,4 +671,13 @@ footer {
     .nav-menu {
         display: none;
     }
-}
+}/ *  
+ L a n g u a g e  
+ S e c t i o n  
+ * /  
+ . l a n g u a g e - g r i d  
+   d i s p l a y :   f l e x ;   f l e x - w r a p :   w r a p ;   j u s t i f y - c o n t e n t :   c e n t e r ;   g a p :   0 . 7 5 r e m ;   m a r g i n - t o p :   3 r e m ;   m a x - w i d t h :   1 0 0 0 p x ;    
+ m a r g i n - l e f t :   a u t o ;   m a r g i n - r i g h t :   a u t o ;    
+ . l a n g - f l a g  
+   f o n t - s i z e :   1 . 2 r e m ;    
+ 
