@@ -807,44 +807,171 @@ footer {
 }
 
 /* Country Highlight Animation */
-.country-glow {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: var(--primary-color);
-    /* Green branding */
-    border-radius: 50%;
-    transform: scale(0);
-    opacity: 0;
-    box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
-    animation: country-flash 4s infinite ease-out;
+/* Country Highlight Animation */
+/* SVG Map Styles */
+.world-map-svg {
+    width: 100%;
+    height: 100%;
+    fill: #cbd5e1;
+    /* Darker gray for better visibility */
 }
 
-@keyframes country-flash {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
+.world-map-svg path {
+    fill: inherit;
+    /* Inherit from parent */
+    stroke: #ffffff;
+    stroke-width: 1px;
+    /* Slightly thicker stroke for crisp edges */
+    transition: fill 0.5s ease;
+}
 
-    5% {
-        transform: scale(1.5);
-        opacity: 1;
-    }
+/* Country Highlight Animation - Red Fill */
+@keyframes highlight-country {
 
-    /* Pop! */
-    15% {
-        transform: scale(1);
-        opacity: 0.6;
-    }
-
-    80% {
-        transform: scale(1);
-        opacity: 0.6;
-    }
-
-    /* Stay visible for a while */
+    0%,
     100% {
-        transform: scale(0);
-        opacity: 0;
+        fill: #e5e7eb;
     }
+
+    50% {
+        fill: #ef4444;
+        /* Red highlight */
+    }
+}
+
+/* Sequential Animation for Key Countries */
+#us {
+    animation: highlight-country 4s infinite 0s;
+}
+
+#ca {
+    animation: highlight-country 4s infinite 0.2s;
+}
+
+#br {
+    animation: highlight-country 4s infinite 0.4s;
+}
+
+#mx {
+    animation: highlight-country 4s infinite 0.6s;
+}
+
+#ar {
+    animation: highlight-country 4s infinite 0.8s;
+}
+
+#gb {
+    animation: highlight-country 4s infinite 1.0s;
+}
+
+#fr {
+    animation: highlight-country 4s infinite 1.2s;
+}
+
+#de {
+    animation: highlight-country 4s infinite 1.4s;
+}
+
+#it {
+    animation: highlight-country 4s infinite 1.6s;
+}
+
+#es {
+    animation: highlight-country 4s infinite 1.8s;
+}
+
+#za {
+    animation: highlight-country 4s infinite 2.0s;
+}
+
+#ng {
+    animation: highlight-country 4s infinite 2.2s;
+}
+
+#eg {
+    animation: highlight-country 4s infinite 2.4s;
+}
+
+#ru {
+    animation: highlight-country 4s infinite 2.6s;
+}
+
+#in {
+    animation: highlight-country 4s infinite 2.8s;
+}
+
+#cn {
+    animation: highlight-country 4s infinite 3.0s;
+}
+
+#jp {
+    animation: highlight-country 4s infinite 3.2s;
+}
+
+#kr {
+    animation: highlight-country 4s infinite 3.4s;
+}
+
+#id {
+    animation: highlight-country 4s infinite 3.6s;
+}
+
+#sa {
+    animation: highlight-country 4s infinite 3.8s;
+}
+
+#tr {
+    animation: highlight-country 4s infinite 4.0s;
+}
+
+#au {
+    animation: highlight-country 4s infinite 4.2s;
+}
+
+#nz {
+    animation: highlight-country 4s infinite 4.4s;
+}
+
+/* Map Tooltip */
+.map-tooltip {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+    display: none;
+    z-index: 9999;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color);
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(4px);
+    transform: translate(-50%, -100%);
+    margin-top: -15px;
+}
+
+.map-tooltip img {
+    width: 24px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Map Path Hover Effect */
+.world-map-svg path {
+    cursor: pointer;
+}
+
+.world-map-svg path:hover {
+    fill: #ef4444 !important;
+    /* Force red highlight on hover */
+    filter: drop-shadow(0 4px 6px rgba(239, 68, 68, 0.4));
+    stroke: #fff;
+    stroke-width: 1.5px;
+    z-index: 10;
+    transition: all 0.2s ease-out;
 }
