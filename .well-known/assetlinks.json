@@ -7,7 +7,8 @@
             "namespace": "android_app",
             "package_name": "com.smartsupermarket.app",
             "sha256_cert_fingerprints": [
-                "7B:E8:0D:00:0D:27:8B:E3:E3:EA:71:7D:E2:B3:F0:C4:80:20:B1:83:84:A9:ED:95:CA:F6:20:D2:17:47:D7:89"
+                "7B:E8:0D:00:0D:27:8B:E3:E3:EA:71:7D:E2:B3:F0:C4:80:20:B1:83:84:A9:ED:95:CA:F6:20:D2:17:47:D7:89",
+                "9E:D1:EC:BC:91:8D:EF:CC:CF:F6:BC:87:92:6D:1F:D8:6C:59:67:E9:0E:69:D5:75:79:79:65:C4:18:C1:45:73"
             ]
         }
     }
