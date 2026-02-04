@@ -1232,14 +1232,21 @@
 
             paths.forEach(path => {
                 path.addEventListener('mouseenter', (e) => {
-                    const countryCode = path.id.toUpperCase();
+                    // Check path ID first, then parent (group) ID for multi-path countries
+                    let countryCode = path.id || path.parentElement.id;
 
                     let countryName = '';
                     try {
-                        if (countryCode.length === 2 && /^[A-Z]{2}$/.test(countryCode)) {
-                            countryName = regionNames.of(countryCode);
+                        if (countryCode && countryCode.length === 2) {
+                            countryCode = countryCode.toUpperCase();
+                            // Ensure it's a valid 2-letter code to avoid errors
+                            if (/^[A-Z]{2}$/.test(countryCode)) {
+                                countryName = regionNames.of(countryCode);
+                            } else {
+                                return;
+                            }
                         } else {
-                            return; // Ignore non-standard IDs
+                            return; // Ignore non-standard or empty IDs
                         }
                     } catch (err) {
                         return;
@@ -1248,7 +1255,7 @@
                     // Show Tooltip with Flag and Name
                     tooltip.style.display = 'flex';
                     tooltip.innerHTML = `
-                        <img src="https://flagcdn.com/w40/${path.id.toLowerCase()}.png" alt="Flag">
+                        <img src="https://flagcdn.com/w40/${countryCode.toLowerCase()}.png" alt="Flag">
                         <span>${countryName}</span>
                     `;
                 });
