@@ -813,29 +813,28 @@ footer {
     width: 100%;
     height: 100%;
     fill: #cbd5e1;
-    /* Darker gray for better visibility */
+    /* Fallback */
 }
 
 .world-map-svg path {
-    fill: inherit;
-    /* Inherit from parent */
+    fill: #e2e8f0;
+    /* Light Slate Blue - Premium Base */
     stroke: #ffffff;
-    stroke-width: 1px;
-    /* Slightly thicker stroke for crisp edges */
-    transition: fill 0.5s ease;
+    stroke-width: 0.75px;
+    transition: fill 0.3s ease;
 }
 
-/* Country Highlight Animation - Red Fill */
+/* Country Highlight Animation - Red/Orange Pulse */
 @keyframes highlight-country {
 
     0%,
     100% {
-        fill: #e5e7eb;
+        fill: #e2e8f0;
     }
 
     50% {
-        fill: #ef4444;
-        /* Red highlight */
+        fill: #ef4444 !important;
+        /* Force Red */
     }
 }
 
