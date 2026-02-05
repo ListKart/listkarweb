@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join ListKart Shared List</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            max-width: 450px;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .logo .list {
+            color: #4CAF50;
+        }
+
+        .logo .kart {
+            color: #FF9800;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 12px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+            background: #45a049;
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: #4CAF50;
+            border: 2px solid #4CAF50;
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: #f0fdf4;
+            box-shadow: none;
+        }
+
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #4CAF50;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="logo"><span class="list">List</span><span class="kart">Kart</span></div>
+        <h1>Shared Shopping List</h1>
+        <p id="message">Attempting to open the shared list in your app...</p>
+
+        <div id="actions">
+            <div class="loader" id="loader"></div>
+            <a href="#" id="open-app-btn" class="btn">Open in ListKart</a>
+            <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app"
+                class="btn btn-secondary">Download on Play Store</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 ListKart. All rights reserved.
+    </div>
+
+    <script>
+        // Extract sharing code from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        let code = urlParams.get('code');
+
+        if (!code) {
+            const pathParts = window.location.pathname.split('/');
+            const lastPart = pathParts[pathParts.length - 1];
+            if (lastPart.length > 0 && lastPart !== 'join' && lastPart !== 'index.html') {
+                code = lastPart;
+            }
+        }
+
+        if (code) {
+            const deepLink = `listkart://join/${code}`;
+            const openBtn = document.getElementById('open-app-btn');
+            openBtn.href = deepLink;
+
+            // Automatic redirect attempt
+            setTimeout(() => {
+                window.location.href = deepLink;
+
+                // If the user stays here for 3 seconds, maybe the app is not installed
+                setTimeout(() => {
+                    const loader = document.getElementById('loader');
+                    if (loader) loader.style.display = 'none';
+                    document.getElementById('message').innerText = "If the app didn't open automatically, you might need to install it first.";
+                }, 3000);
+            }, 500);
+        } else {
+            document.getElementById('message').innerText = "Invalid or missing sharing code.";
+            const loader = document.getElementById('loader');
+            if (loader) loader.style.display = 'none';
+            document.getElementById('open-app-btn').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

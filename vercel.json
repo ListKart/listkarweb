@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/join/:code",
+            "destination": "/join/index.html"
+        },
+        {
+            "source": "/.well-known/assetlinks.json",
+            "destination": "/.well-known/assetlinks.json"
+        }
+    ]
+}
