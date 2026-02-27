@@ -15,6 +15,7 @@ export default function Home() {
             <a href="#features">Features</a>
             <a href="#how-it-works">How It Works</a>
             <a href="#support">Support</a>
+            <Link href="/blog">Blog</Link>
             <a
               href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
               className="btn-nav"
@@ -217,7 +218,7 @@ export default function Home() {
       <footer>
         <div className="container">
           <p>
-            &copy; 2024 ListKart. All rights reserved. | <Link href="/privacy-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>Privacy Policy</Link>
+            &copy; 2024 ListKart. All rights reserved. | <Link href="/privacy-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>Privacy Policy</Link> | <Link href="/blog" style={{ color: 'inherit', textDecoration: 'underline' }}>Blog</Link>
           </p>
         </div>
       </footer>
