@@ -1,6 +1,6 @@
-import { sql } from '@vercel/postgres';
+﻿const { sql } = require('@vercel/postgres');
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   const { action } = req.query;
   try {
     switch (action) {
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
     console.error(error);
     return res.status(500).json({ error: error.message });
   }
-}
+};
 
 async function shareList(req, res) {
   const { list_name, device_id } = req.body;
@@ -139,4 +139,3 @@ async function updateStreak(req, res) {
   \;
   return res.json({ success: true });
 }
-
