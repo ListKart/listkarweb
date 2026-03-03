@@ -1,26 +1,49 @@
-﻿import { sql } from '@vercel/postgres';
-import { NextRequest, NextResponse } from 'next/server';
+﻿import { NextRequest, NextResponse } from 'next/server';
+
+async function getSql() {
+  const vcDb = await import('@vercel/postgres');
+  return vcDb.sql;
+}
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const action = searchParams.get('action');
 
   try {
+    let sql;
+    try {
+      sql = await getSql();
+    } catch (dbErr: any) {
+      if (action === 'debug_env') {
+        const keys = Object.keys(process.env).filter(k =>
+          k.includes('URL') || k.includes('POSTGRES') || k.includes('STORAGE') || k.includes('DATABASE')
+        );
+        return NextResponse.json({
+          detected_keys: keys,
+          node_env: process.env.NODE_ENV,
+          postgres_import_success: false,
+          error: dbErr.message,
+          stack: dbErr.stack
+        });
+      }
+      throw dbErr;
+    }
+
     if (action === 'debug_env') {
       const keys = Object.keys(process.env).filter(k =>
         k.includes('URL') || k.includes('POSTGRES') || k.includes('STORAGE') || k.includes('DATABASE')
       );
-      return NextResponse.json({ detected_keys: keys, node_env: process.env.NODE_ENV });
+      return NextResponse.json({ detected_keys: keys, node_env: process.env.NODE_ENV, postgres_import_success: true });
     }
 
     switch (action) {
-      case 'inspect_list': return await inspectList(searchParams);
-      case 'get_updates': return await getUpdates(searchParams);
-      case 'get_streak': return await getStreak(searchParams);
+      case 'inspect_list': return await inspectList(sql, searchParams);
+      case 'get_updates': return await getUpdates(sql, searchParams);
+      case 'get_streak': return await getStreak(sql, searchParams);
       default: return NextResponse.json({ error: 'Invalid GET action' }, { status: 400 });
     }
   } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ error: error.message, stack: error.stack }, { status: 500 });
   }
 }
 
@@ -29,20 +52,21 @@ export async function POST(req: NextRequest) {
   const action = searchParams.get('action');
 
   try {
+    const sql = await getSql();
     const body = await req.json();
     switch (action) {
-      case 'share_list': return await shareList(body);
-      case 'join_list': return await joinList(body);
-      case 'sync_items': return await syncItems(body);
-      case 'update_streak': return await updateStreak(body);
+      case 'share_list': return await shareList(sql, body);
+      case 'join_list': return await joinList(sql, body);
+      case 'sync_items': return await syncItems(sql, body);
+      case 'update_streak': return await updateStreak(sql, body);
       default: return NextResponse.json({ error: 'Invalid POST action' }, { status: 400 });
     }
   } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json({ error: error.message, stack: error.stack }, { status: 500 });
   }
 }
 
-async function shareList(body: any) {
+async function shareList(sql: any, body: any) {
   const { list_name, device_id } = body;
   const sharing_code = Math.floor(100000 + Math.random() * 900000).toString();
   const result = await sql`INSERT INTO shared_lists (sharing_code, list_name) VALUES (${sharing_code}, ${list_name}) RETURNING id`;
@@ -53,7 +77,7 @@ async function shareList(body: any) {
   return NextResponse.json({ success: true, sharing_code, id: list_id });
 }
 
-async function inspectList(searchParams: URLSearchParams) {
+async function inspectList(sql: any, searchParams: URLSearchParams) {
   const sharing_code = searchParams.get('sharing_code');
   const result = await sql`SELECT id, list_name FROM shared_lists WHERE sharing_code = ${sharing_code}`;
   if (result.rows.length === 0) return NextResponse.json({ error: 'List not found' }, { status: 404 });
@@ -62,7 +86,7 @@ async function inspectList(searchParams: URLSearchParams) {
   return NextResponse.json({ success: true, id: list.id, list_name: list.list_name, item_count: parseInt(count.rows[0].count) });
 }
 
-async function joinList(body: any) {
+async function joinList(sql: any, body: any) {
   const { sharing_code, device_id } = body;
   const result = await sql`SELECT id, list_name FROM shared_lists WHERE sharing_code = ${sharing_code}`;
   if (result.rows.length === 0) return NextResponse.json({ error: 'List not found' }, { status: 404 });
@@ -72,13 +96,13 @@ async function joinList(body: any) {
   return NextResponse.json({ success: true, id: list.id, list_name: list.list_name, items: items.rows });
 }
 
-async function getUpdates(searchParams: URLSearchParams) {
+async function getUpdates(sql: any, searchParams: URLSearchParams) {
   const list_id = searchParams.get('list_id');
   const items = await sql`SELECT * FROM shared_list_items WHERE shared_list_id = ${list_id} ORDER BY order_index`;
   return NextResponse.json({ success: true, items: items.rows });
 }
 
-async function syncItems(body: any) {
+async function syncItems(sql: any, body: any) {
   const { list_id, items } = body;
   for (const item of items) {
     if (item.op === 'delete') {
@@ -95,13 +119,13 @@ async function syncItems(body: any) {
   return NextResponse.json({ success: true });
 }
 
-async function getStreak(searchParams: URLSearchParams) {
+async function getStreak(sql: any, searchParams: URLSearchParams) {
   const user_id = searchParams.get('user_id');
   const result = await sql`SELECT * FROM user_streaks WHERE user_id = ${user_id}`;
   return NextResponse.json({ success: true, data: result.rows[0] || null });
 }
 
-async function updateStreak(body: any) {
+async function updateStreak(sql: any, body: any) {
   const collected = JSON.stringify(body.collected_ingredients);
   const badges = JSON.stringify(body.badges_earned);
   await sql`INSERT INTO user_streaks (user_id, current_streak, longest_streak, last_collected_date, total_collected, collected_ingredients, badges_earned)
