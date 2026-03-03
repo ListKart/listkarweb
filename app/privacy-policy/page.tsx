@@ -148,7 +148,7 @@ export default function PrivacyPolicy() {
             <footer>
                 <div className="container">
                     <p>
-                        &copy; 2024 ListKart. All rights reserved. | <Link href="/privacy-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>Privacy Policy</Link>
+                        &copy; {new Date().getFullYear()} ListKart. All rights reserved. | <Link href="/privacy-policy" style={{ color: 'inherit', textDecoration: 'underline' }}>Privacy Policy</Link> | <Link href="/faq" style={{ color: 'inherit', textDecoration: 'underline' }}>FAQ</Link> | <Link href="/blog" style={{ color: 'inherit', textDecoration: 'underline' }}>Blog</Link>
                     </p>
                 </div>
             </footer>
