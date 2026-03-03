@@ -1,5 +1,10 @@
-﻿import { sql } from '@vercel/postgres';
+﻿import { createPool } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
+
+// Handle custom prefix 'STORAGE' provided by user in Vercel
+const pool = createPool({
+  connectionString: process.env.STORAGE_URL || process.env.POSTGRES_URL
+});
 
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
@@ -49,14 +54,14 @@ export async function POST(req) {
 async function shareList(body) {
   const { list_name, device_id } = body;
   const sharing_code = Math.floor(100000 + Math.random() * 900000).toString();
-  const { rows } = await sql\
+  const { rows } = await pool.sql\
     INSERT INTO shared_lists (sharing_code, list_name) 
     VALUES (\, \) 
     RETURNING id;
   \;
   const list_id = rows[0].id;
   if (device_id) {
-    await sql\
+    await pool.sql\
       INSERT INTO shared_list_participants (shared_list_id, device_id) 
       VALUES (\, \) 
       ON CONFLICT DO NOTHING;
@@ -67,12 +72,12 @@ async function shareList(body) {
 
 async function inspectList(searchParams) {
   const sharing_code = searchParams.get('sharing_code');
-  const { rows } = await sql\
+  const { rows } = await pool.sql\
     SELECT id, list_name FROM shared_lists WHERE sharing_code = \;
   \;
   if (rows.length === 0) return NextResponse.json({ error: 'List not found' }, { status: 404 });
   const list = rows[0];
-  const { count } = (await sql\
+  const { count } = (await pool.sql\
     SELECT COUNT(*) FROM shared_list_items WHERE shared_list_id = \;
   \).rows[0];
   return NextResponse.json({
@@ -85,17 +90,17 @@ async function inspectList(searchParams) {
 
 async function joinList(body) {
   const { sharing_code, device_id } = body;
-  const { rows: listRows } = await sql\
+  const { rows: listRows } = await pool.sql\
     SELECT id, list_name FROM shared_lists WHERE sharing_code = \;
   \;
   if (listRows.length === 0) return NextResponse.json({ error: 'List not found' }, { status: 404 });
   const list = listRows[0];
-  await sql\
+  await pool.sql\
     INSERT INTO shared_list_participants (shared_list_id, device_id) 
     VALUES (\, \) 
     ON CONFLICT (shared_list_id, device_id) DO NOTHING;
   \;
-  const { rows: items } = await sql\
+  const { rows: items } = await pool.sql\
     SELECT * FROM shared_list_items WHERE shared_list_id = \ ORDER BY order_index;
   \;
   return NextResponse.json({ success: true, id: list.id, list_name: list.list_name, items });
@@ -103,7 +108,7 @@ async function joinList(body) {
 
 async function getUpdates(searchParams) {
   const list_id = searchParams.get('list_id');
-  const { rows: items } = await sql\
+  const { rows: items } = await pool.sql\
     SELECT * FROM shared_list_items WHERE shared_list_id = \ ORDER BY order_index;
   \;
   return NextResponse.json({ success: true, items });
@@ -113,12 +118,12 @@ async function syncItems(body) {
   const { list_id, items } = body;
   for (const item of items) {
     if (item.op === 'delete') {
-      await sql\
+      await pool.sql\
         DELETE FROM shared_list_items 
         WHERE shared_list_id = \ AND item_id = \;
       \;
     } else {
-      await sql\
+      await pool.sql\
         INSERT INTO shared_list_items 
         (shared_list_id, item_id, product_id, product_name, quantity, unit, is_completed, price_when_added, order_index)
         VALUES (\, \, \, \, \, \, \, \, \)
@@ -137,13 +142,13 @@ async function syncItems(body) {
 
 async function getStreak(searchParams) {
   const user_id = searchParams.get('user_id');
-  const { rows } = await sql\SELECT * FROM user_streaks WHERE user_id = \;\;
+  const { rows } = await pool.sql\SELECT * FROM user_streaks WHERE user_id = \;\;
   return NextResponse.json({ success: true, data: rows[0] || null });
 }
 
 async function updateStreak(body) {
   const data = body;
-  await sql\
+  await pool.sql\
     INSERT INTO user_streaks 
     (user_id, current_streak, longest_streak, last_collected_date, total_collected, collected_ingredients, badges_earned)
     VALUES (\, \, \, \, \, \, \)
