@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import styles from './join.module.css';
 
-export default function JoinPageQuery() {
+function JoinContent() {
     const searchParams = useSearchParams();
     const code = searchParams.get('code');
 
@@ -65,5 +65,13 @@ export default function JoinPageQuery() {
                 &copy; 2026 ListKart. All rights reserved.
             </div>
         </div>
+    );
+}
+
+export default function JoinPageQuery() {
+    return (
+        <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>Loading...</div>}>
+            <JoinContent />
+        </Suspense>
     );
 }
