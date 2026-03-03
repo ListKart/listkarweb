@@ -30,32 +30,32 @@ module.exports = async function handler(req, res) {
 async function shareList(req, res) {
   const { list_name, device_id } = req.body;
   const sharing_code = Math.floor(100000 + Math.random() * 900000).toString();
-  const { rows } = await sql\
+  const { rows } = await sql`
     INSERT INTO shared_lists (sharing_code, list_name) 
-    VALUES (\, \) 
+    VALUES (${sharing_code}, ${list_name}) 
     RETURNING id;
-  \;
+  `;
   const list_id = rows[0].id;
   if (device_id) {
-    await sql\
+    await sql`
       INSERT INTO shared_list_participants (shared_list_id, device_id) 
-      VALUES (\, \) 
+      VALUES (${list_id}, ${device_id}) 
       ON CONFLICT DO NOTHING;
-    \;
+    `;
   }
   return res.json({ success: true, sharing_code, id: list_id });
 }
 
 async function inspectList(req, res) {
   const { sharing_code } = req.query;
-  const { rows } = await sql\
-    SELECT id, list_name FROM shared_lists WHERE sharing_code = \;
-  \;
+  const { rows } = await sql`
+    SELECT id, list_name FROM shared_lists WHERE sharing_code = ${sharing_code};
+  `;
   if (rows.length === 0) return res.status(404).json({ error: 'List not found' });
   const list = rows[0];
-  const { count } = (await sql\
-    SELECT COUNT(*) FROM shared_list_items WHERE shared_list_id = \;
-  \).rows[0];
+  const { count } = (await sql`
+    SELECT COUNT(*) FROM shared_list_items WHERE shared_list_id = ${list.id};
+  `).rows[0];
   return res.json({
     success: true,
     id: list.id,
@@ -66,27 +66,27 @@ async function inspectList(req, res) {
 
 async function joinList(req, res) {
   const { sharing_code, device_id } = req.body;
-  const { rows: listRows } = await sql\
-    SELECT id, list_name FROM shared_lists WHERE sharing_code = \;
-  \;
+  const { rows: listRows } = await sql`
+    SELECT id, list_name FROM shared_lists WHERE sharing_code = ${sharing_code};
+  `;
   if (listRows.length === 0) return res.status(404).json({ error: 'List not found' });
   const list = listRows[0];
-  await sql\
+  await sql`
     INSERT INTO shared_list_participants (shared_list_id, device_id) 
-    VALUES (\, \) 
+    VALUES (${list.id}, ${device_id}) 
     ON CONFLICT (shared_list_id, device_id) DO NOTHING;
-  \;
-  const { rows: items } = await sql\
-    SELECT * FROM shared_list_items WHERE shared_list_id = \ ORDER BY order_index;
-  \;
+  `;
+  const { rows: items } = await sql`
+    SELECT * FROM shared_list_items WHERE shared_list_id = ${list.id} ORDER BY order_index;
+  `;
   return res.json({ success: true, id: list.id, list_name: list.list_name, items });
 }
 
 async function getUpdates(req, res) {
   const { list_id } = req.query;
-  const { rows: items } = await sql\
-    SELECT * FROM shared_list_items WHERE shared_list_id = \ ORDER BY order_index;
-  \;
+  const { rows: items } = await sql`
+    SELECT * FROM shared_list_items WHERE shared_list_id = ${list_id} ORDER BY order_index;
+  `;
   return res.json({ success: true, items });
 }
 
@@ -94,15 +94,15 @@ async function syncItems(req, res) {
   const { list_id, items } = req.body;
   for (const item of items) {
     if (item.op === 'delete') {
-      await sql\
+      await sql`
         DELETE FROM shared_list_items 
-        WHERE shared_list_id = \ AND item_id = \;
-      \;
+        WHERE shared_list_id = ${list_id} AND item_id = ${item.item_id};
+      `;
     } else {
-      await sql\
+      await sql`
         INSERT INTO shared_list_items 
         (shared_list_id, item_id, product_id, product_name, quantity, unit, is_completed, price_when_added, order_index)
-        VALUES (\, \, \, \, \, \, \, \, \)
+        VALUES (${list_id}, ${item.item_id}, ${item.product_id}, ${item.product_name}, ${item.quantity}, ${item.unit}, ${item.is_completed}, ${item.price_when_added}, ${item.order_index})
         ON CONFLICT (shared_list_id, item_id) DO UPDATE SET
           quantity = EXCLUDED.quantity,
           unit = EXCLUDED.unit,
@@ -110,7 +110,7 @@ async function syncItems(req, res) {
           price_when_added = EXCLUDED.price_when_added,
           order_index = EXCLUDED.order_index,
           updated_at = CURRENT_TIMESTAMP;
-      \;
+      `;
     }
   }
   return res.json({ success: true });
@@ -118,16 +118,16 @@ async function syncItems(req, res) {
 
 async function getStreak(req, res) {
   const { user_id } = req.query;
-  const { rows } = await sql\SELECT * FROM user_streaks WHERE user_id = \;\;
+  const { rows } = await sql`SELECT * FROM user_streaks WHERE user_id = ${user_id};`;
   return res.json({ success: true, data: rows[0] || null });
 }
 
 async function updateStreak(req, res) {
   const data = req.body;
-  await sql\
+  await sql`
     INSERT INTO user_streaks 
     (user_id, current_streak, longest_streak, last_collected_date, total_collected, collected_ingredients, badges_earned)
-    VALUES (\, \, \, \, \, \, \)
+    VALUES (${data.user_id}, ${data.current_streak}, ${data.longest_streak}, ${data.last_collected_date}, ${data.total_collected}, ${JSON.stringify(data.collected_ingredients)}, ${JSON.stringify(data.badges_earned)})
     ON CONFLICT (user_id) DO UPDATE SET
       current_streak = EXCLUDED.current_streak,
       longest_streak = EXCLUDED.longest_streak,
@@ -136,6 +136,6 @@ async function updateStreak(req, res) {
       collected_ingredients = EXCLUDED.collected_ingredients,
       badges_earned = EXCLUDED.badges_earned,
       updated_at = CURRENT_TIMESTAMP;
-  \;
+  `;
   return res.json({ success: true });
 }
