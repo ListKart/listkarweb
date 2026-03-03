@@ -41,7 +41,7 @@ export default function BlogPage() {
                     </h1>
 
                     <div className="blog-content" style={{ fontSize: '1.125rem', lineHeight: '1.8', color: 'var(--text-color)' }}>
-                        <p style={{ marginBottom: '1.5rem', fontSize: '1.25rem', color: 'var(--text-light)', textEdge: 'cap' }}>
+                        <p style={{ marginBottom: '1.5rem', fontSize: '1.25rem', color: 'var(--text-light)' }}>
                             Forgetting items while shopping is one of the most common daily problems. People either depend on memory, paper notes, or scattered WhatsApp messages — and still miss important things.
                         </p>
                         <p style={{ marginBottom: '1.5rem', fontSize: '1.25rem', color: 'var(--text-light)' }}>
