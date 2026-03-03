@@ -1,16 +1,36 @@
 ﻿import { createPool } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
 
-// Handle custom prefix 'STORAGE' provided by user in Vercel
+// Robust connection string detection for Vercel's prefixed environment variables
+const connectionString = 
+  process.env.STORAGE_POSTGRES_URL || 
+  process.env.STORAGE_URL || 
+  process.env.POSTGRES_URL || 
+  process.env.DATABASE_URL;
+
 const pool = createPool({
-  connectionString: process.env.STORAGE_URL || process.env.POSTGRES_URL
+  connectionString: connectionString
 });
 
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
   const action = searchParams.get('action');
 
+  // Diagnostic mode to identify available environment variables (safe keys only)
+  if (action === 'debug_env') {
+    const keys = Object.keys(process.env).filter(k => k.includes('URL') || k.includes('POSTGRES') || k.includes('STORAGE'));
+    return NextResponse.json({ 
+      has_connection_string: !!connectionString,
+      detected_keys: keys,
+      env_check: "Diagnostic complete"
+    });
+  }
+
   try {
+    if (!connectionString) {
+      throw new Error("No database connection string found. Please check Vercel environment variables.");
+    }
+
     switch (action) {
       case 'inspect_list':
         return await inspectList(searchParams);
@@ -22,8 +42,11 @@ export async function GET(req) {
         return NextResponse.json({ error: 'Invalid GET action' }, { status: 400 });
     }
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error('API Error:', error.message);
+    return NextResponse.json({ 
+      error: error.message,
+      diagnostic: "Check if DATABASE_URL or STORAGE_POSTGRES_URL is set in Vercel"
+    }, { status: 500 });
   }
 }
 
@@ -46,7 +69,7 @@ export async function POST(req) {
         return NextResponse.json({ error: 'Invalid POST action' }, { status: 400 });
     }
   } catch (error) {
-    console.error(error);
+    console.error('API Error:', error.message);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
