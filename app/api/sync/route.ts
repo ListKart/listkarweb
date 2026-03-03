@@ -1,8 +1,10 @@
 ﻿import { NextRequest, NextResponse } from 'next/server';
 
 async function getSql() {
-  const vcDb = await import('@vercel/postgres');
-  return vcDb.sql;
+  const { neon } = await import('@neondatabase/serverless');
+  const dbUrl = process.env.POSTGRES_URL || process.env.DATABASE_URL;
+  if (!dbUrl) throw new Error('Database URL is missing in environment variables');
+  return neon(dbUrl);
 }
 
 export async function GET(req: NextRequest) {
