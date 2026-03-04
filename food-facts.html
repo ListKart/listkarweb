@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="google-site-verification" content="4Bc-6onxXfemoARrVTdS7U-xKGocVZ-xdKKPmxgBdI4" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover powerful Superfoods and healthy grocery shopping tips with ListKart. Improve your heart health, immunity, and brain power.">
+    <meta name="keywords"
+        content="superfoods, healthy grocery list, food facts, nutrition tips, smart shopping, heart healthy foods">
+    <title>Smart Food Facts & Superfoods Guide - ListKart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logo.webp">
+    <style>
+        .page-header {
+            padding-top: 160px;
+            padding-bottom: 80px;
+            background: radial-gradient(circle at top right, rgba(25, 152, 58, 0.05), transparent),
+                radial-gradient(circle at top left, rgba(255, 152, 0, 0.05), transparent);
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 4rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+        }
+
+        .page-subtitle {
+            font-size: 1.35rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+            padding-bottom: 100px;
+        }
+
+        .food-card {
+            background: var(--white);
+            border-radius: 32px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .food-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.08);
+            border-color: var(--primary-color);
+        }
+
+        .food-image-box {
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .food-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .food-card:hover .food-image-box img {
+            transform: scale(1.1);
+        }
+
+        .food-content {
+            padding: 2.5rem;
+            flex-grow: 1;
+        }
+
+        .food-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: var(--primary-soft);
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .food-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .food-desc {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .food-benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+
+        .food-benefit svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.75rem;
+            }
+
+            .food-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="display:flex; align-items:center; text-decoration:none; color:inherit;">
+                    <img src="assets/logo.webp" alt="ListKart Logo">
+                    <span><span class="brand-list">List</span><span class="brand-kart">Kart</span></span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html#features">Features</a>
+                <a href="food-facts.html" style="color: var(--primary-color);">Food Facts</a>
+                <a href="faq.html">FAQ</a>
+                <a href="blog.html">Blog</a>
+                <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                    class="btn-nav" target="_blank">Download App</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Smart Food Facts</h1>
+                <p class="page-subtitle">Elevate your grocery shopping with science-backed nutrition insights. Discover
+                    superfoods that fuel your body and mind.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="food-grid">
+                <!-- Avocado -->
+                <div class="food-card reveal-left">
+                    <div class="food-image-box">
+                        <img src="assets/food-avocado.png" alt="Fresh Avocado">
+                    </div>
+                    <div class="food-content">
+                        <span class="food-tag">Heart Health</span>
+                        <h2 class="food-name">Avocado</h2>
+                        <p class="food-desc">Packed with monounsaturated fats, avocados help reduce bad cholesterol
+                            levels and lower the risk of heart disease.</p>
+                        <div class="food-benefit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            Rich in Fiber & Potassium
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blueberries -->
+                <div class="food-card reveal">
+                    <div class="food-image-box">
+                        <img src="assets/food-blueberries.png" alt="Fresh Blueberries">
+                    </div>
+                    <div class="food-content">
+                        <span class="food-tag">Brain Power</span>
+                        <h2 class="food-name">Blueberries</h2>
+                        <p class="food-desc">Often called 'Brain Berries', they are loaded with antioxidants that delay
+                            brain aging and improve memory.</p>
+                        <div class="food-benefit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            High in Anthocyanins
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ginger -->
+                <div class="food-card reveal-right">
+                    <div class="food-image-box">
+                        <img src="assets/food-ginger.png" alt="Fresh Ginger">
+                    </div>
+                    <div class="food-content">
+                        <span class="food-tag">Immunity Booster</span>
+                        <h2 class="food-name">Ginger</h2>
+                        <p class="food-desc">A natural anti-inflammatory powerhouse that aids digestion and strengthens
+                            your immune system against common colds.</p>
+                        <div class="food-benefit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            Powerful Anti-inflammatory
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Walnut -->
+                <div class="food-card reveal-left">
+                    <div class="food-image-box">
+                        <img src="assets/food-walnut.png" alt="Pure Walnuts">
+                    </div>
+                    <div class="food-content">
+                        <span class="food-tag">Mental Focus</span>
+                        <h2 class="food-name">Walnuts</h2>
+                        <p class="food-desc">Walnuts have higher antioxidant activity than any other common nut,
+                            significantly improving cognitive function.</p>
+                        <div class="food-benefit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            The Ultimate Brain Nut
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spinach -->
+                <div class="food-card reveal">
+                    <div class="food-image-box">
+                        <img src="assets/food-spinach.png" alt="Crisp Spinach">
+                    </div>
+                    <div class="food-content">
+                        <span class="food-tag">Energy & Strength</span>
+                        <h2 class="food-name">Spinach</h2>
+                        <p class="food-desc">High in iron and vitamins, spinach is essential for energy production and
+                            maintaining healthy blood pressure levels.</p>
+                        <div class="food-benefit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            Iron-Rich Power Food
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder for daily update -->
+                <div class="food-card reveal-right"
+                    style="border: 2px dashed rgba(0,0,0,0.1); background: transparent; display: flex; align-items: center; justify-content: center; min-height: 400px;">
+                    <div style="text-align: center; color: var(--text-light); padding: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">🥗</div>
+                        <h3 style="font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--text-color);">New
+                            Fact Coming Tomorrow!</h3>
+                        <p>We add fresh superfood insights every day to keep your shopping smart and healthy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="background: var(--bg-secondary); padding: 100px 0; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Shop Smarter, Live Healthier</h2>
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto 3rem;">Ready to
+                    upgrade your grocery habits? Download ListKart and start planning your healthy meals today.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                    class="btn btn-primary" target="_blank">
+                    <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                    </svg>
+                    Download ListKart Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p
+                style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05); color: var(--text-light);">
+                &copy; 2026 ListKart. All rights reserved. | <a href="grocery-list-app.html"
+                    style="color: inherit; text-decoration: underline;">Grocery List App</a> | <a href="food-facts.html"
+                    style="color: inherit; text-decoration: underline;">Food Facts</a> | <a href="privacy.html"
+                    style="color: inherit; text-decoration: underline;">Privacy Policy</a> | <a href="faq.html"
+                    style="color: inherit; text-decoration: underline;">FAQ</a> | <a href="blog.html"
+                    style="color: inherit; text-decoration: underline;">Blog</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+                header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+                header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.05)';
+            }
+        });
+    </script>
+</body>
+
+</html>
