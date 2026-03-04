@@ -1,0 +1,11 @@
+﻿{
+    "trailingSlash":  false,
+    "cleanUrls":  true,
+    "version":  2,
+    "rewrites":  [
+                     {
+                         "destination":  "/join/index.html?code=",
+                         "source":  "/join/(?\u003ccode \u003e.*)"
+                     }
+                 ]
+}
