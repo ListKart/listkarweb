@@ -183,18 +183,119 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                <a href="index.html" style="display:flex; align-items:center; text-decoration:none; color:inherit;">
-                    <img src="assets/logo.webp" alt="ListKart Logo">
-                    <span><span class="brand-list">List</span><span class="brand-kart">Kart</span></span>
-                </a>
+            <a href="index.html" class="logo">
+                <img src="assets/logo.webp" alt="ListKart Logo">
+                <span><span class="brand-list">List</span><span class="brand-kart">Kart</span></span>
+            </a>
+            <div class="mobile-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
             <nav class="nav-menu">
-                <a href="index.html#about">About</a>
-                <a href="index.html#features">Features</a>
-                <a href="index.html#how-it-works">How It Works</a>
-                <a href="index.html#support">Support</a>
-                <a href="blog.html">Blog</a>
+                <!-- Product Dropdown -->
+                <div class="nav-item">
+                    <div class="dropdown-trigger">
+                        Product
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="index.html#about" class="dropdown-item">
+                            <div class="dropdown-icon">📖</div>
+                            <div class="dropdown-content">
+                                <span class="dropdown-title">About ListKart</span>
+                                <span class="dropdown-desc">Our mission and story</span>
+                            </div>
+                        </a>
+                        <a href="index.html#features" class="dropdown-item">
+                            <div class="dropdown-icon">✨</div>
+                            <div class="dropdown-content">
+                                <span class="dropdown-title">All Features</span>
+                                <span class="dropdown-desc">Smart lists, voice & scan</span>
+                            </div>
+                        </a>
+                        <a href="index.html#languages" class="dropdown-item">
+                            <div class="dropdown-icon">🌐</div>
+                            <div class="dropdown-content">
+                                <span class="dropdown-title">53+ Languages</span>
+                                <span class="dropdown-desc">Shop in your native tongue</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Solutions Dropdown -->
+                <div class="nav-item">
+                    <div class="dropdown-trigger">
+                        Solutions
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="index.html#features" class="dropdown-item">
+                            <div class="dropdown-icon">👨‍👩‍👧</div>
+                            <div class="dropdown-content">
+                                <span class="dropdown-title">Family Sync</span>
+                                <span class="dropdown-desc">Share lists with partners</span>
+                            </div>
+                        </a>
+                        <a href="index.html#features" class="dropdown-item">
+                            <div class="dropdown-icon">💰</div>
+                            <div class="dropdown-content">
+                                <span class="dropdown-title">Budget Tracker</span>
+                                <span class="dropdown-desc">Monitor your spending</span>
+                            </div>
+                        </a>
+                        <a href="index.html#features" class="dropdown-item">
+                            <div class="dropdown-icon">📴</div>
+                            <div class="dropdown-content">
+                                <span class="dropdown-title">Offline Mode</span>
+                                <span class="dropdown-desc">Works without internet</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resources Dropdown -->
+                <div class="nav-item">
+                    <div class="dropdown-trigger">
+                        Resources
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="food-facts.html" class="dropdown-item">
+                            <div class="dropdown-icon">🍏</div>
+                            <div class="dropdown-content">
+                                <span class="dropdown-title">Smart Food Facts</span>
+                                <span class="dropdown-desc">Health & Superfoods guide</span>
+                            </div>
+                        </a>
+                        <a href="blog.html" class="dropdown-item">
+                            <div class="dropdown-icon">✍️</div>
+                            <div class="dropdown-content">
+                                <span class="dropdown-title">Our Blog</span>
+                                <span class="dropdown-desc">Shopping tips & updates</span>
+                            </div>
+                        </a>
+                        <a href="grocery-list-app.html" class="dropdown-item">
+                            <div class="dropdown-icon">🛒</div>
+                            <div class="dropdown-content">
+                                <span class="dropdown-title">Shopping Guide</span>
+                                <span class="dropdown-desc">Best grocery list app 2026</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="faq.html">FAQ</a>
                 <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
                     class="btn-nav" target="_blank">Download App</a>
             </nav>
@@ -350,6 +451,37 @@
                 header.style.boxShadow = 'none';
                 header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.05)';
             }
+        });
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Mobile dropdown toggle
+        document.querySelectorAll('.dropdown-trigger').forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    const parent = trigger.closest('.nav-item');
+                    parent.classList.toggle('mobile-active');
+                }
+            });
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileToggle) {
+                    mobileToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
         });
     </script>
 </body>
