@@ -518,7 +518,7 @@ section>.container>p.lead-text {
 }
 
 .check-list li::before {
-    content: 'Γ£ô';
+    content: '\2714';
     position: absolute;
     left: 0;
     color: var(--primary-color);
