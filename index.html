@@ -15,7 +15,8 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ListKart - The Ultimate Multilingual Shopping List App">
-    <meta name="twitter:description" content="Shop in your mother tongue with ListKart. Supporting 53+ languages including Hindi, Spanish, French, and more. 100% Free & Private.">
+    <meta name="twitter:description"
+        content="Shop in your mother tongue with ListKart. Supporting 53+ languages including Hindi, Spanish, French, and more. 100% Free & Private.">
     <meta name="twitter:image" content="https://getlistkart.com/assets/hero-illustration.webp">
     <meta property="og:description"
         content="Shop in your mother tongue with ListKart. Supporting 53+ languages including Hindi, Spanish, French, and more. 100% Free & Private.">
@@ -26,8 +27,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.webp">
-<meta name="google-site-verification" content="4Bc-6onxXfemoARrVTdS7U-xKGocVZ-xdKKPmxgBdI4" />
-<script type="application/ld+json">
+    <meta name="google-site-verification" content="4Bc-6onxXfemoARrVTdS7U-xKGocVZ-xdKKPmxgBdI4" />
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -91,7 +92,12 @@
                 </div>
                 <div class="image-content">
                     <div class="hero-image-wrapper">
-                        <img src="assets/hero-illustration.webp" alt="ListKart App Usage" class="hero-app-icon">
+                        <div class="mockup-container reveal">
+                            <div class="mockup-camera"></div>
+                            <div class="mockup-screen">
+                                <img src="assets/mockup-screen.png" alt="ListKart App Layout Preview">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,54 +112,55 @@
             </div>
         </section>
 
-        <section class="features reveal" id="features">
+        <section class="features" id="features">
             <!-- Feature Spotlight: Shared Lists -->
-            <div class="container two-column reverse-mobile" style="margin-bottom: 5rem;">
+            <div class="container two-column reverse-mobile reveal-left" style="margin-bottom: 5rem;">
                 <div class="text-column">
                     <h2>Shared Shopping Lists</h2>
                     <p class="lead-text" style="text-align: left; margin: 0;">Create shared grocery lists and keep
-                        everyone synced. Tick off items together in real-time ΓÇô perfect for partners, families,
+                        everyone synced. Tick off items together in real-time — perfect for partners, families,
                         roommates or flatmates shopping together.</p>
                 </div>
-                <div class="image-column">
+                <div class="image-column reveal-right">
                     <img src="assets/feature-shared.webp" alt="Family Shopping Together" class="spotlight-image">
                 </div>
             </div>
 
-            <div class="container">
+            <div class="container reveal-scale">
                 <h2>More Smart Features</h2>
                 <div class="feature-grid">
-                    <div class="feature-card">
+                    <div class="feature-card reveal">
                         <h3>Smart Shopping List</h3>
                         <p>Create unlimited shopping and grocery lists. Add items by typing, voice, or camera scan.
                             Organise by aisles, meals, or priorities.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal">
                         <h3>Shared Family Lists</h3>
-                        <p>Keep everyone synced. Tick off items together in real-time ΓÇô perfect for partners, families,
+                        <p>Keep everyone synced. Tick off items together in real-time ΓÇô perfect for partners,
+                            families,
                             and roommates.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal">
                         <h3>Voice & Scan Input</h3>
                         <p>Add items hands-free or scan handwritten lists using fast OCR. Just point, capture, and
                             auto-add.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal">
                         <h3>Home Screen Widgets</h3>
                         <p>View and tick off items without opening the app utilizing quick-add widgets in multiple
                             sizes.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal">
                         <h3>Offline Mode</h3>
                         <p>Works fully offline. Data stays on your phone and syncs automatically when you're back
                             online.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal">
                         <h3>No Language Barriers</h3>
                         <p>Traveling or living abroad? ListKart adapts to your local language instantly. From Hindi to
                             Spanish, we cover 53+ languages and counting.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal">
                         <h3>Budget Tracker</h3>
                         <p>Track spending with built-in price lists and category budgets. Monitor expenses instantly.
                         </p>
@@ -243,7 +250,8 @@
             <div class="container">
                 <h2>Built for the World, Made for You</h2>
                 <p class="lead-text">We believe shopping lists should be personal. That's why ListKart speaks <strong>53
-                        Languages</strong>ΓÇöso you don't have to translate your needs. Whether it's 'Tomato', 'Tamatar',
+                        Languages</strong>ΓÇöso you don't have to translate your needs. Whether it's 'Tomato',
+                    'Tamatar',
                     or 'Tomate', we understand you.</p>
 
                 <div class="marquee-wrapper">
@@ -1212,7 +1220,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 ListKart. All rights reserved. | <a href="privacy.html"
+            <p>&copy; 2026 ListKart. All rights reserved. | <a href="grocery-list-app.html"
+                    style="color: inherit; text-decoration: underline;">Grocery List App</a> | <a href="privacy.html"
                     style="color: inherit; text-decoration: underline;">Privacy Policy</a> | <a href="faq.html"
                     style="color: inherit; text-decoration: underline;">FAQ</a> | <a href="blog.html"
                     style="color: inherit; text-decoration: underline;">Blog</a></p>
@@ -1234,7 +1243,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
 
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
@@ -1303,4 +1312,3 @@
 </body>
 
 </html>
-
