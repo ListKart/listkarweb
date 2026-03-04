@@ -1,1 +1,1 @@
-{"version":2,"cleanUrls":true,"trailingSlash":false,"rewrites":[{"source":"/join/:code","destination":"/join/index.html"}]}
+{"version":2,"cleanUrls":true,"trailingSlash":false,"rewrites":[{"source":"/join/:path*","destination":"/join/index.html"}]}
