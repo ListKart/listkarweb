@@ -647,13 +647,13 @@ section>.container>p.lead-text {
 
 .spotlight-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 4rem;
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     border-radius: 32px;
-    padding: 3rem;
+    padding: 3.5rem;
     box-shadow: var(--glass-shadow);
     transition: all 0.4s ease;
 }
