@@ -15,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="icon" type="image/png" href="assets/logo.webp">
     <style>
         .blog-header {
             padding-top: 140px;
@@ -133,14 +133,59 @@
             gap: 0.25rem;
         }
     </style>
+
+    <!-- FAQ Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is ListKart?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ListKart is your smart, privacy-first companion for organized shopping. It replaces messy paper lists with a clean, digital experience that helps you shop faster and smarter."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do you track what I buy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Your shopping lists are yours alone. We don't build a profile of your habits to sell to advertisers."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do I need an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You can use all features without ever creating an account, ensuring complete anonymity."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is ListKart free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! The core features of ListKart are completely free to use. We want to make shopping easier for everyone."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I use ListKart in my native language?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, ListKart supports over 53+ native languages including Hindi, Spanish, Polish, Japanese, and more!"
+        }
+      }]
+    }
+    </script>
 </head>
+
 
 <body>
     <header>
         <div class="container">
             <div class="logo">
                 <a href="index.html" style="display:flex; align-items:center; text-decoration:none; color:inherit;">
-                    <img src="assets/logo.png" alt="ListKart Logo">
+                    <img src="assets/logo.webp" alt="ListKart Logo">
                     <span><span class="brand-list">List</span><span class="brand-kart">Kart</span></span>
                 </a>
             </div>
@@ -202,7 +247,8 @@
                                 Add Items</h3>
                             <p>You can <strong>Type</strong>, <strong>Scan</strong> with your camera, or use
                                 <strong>Voice</strong> to add items. You can even say multiple items like "Milk, Bread,
-                                Eggs" and we'll add them separately.</p>
+                                Eggs" and we'll add them separately.
+                            </p>
                         </div>
                         <div style="padding: 1.5rem; background-color: var(--bg-secondary); border-radius: 16px;">
                             <h3 style="margin-bottom: 0.75rem; font-size: 1.25rem; color: var(--primary-color);">How to
