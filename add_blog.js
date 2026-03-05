@@ -14,7 +14,7 @@ const blogContent = <!DOCTYPE html>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <link rel="icon" type="image/png" href="../assets/logo.webp">
     <style>
         .blog-header {
             padding-top: 140px;
@@ -64,7 +64,7 @@ const blogContent = <!DOCTYPE html>
             align-items: center;
             justify-content: center;
             border: 1px solid rgba(0, 0, 0, 0.05);
-            background-image: url('../assets/blog-ultimate-grocery.png');
+            background-image: url('../assets/blog-ultimate-grocery.webp');
             background-size: cover;
             background-position: center;
         }
@@ -168,7 +168,7 @@ const blogContent = <!DOCTYPE html>
         <div class="container">
             <div class="logo">
                 <a href="../index.html" style="display:flex; align-items:center; text-decoration:none; color:inherit;">
-                    <img src="../assets/logo.png" alt="ListKart Logo">
+                    <img src="../assets/logo.webp" alt="ListKart Logo">
                     <span><span class="brand-list">List</span><span class="brand-kart">Kart</span></span>
                 </a>
             </div>
@@ -293,7 +293,7 @@ let blogHtml = fs.readFileSync('blog.html', 'utf8');
 const newCard = <!-- Blog Post 0 -->
                 <a href="blog/ultimate-grocery-list-2026.html" class="blog-card">
                     <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
-                        <img src="assets/blog-ultimate-grocery.png" alt="Ultimate Grocery List" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="assets/blog-ultimate-grocery.webp" alt="Ultimate Grocery List" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="blog-card-content">
                         <span class="blog-card-tag" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.1)); color: #d97706;">Guide</span>
