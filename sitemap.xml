@@ -38,6 +38,12 @@
 </url>
 
   <url>
+    <loc>https://getlistkart.com/blog/slash-grocery-bill-2026.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://getlistkart.com/blog/solo-developer-vision-listkart.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
