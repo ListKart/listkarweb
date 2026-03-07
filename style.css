@@ -204,17 +204,19 @@ header .container {
     align-items: center;
 }
 
-.dropdown-trigger {
+.dropdown-trigger,
+.nav-link {
     display: flex;
     align-items: center;
     gap: 0.4rem;
     cursor: pointer;
     padding: 0.5rem 0;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-color);
-    transition: color 0.2s;
+    transition: all 0.2s ease;
     font-size: 1rem;
     position: relative;
+    text-decoration: none;
 }
 
 .dropdown-trigger svg {
@@ -224,13 +226,9 @@ header .container {
     opacity: 0.6;
 }
 
-.nav-item:hover .dropdown-trigger {
+.nav-item:hover .dropdown-trigger,
+.nav-item:hover .nav-link {
     color: var(--primary-color);
-}
-
-.nav-item:hover .dropdown-trigger svg {
-    transform: rotate(180deg);
-    opacity: 1;
 }
 
 .dropdown-menu {
