@@ -130,6 +130,36 @@
         }
 
         .food-benefit svg {
+            width: 18px;
+            height: 18px;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .food-cta {
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--primary-gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px var(--primary-glow);
+        }
+
+        .food-cta:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 20px var(--primary-glow);
+            filter: brightness(1.1);
+        }
+
+        .food-cta svg {
             width: 20px;
             height: 20px;
         }
@@ -309,460 +339,663 @@
                             </svg>
                             Rich in Fiber & Potassium
                         </div>
-                    </div>
-                </div>
-
-                <!-- Blueberries -->
-                <div class="food-card reveal">
-                    <div class="food-image-box">
-                        <img src="assets/food-blueberries.webp" alt="Fresh Blueberries">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Brain Power</span>
-                        <h2 class="food-name">Blueberries</h2>
-                        <p class="food-desc">Often called 'Brain Berries', they are loaded with antioxidants that delay
-                            brain aging and improve memory.</p>
-                        <div class="food-benefit">
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                            class="food-cta" target="_blank">
+                            <span>Add to List</span>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                                 stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
                             </svg>
-                            High in Anthocyanins
-                        </div>
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Ginger -->
-                <div class="food-card reveal-right">
-                    <div class="food-image-box">
-                        <img src="assets/food-ginger.webp" alt="Fresh Ginger">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Immunity Booster</span>
-                        <h2 class="food-name">Ginger</h2>
-                        <p class="food-desc">A natural anti-inflammatory powerhouse that aids digestion and strengthens
-                            your immune system against common colds.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Powerful Anti-inflammatory
-                        </div>
-                    </div>
+            <!-- Blueberries -->
+            <div class="food-card reveal">
+                <div class="food-image-box">
+                    <img src="assets/food-blueberries.webp" alt="Fresh Blueberries">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Brain Power</span>
+                    <h2 class="food-name">Blueberries</h2>
+                    <p class="food-desc">Often called 'Brain Berries', they are loaded with antioxidants that delay
+                        brain aging and improve memory.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        High in Anthocyanins
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            </div>
 
-                <!-- Walnut -->
-                <div class="food-card reveal-left">
-                    <div class="food-image-box">
-                        <img src="assets/food-walnut.webp" alt="Pure Walnuts">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Mental Focus</span>
-                        <h2 class="food-name">Walnuts</h2>
-                        <p class="food-desc">Walnuts have higher antioxidant activity than any other common nut,
-                            significantly improving cognitive function.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            The Ultimate Brain Nut
-                        </div>
-                    </div>
+            <!-- Ginger -->
+            <div class="food-card reveal-right">
+                <div class="food-image-box">
+                    <img src="assets/food-ginger.webp" alt="Fresh Ginger">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Immunity Booster</span>
+                    <h2 class="food-name">Ginger</h2>
+                    <p class="food-desc">A natural anti-inflammatory powerhouse that aids digestion and strengthens
+                        your immune system against common colds.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Powerful Anti-inflammatory
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            </div>
 
-                <!-- Spinach -->
-                <div class="food-card reveal">
-                    <div class="food-image-box">
-                        <img src="assets/food-spinach.webp" alt="Crisp Spinach">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Energy & Strength</span>
-                        <h2 class="food-name">Spinach</h2>
-                        <p class="food-desc">High in iron and vitamins, spinach is essential for energy production and
-                            maintaining healthy blood pressure levels.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Iron-Rich Power Food
-                        </div>
-                    </div>
+            <!-- Walnut -->
+            <div class="food-card reveal-left">
+                <div class="food-image-box">
+                    <img src="assets/food-walnut.webp" alt="Pure Walnuts">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Mental Focus</span>
+                    <h2 class="food-name">Walnuts</h2>
+                    <p class="food-desc">Walnuts have higher antioxidant activity than any other common nut,
+                        significantly improving cognitive function.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        The Ultimate Brain Nut
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            </div>
 
-                <!-- Turmeric -->
-                <div class="food-card reveal-left">
-                    <div class="food-image-box">
-                        <img src="assets/food-turmeric.webp" alt="Vibrant Turmeric">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Inflammation</span>
-                        <h2 class="food-name">Turmeric</h2>
-                        <p class="food-desc">The 'Golden Spice' contains curcumin, a bioactive compound with powerful
-                            medicinal properties that fight chronic inflammation.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Natural Curcumin Defense
-                        </div>
-                    </div>
+            <!-- Spinach -->
+            <div class="food-card reveal">
+                <div class="food-image-box">
+                    <img src="assets/food-spinach.webp" alt="Crisp Spinach">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Energy & Strength</span>
+                    <h2 class="food-name">Spinach</h2>
+                    <p class="food-desc">High in iron and vitamins, spinach is essential for energy production and
+                        maintaining healthy blood pressure levels.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Iron-Rich Power Food
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            </div>
 
-                <!-- Broccoli -->
-                <div class="food-card reveal">
-                    <div class="food-image-box">
-                        <img src="assets/food-broccoli.webp" alt="Fresh Broccoli">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Detox & Fiber</span>
-                        <h2 class="food-name">Broccoli</h2>
-                        <p class="food-desc">High in sulforaphane, broccoli supports the body's natural detoxification
-                            processes and promotes optimal digestive health.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Detoxifying Sulforaphane
-                        </div>
-                    </div>
+            <!-- Turmeric -->
+            <div class="food-card reveal-left">
+                <div class="food-image-box">
+                    <img src="assets/food-turmeric.webp" alt="Vibrant Turmeric">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Inflammation</span>
+                    <h2 class="food-name">Turmeric</h2>
+                    <p class="food-desc">The 'Golden Spice' contains curcumin, a bioactive compound with powerful
+                        medicinal properties that fight chronic inflammation.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Natural Curcumin Defense
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Almonds -->
-                <div class="food-card reveal-right">
-                    <div class="food-image-box">
-                        <img src="assets/food-almonds.webp" alt="Fresh Almonds">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Skin & Heart</span>
-                        <h2 class="food-name">Almonds</h2>
-                        <p class="food-desc">Almonds are a fantastic source of Vitamin E and antioxidants that protect
-                            your skin from aging and improve arterial health.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Vitamin E Powerhouse
-                        </div>
-                    </div>
+            <!-- Broccoli -->
+            <div class="food-card reveal">
+                <div class="food-image-box">
+                    <img src="assets/food-broccoli.webp" alt="Fresh Broccoli">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Detox & Fiber</span>
+                    <h2 class="food-name">Broccoli</h2>
+                    <p class="food-desc">High in sulforaphane, broccoli supports the body's natural detoxification
+                        processes and promotes optimal digestive health.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Detoxifying Sulforaphane
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Chia Seeds -->
-                <div class="food-card reveal-left">
-                    <div class="food-image-box">
-                        <img src="assets/food-chia.webp" alt="Nutritious Chia Seeds">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Omega-3 & Energy</span>
-                        <h2 class="food-name">Chia Seeds</h2>
-                        <p class="food-desc">One of the best plant-based sources of Omega-3 fatty acids, providing
-                            sustained energy and supporting brain function.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Omega-3 Rich Energy
-                        </div>
-                    </div>
+            <!-- Almonds -->
+            <div class="food-card reveal-right">
+                <div class="food-image-box">
+                    <img src="assets/food-almonds.webp" alt="Fresh Almonds">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Skin & Heart</span>
+                    <h2 class="food-name">Almonds</h2>
+                    <p class="food-desc">Almonds are a fantastic source of Vitamin E and antioxidants that protect
+                        your skin from aging and improve arterial health.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Vitamin E Powerhouse
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Oats -->
-                <div class="food-card reveal">
-                    <div class="food-image-box">
-                        <img src="assets/food-oats.webp" alt="Healthy Oats">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Cholesterol</span>
-                        <h2 class="food-name">Oats</h2>
-                        <p class="food-desc">Contains beta-glucan fiber, which is known for its ability to lower
-                            cholesterol and keep you feeling full for longer.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Beta-Glucan Fiber
-                        </div>
-                    </div>
+            <!-- Chia Seeds -->
+            <div class="food-card reveal-left">
+                <div class="food-image-box">
+                    <img src="assets/food-chia.webp" alt="Nutritious Chia Seeds">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Omega-3 & Energy</span>
+                    <h2 class="food-name">Chia Seeds</h2>
+                    <p class="food-desc">One of the best plant-based sources of Omega-3 fatty acids, providing
+                        sustained energy and supporting brain function.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Omega-3 Rich Energy
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Salmon -->
-                <div class="food-card reveal-left">
-                    <div class="food-image-box">
-                        <img src="assets/food-salmon.webp" alt="Fresh Salmon Fillet">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Heart & Brain</span>
-                        <h2 class="food-name">Salmon</h2>
-                        <p class="food-desc">Rich in Omega-3 fatty acids, salmon is a powerhouse for reducing
-                            inflammation, supporting heart health, and boosting cognitive function.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Essential Omega-3 Source
-                        </div>
-                    </div>
+            <!-- Oats -->
+            <div class="food-card reveal">
+                <div class="food-image-box">
+                    <img src="assets/food-oats.webp" alt="Healthy Oats">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Cholesterol</span>
+                    <h2 class="food-name">Oats</h2>
+                    <p class="food-desc">Contains beta-glucan fiber, which is known for its ability to lower
+                        cholesterol and keep you feeling full for longer.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Beta-Glucan Fiber
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Greek Yogurt -->
-                <div class="food-card reveal">
-                    <div class="food-image-box">
-                        <img src="assets/food-yogurt.webp" alt="Creamy Greek Yogurt">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Gut Health</span>
-                        <h2 class="food-name">Greek Yogurt</h2>
-                        <p class="food-desc">Packed with probiotics and high-quality protein, Greek yogurt supports a
-                            healthy microbiome and helps maintain muscle mass.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Probiotic Muscle Build
-                        </div>
-                    </div>
+            <!-- Salmon -->
+            <div class="food-card reveal-left">
+                <div class="food-image-box">
+                    <img src="assets/food-salmon.webp" alt="Fresh Salmon Fillet">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Heart & Brain</span>
+                    <h2 class="food-name">Salmon</h2>
+                    <p class="food-desc">Rich in Omega-3 fatty acids, salmon is a powerhouse for reducing
+                        inflammation, supporting heart health, and boosting cognitive function.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Essential Omega-3 Source
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Sweet Potato -->
-                <div class="food-card reveal-right">
-                    <div class="food-image-box">
-                        <img src="assets/food-sweet-potato.webp" alt="Roasted Sweet Potato">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Vision & Immunity</span>
-                        <h2 class="food-name">Sweet Potato</h2>
-                        <p class="food-desc">An excellent source of beta-carotene, which the body converts to Vitamin A
-                            to support eye health, skin, and immune function.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Beta-Carotene Boost
-                        </div>
-                    </div>
+            <!-- Greek Yogurt -->
+            <div class="food-card reveal">
+                <div class="food-image-box">
+                    <img src="assets/food-yogurt.webp" alt="Creamy Greek Yogurt">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Gut Health</span>
+                    <h2 class="food-name">Greek Yogurt</h2>
+                    <p class="food-desc">Packed with probiotics and high-quality protein, Greek yogurt supports a
+                        healthy microbiome and helps maintain muscle mass.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Probiotic Muscle Build
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Dark Chocolate -->
-                <div class="food-card reveal-left">
-                    <div class="food-image-box">
-                        <img src="assets/food-dark-chocolate.webp" alt="Pure Dark Chocolate">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Mood & Antioxidants</span>
-                        <h2 class="food-name">Dark Chocolate</h2>
-                        <p class="food-desc">High in cocoa flavanols, dark chocolate can improve blood flow, lower blood
-                            pressure, and naturally enhance your mood.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Flavonoids & Mood Lift
-                        </div>
-                    </div>
+            <!-- Sweet Potato -->
+            <div class="food-card reveal-right">
+                <div class="food-image-box">
+                    <img src="assets/food-sweet-potato.webp" alt="Roasted Sweet Potato">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Vision & Immunity</span>
+                    <h2 class="food-name">Sweet Potato</h2>
+                    <p class="food-desc">An excellent source of beta-carotene, which the body converts to Vitamin A
+                        to support eye health, skin, and immune function.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Beta-Carotene Boost
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Garlic -->
-                <div class="food-card reveal-right">
-                    <div class="food-image-box">
-                        <img src="assets/food-garlic.webp" alt="Fresh Garlic Bulbs">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Immunity Shield</span>
-                        <h2 class="food-name">Garlic</h2>
-                        <p class="food-desc">A natural antibiotic and immune system powerhouse, garlic contains allicin
-                            which helps fight infections and supports heart health.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Antibacterial & Antiviral
-                        </div>
-                    </div>
+            <!-- Dark Chocolate -->
+            <div class="food-card reveal-left">
+                <div class="food-image-box">
+                    <img src="assets/food-dark-chocolate.webp" alt="Pure Dark Chocolate">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Mood & Antioxidants</span>
+                    <h2 class="food-name">Dark Chocolate</h2>
+                    <p class="food-desc">High in cocoa flavanols, dark chocolate can improve blood flow, lower blood
+                        pressure, and naturally enhance your mood.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Flavonoids & Mood Lift
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Green Tea -->
-                <div class="food-card reveal-left">
-                    <div class="food-image-box">
-                        <img src="assets/food-green-tea.webp" alt="Premium Green Tea">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Metabolism Boost</span>
-                        <h2 class="food-name">Green Tea</h2>
-                        <p class="food-desc">Rich in polyphenols and catechins, green tea boosts metabolism, enhances
-                            fat burning, and provides a clean energy focus without the crash.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Antioxidant Powerhouse
-                        </div>
-                    </div>
+            <!-- Garlic -->
+            <div class="food-card reveal-right">
+                <div class="food-image-box">
+                    <img src="assets/food-garlic.webp" alt="Fresh Garlic Bulbs">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Immunity Shield</span>
+                    <h2 class="food-name">Garlic</h2>
+                    <p class="food-desc">A natural antibiotic and immune system powerhouse, garlic contains allicin
+                        which helps fight infections and supports heart health.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Antibacterial & Antiviral
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Quinoa -->
-                <div class="food-card reveal">
-                    <div class="food-image-box">
-                        <img src="assets/food-quinoa.webp" alt="Organic Quinoa Grains">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Complete Protein</span>
-                        <h2 class="food-name">Quinoa</h2>
-                        <p class="food-desc">One of the few plant-based foods that contain all nine essential amino
-                            acids. High in fiber, magnesium, and B vitamins for sustained energy.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Gluten-Free Nutrient Gold
-                        </div>
-                    </div>
+            <!-- Green Tea -->
+            <div class="food-card reveal-left">
+                <div class="food-image-box">
+                    <img src="assets/food-green-tea.webp" alt="Premium Green Tea">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Metabolism Boost</span>
+                    <h2 class="food-name">Green Tea</h2>
+                    <p class="food-desc">Rich in polyphenols and catechins, green tea boosts metabolism, enhances
+                        fat burning, and provides a clean energy focus without the crash.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Antioxidant Powerhouse
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Extra Virgin Olive Oil -->
-                <div class="food-card reveal-right">
-                    <div class="food-image-box">
-                        <img src="assets/food-olive-oil.webp" alt="Premium Olive Oil">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Heart Health</span>
-                        <h2 class="food-name">Olive Oil</h2>
-                        <p class="food-desc">The 'Liquid Gold' of the Mediterranean diet. Loaded with healthy
-                            monounsaturated fats and powerful antioxidants for cellular protection.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Healthy Mono-Fats
-                        </div>
-                    </div>
+            <!-- Quinoa -->
+            <div class="food-card reveal">
+                <div class="food-image-box">
+                    <img src="assets/food-quinoa.webp" alt="Organic Quinoa Grains">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Complete Protein</span>
+                    <h2 class="food-name">Quinoa</h2>
+                    <p class="food-desc">One of the few plant-based foods that contain all nine essential amino
+                        acids. High in fiber, magnesium, and B vitamins for sustained energy.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Gluten-Free Nutrient Gold
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Dragon Fruit -->
-                <div class="food-card reveal-left">
-                    <div class="food-image-box">
-                        <img src="assets/food-dragonfruit.webp" alt="Fresh Dragon Fruit">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Antioxidants</span>
-                        <h2 class="food-name">Dragon Fruit</h2>
-                        <p class="food-desc">A visually stunning superfruit packed with phytonutrients and magnesium,
-                            promoting healthy gut bacteria and glowing skin.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Mineral-Rich Superfruit
-                        </div>
-                    </div>
+            <!-- Extra Virgin Olive Oil -->
+            <div class="food-card reveal-right">
+                <div class="food-image-box">
+                    <img src="assets/food-olive-oil.webp" alt="Premium Olive Oil">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Heart Health</span>
+                    <h2 class="food-name">Olive Oil</h2>
+                    <p class="food-desc">The 'Liquid Gold' of the Mediterranean diet. Loaded with healthy
+                        monounsaturated fats and powerful antioxidants for cellular protection.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Healthy Mono-Fats
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Beetroot -->
-                <div class="food-card reveal">
-                    <div class="food-image-box">
-                        <img src="assets/food-beetroot.webp" alt="Fresh Beetroot">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Blood & Heart</span>
-                        <h2 class="food-name">Beetroot</h2>
-                        <p class="food-desc">Rich in dietary nitrates, beetroot helps improve blood flow, lower blood
-                            pressure, and boost physical performance.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Natural Stamina Booster
-                        </div>
-                    </div>
+            <!-- Dragon Fruit -->
+            <div class="food-card reveal-left">
+                <div class="food-image-box">
+                    <img src="assets/food-dragonfruit.webp" alt="Fresh Dragon Fruit">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Antioxidants</span>
+                    <h2 class="food-name">Dragon Fruit</h2>
+                    <p class="food-desc">A visually stunning superfruit packed with phytonutrients and magnesium,
+                        promoting healthy gut bacteria and glowing skin.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Mineral-Rich Superfruit
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Kale -->
-                <div class="food-card reveal-right">
-                    <div class="food-image-box">
-                        <img src="assets/food-kale.webp" alt="Fresh Kale">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Bone & Eye Health</span>
-                        <h2 class="food-name">Kale</h2>
-                        <p class="food-desc">The 'King of Greens' is incredibly nutrient-dense, providing massive
-                            amounts of Vitamin K, A, and C for overall vitality.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Ultra Vitamin-K Support
-                        </div>
-                    </div>
+            <!-- Beetroot -->
+            <div class="food-card reveal">
+                <div class="food-image-box">
+                    <img src="assets/food-beetroot.webp" alt="Fresh Beetroot">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Blood & Heart</span>
+                    <h2 class="food-name">Beetroot</h2>
+                    <p class="food-desc">Rich in dietary nitrates, beetroot helps improve blood flow, lower blood
+                        pressure, and boost physical performance.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Natural Stamina Booster
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Pumpkin Seeds -->
-                <div class="food-card reveal-left">
-                    <div class="food-image-box">
-                        <img src="assets/food-pumpkinseeds.webp" alt="Roasted Pumpkin Seeds">
-                    </div>
-                    <div class="food-content">
-                        <span class="food-tag">Zinc & Magnesium</span>
-                        <h2 class="food-name">Pumpkin Seeds</h2>
-                        <p class="food-desc">Tiny but mighty seeds that are an excellent source of zinc and magnesium,
-                            essential for immune support and restful sleep.</p>
-                        <div class="food-benefit">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Essential Mineral Power
-                        </div>
-                    </div>
+            <!-- Kale -->
+            <div class="food-card reveal-right">
+                <div class="food-image-box">
+                    <img src="assets/food-kale.webp" alt="Fresh Kale">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Bone & Eye Health</span>
+                    <h2 class="food-name">Kale</h2>
+                    <p class="food-desc">The 'King of Greens' is incredibly nutrient-dense, providing massive
+                        amounts of Vitamin K, A, and C for overall vitality.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Ultra Vitamin-K Support
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-                <!-- Placeholder for daily update -->
-                <div class="food-card reveal"
-                    style="border: 2px dashed rgba(0,0,0,0.1); background: transparent; display: flex; align-items: center; justify-content: center; min-height: 400px;">
-                    <div style="text-align: center; color: var(--text-light); padding: 2rem;">
-                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">🥗</div>
-                        <h3 style="font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--text-color);">
-                            Coming Soon!</h3>
-                        <p>We add fresh superfood insights regularly to keep your shopping smart and healthy.</p>
-                    </div>
+            <!-- Pumpkin Seeds -->
+            <div class="food-card reveal-left">
+                <div class="food-image-box">
+                    <img src="assets/food-pumpkinseeds.webp" alt="Roasted Pumpkin Seeds">
                 </div>
+                <div class="food-content">
+                    <span class="food-tag">Zinc & Magnesium</span>
+                    <h2 class="food-name">Pumpkin Seeds</h2>
+                    <p class="food-desc">Tiny but mighty seeds that are an excellent source of zinc and magnesium,
+                        essential for immune support and restful sleep.</p>
+                    <div class="food-benefit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        Zinc & Magnesium Rich
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
+                        class="food-cta" target="_blank">
+                        <span>Add to List</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Placeholder for daily update -->
+            <div class="food-card reveal"
+                style="border: 2px dashed rgba(0,0,0,0.1); background: transparent; display: flex; align-items: center; justify-content: center; min-height: 400px;">
+                <div style="text-align: center; color: var(--text-light); padding: 2rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">🥗</div>
+                    <h3 style="font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--text-color);">
+                        Coming Soon!</h3>
+                    <p>We add fresh superfood insights regularly to keep your shopping smart and healthy.</p>
+                </div>
+            </div>
             </div>
         </section>
 
