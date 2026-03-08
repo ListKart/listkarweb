@@ -418,6 +418,20 @@ section>.container>p.lead-text {
     align-items: center;
 }
 
+.hero-title {
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
 @media (max-width: 992px) {
     .hero-title {
         font-size: 3.5rem;
