@@ -1629,3 +1629,18 @@ footer {
         font-size: 2.5rem;
     }
 }
+
+/* Brand Colors for Typography */
+.brand-list {
+    color: var(--primary-color);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.brand-kart {
+    color: var(--accent-color);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
