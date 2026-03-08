@@ -1,0 +1,5 @@
+Contact: mailto:security@getlistkart.com
+Expires: 2027-01-01T00:00:00.000Z
+Preferred-Languages: en, hi
+Canonical: https://getlistkart.com/.well-known/security.txt
+Policy: https://getlistkart.com/privacy.html

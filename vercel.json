@@ -1,1 +1,42 @@
-{"version":2,"cleanUrls":true,"trailingSlash":false,"rewrites":[{"source":"/join/:path*","destination":"/join/index.html"}]}
+{
+    "version": 2,
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Content-Security-Policy",
+                    "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://flagcdn.com https://i.ibb.co; font-src 'self' https://fonts.gstatic.com; connect-src 'self';"
+                },
+                {
+                    "key": "X-Frame-Options",
+                    "value": "DENY"
+                },
+                {
+                    "key": "X-Content-Type-Options",
+                    "value": "nosniff"
+                },
+                {
+                    "key": "Referrer-Policy",
+                    "value": "strict-origin-when-cross-origin"
+                },
+                {
+                    "key": "Permissions-Policy",
+                    "value": "camera=(), microphone=(), geolocation=()"
+                }
+            ]
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/README_PRIVATE.md",
+            "destination": "/404.html"
+        },
+        {
+            "source": "/join/:path*",
+            "destination": "/join/index.html"
+        }
+    ]
+}
