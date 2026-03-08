@@ -830,12 +830,21 @@ section>.container>p.lead-text {
     }
 }
 
-position: relative;
-overflow: hidden;
-background: var(--white);
-border: 1px solid rgba(0, 0, 0, 0.05);
-box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-padding: 1.5rem !important;
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem !important;
 }
 
 .feature-icon {
