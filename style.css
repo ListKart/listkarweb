@@ -1729,7 +1729,7 @@ footer {
 }
 
 .footer-cta-btn img {
-    height: 60px; /* Standard badge height */
+    height: 45px; /* Matches the official badge scale */
     width: auto;
 }
 
