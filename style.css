@@ -1721,25 +1721,16 @@ footer {
 .footer-cta-btn {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    background: #000;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .footer-cta-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    background: #111;
 }
 
 .footer-cta-btn img {
-    height: 24px;
+    height: 60px; /* Standard badge height */
+    width: auto;
 }
 
 .footer-heading {
