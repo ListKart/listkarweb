@@ -46,9 +46,9 @@
 
         .food-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2.5rem;
-            padding-bottom: 100px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding-bottom: 80px;
         }
 
         .food-card {
@@ -164,13 +164,22 @@
             height: 20px;
         }
 
-        @media (max-width: 768px) {
-            .page-title {
-                font-size: 2.75rem;
+        @media (max-width: 992px) {
+            .food-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.5rem;
             }
+            .page-title {
+                font-size: 3.25rem;
+            }
+        }
 
+        @media (max-width: 600px) {
             .food-grid {
                 grid-template-columns: 1fr;
+            }
+            .page-title {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -350,7 +359,6 @@
                         </a>
                     </div>
                 </div>
-            </div>
 
             <!-- Blueberries -->
             <div class="food-card reveal">
@@ -380,7 +388,6 @@
                         </svg>
                     </a>
                 </div>
-            </div>
             </div>
 
             <!-- Ginger -->
@@ -412,7 +419,6 @@
                     </a>
                 </div>
             </div>
-            </div>
 
             <!-- Walnut -->
             <div class="food-card reveal-left">
@@ -443,7 +449,6 @@
                     </a>
                 </div>
             </div>
-            </div>
 
             <!-- Spinach -->
             <div class="food-card reveal">
@@ -473,7 +478,6 @@
                         </svg>
                     </a>
                 </div>
-            </div>
             </div>
 
             <!-- Turmeric -->
@@ -994,10 +998,9 @@
                     <h3 style="font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--text-color);">
                         Coming Soon!</h3>
                     <p>We add fresh superfood insights regularly to keep your shopping smart and healthy.</p>
-                </div>
             </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
         <!-- CTA Section -->
         <section style="background: var(--bg-secondary); padding: 100px 0; text-align: center;">
