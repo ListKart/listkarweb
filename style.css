@@ -1704,8 +1704,12 @@ footer {
     line-height: 1;
 }
 
-.footer-brand .logo img {
-    height: 38px;
+.footer-brand .logo-footer-refined {
+    margin-bottom: 1.5rem;
+}
+
+.footer-brand .logo-footer-refined img {
+    height: 44px; /* Slightly larger for the icon-only version */
     width: auto;
     object-fit: contain;
 }
@@ -1714,23 +1718,28 @@ footer {
     color: var(--text-light);
     line-height: 1.7;
     margin-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 1.05rem; /* Slightly larger for readability */
     text-align: left;
+    max-width: 320px;
 }
 
 .footer-cta-btn {
     display: inline-flex;
     align-items: center;
     transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: transparent;
+    padding: 0;
+    border: none;
 }
 
 .footer-cta-btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.02);
 }
 
 .footer-cta-btn img {
-    height: 60px; /* Increased to 60px for premium visibility */
+    height: 65px; /* Boosted to 65px with ZERO padding for maximum impact */
     width: auto;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
 }
 
 .footer-heading {
