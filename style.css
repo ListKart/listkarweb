@@ -1729,7 +1729,7 @@ footer {
 }
 
 .footer-cta-btn img {
-    height: 55px; /* Increased for better visibility and premium feel */
+    height: 60px; /* Increased to 60px for premium visibility */
     width: auto;
 }
 
