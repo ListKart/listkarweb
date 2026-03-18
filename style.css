@@ -1731,7 +1731,7 @@ footer {
 }
 
 .footer-cta-btn img {
-    height: 65px; /* Optimal size for the new transparent/unpadded badge */
+    height: 85px; /* Increased to account for the official image's natural padding */
     width: auto;
     display: block;
 }
