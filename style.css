@@ -1704,12 +1704,8 @@ footer {
     line-height: 1;
 }
 
-.footer-brand .logo-footer-refined {
-    margin-bottom: 1.5rem;
-}
-
-.footer-brand .logo-footer-refined img {
-    height: 44px; /* Slightly larger for the icon-only version */
+.footer-brand .logo img {
+    height: 38px;
     width: auto;
     object-fit: contain;
 }
@@ -1718,28 +1714,26 @@ footer {
     color: var(--text-light);
     line-height: 1.7;
     margin-bottom: 2rem;
-    font-size: 1.05rem; /* Slightly larger for readability */
+    font-size: 1rem;
     text-align: left;
-    max-width: 320px;
 }
 
 .footer-cta-btn {
     display: inline-flex;
     align-items: center;
     transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    background: transparent;
-    padding: 0;
-    border: none;
+    background: transparent !important;
+    padding: 0 !important;
 }
 
 .footer-cta-btn:hover {
-    transform: translateY(-3px) scale(1.02);
+    transform: translateY(-3px);
 }
 
 .footer-cta-btn img {
-    height: 65px; /* Boosted to 65px with ZERO padding for maximum impact */
+    height: 65px; /* Optimal size for the new transparent/unpadded badge */
     width: auto;
-    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+    display: block;
 }
 
 .footer-heading {
