@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="mr">
+ <head>
+  <meta content="4Bc-6onxXfemoARrVTdS7U-xKGocVZ-xdKKPmxgBdI4" name="google-site-verification"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Discover powerful Superfoods and healthy grocery shopping tips with ListKart. Improve your heart health, immunity, and brain power." name="description"/>
+  <meta content="superfoods, healthy grocery list, food facts, nutrition tips, smart shopping, heart healthy foods" name="keywords"/>
+  <title data-i18n="food-facts_page_title">
+   Smart Food Facts &amp; Superfoods Guide - ListKart
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Outfit:wght@500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="../style.css" rel="stylesheet"/>
+  <link href="../assets/logo.webp" rel="icon" type="image/png"/>
+  <style>
+   .page-header {
+            padding-top: 160px;
+            padding-bottom: 80px;
+            background: radial-gradient(circle at top right, rgba(25, 152, 58, 0.05), transparent),
+                radial-gradient(circle at top left, rgba(255, 152, 0, 0.05), transparent);
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 4rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+        }
+
+        .page-subtitle {
+            font-size: 1.35rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding-bottom: 80px;
+        }
+
+        .food-card {
+            background: var(--white);
+            border-radius: 32px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .food-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.08);
+            border-color: var(--primary-color);
+        }
+
+        .food-image-box {
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .food-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .food-card:hover .food-image-box img {
+            transform: scale(1.1);
+        }
+
+        .food-content {
+            padding: 2.5rem;
+            flex-grow: 1;
+        }
+
+        .food-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: var(--primary-soft);
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .food-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .food-desc {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .food-benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+
+        .food-benefit svg {
+            width: 18px;
+            height: 18px;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .food-cta {
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--primary-gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px var(--primary-glow);
+        }
+
+        .food-cta:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 20px var(--primary-glow);
+            filter: brightness(1.1);
+        }
+
+        .food-cta svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media (max-width: 992px) {
+            .food-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+            .page-title {
+                font-size: 3.25rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .food-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-title {
+                font-size: 2.5rem;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <a class="logo" href="../index.html">
+     <img alt="ListKart Logo" src="../assets/logo.webp"/>
+     <span>
+      <span class="brand-list" data-i18n="food-facts_span_1">
+       List
+      </span>
+      <span class="brand-kart" data-i18n="food-facts_span_2">
+       Kart
+      </span>
+     </span>
+    </a>
+    <div class="mobile-toggle" id="mobile-toggle">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+    </div>
+    <nav class="nav-menu">
+     <div class="nav-item">
+      <a class="nav-link" data-i18n="food-facts_a_1" href="../index.html">
+       Home
+      </a>
+     </div>
+     <!-- Product Dropdown -->
+     <div class="nav-item">
+      <div class="dropdown-trigger">
+       Product
+       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+        <polyline points="6 9 12 15 18 9">
+        </polyline>
+       </svg>
+      </div>
+      <div class="dropdown-menu">
+       <a class="dropdown-item" href="../index.html#about">
+        <div class="dropdown-icon">
+         📖
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="food-facts_span_6">
+          About ListKart
+         </span>
+         <span class="dropdown-desc" data-i18n="food-facts_span_7">
+          Our mission and story
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../index.html#features">
+        <div class="dropdown-icon">
+         ✨
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="food-facts_span_8">
+          All Features
+         </span>
+         <span class="dropdown-desc" data-i18n="food-facts_span_9">
+          Smart lists, voice &amp; scan
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../index.html#languages">
+        <div class="dropdown-icon">
+         🌐
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="food-facts_span_10">
+          53+ Languages
+         </span>
+         <span class="dropdown-desc" data-i18n="food-facts_span_11">
+          Shop in your native tongue
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../compare-grocery-list-apps.html">
+        <div class="dropdown-icon">
+         📊
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="food-facts_span_12">
+          Compare Apps
+         </span>
+         <span class="dropdown-desc" data-i18n="food-facts_span_13">
+          ListKart vs. The Others
+         </span>
+        </div>
+       </a>
+      </div>
+     </div>
+     <!-- Solutions Dropdown -->
+     <div class="nav-item">
+      <div class="dropdown-trigger">
+       Solutions
+       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+        <polyline points="6 9 12 15 18 9">
+        </polyline>
+       </svg>
+      </div>
+      <div class="dropdown-menu">
+       <a class="dropdown-item" href="../index.html#features-sync">
+        <div class="dropdown-icon">
+         👨‍👩‍👧
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="food-facts_span_14">
+          Family Sync
+         </span>
+         <span class="dropdown-desc" data-i18n="food-facts_span_15">
+          Share lists with partners
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../index.html#features-budget">
+        <div class="dropdown-icon">
+         💰
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="food-facts_span_16">
+          Budget Tracker
+         </span>
+         <span class="dropdown-desc" data-i18n="food-facts_span_17">
+          Monitor your spending
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../index.html#features-offline">
+        <div class="dropdown-icon">
+         📴
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="food-facts_span_18">
+          Offline Mode
+         </span>
+         <span class="dropdown-desc" data-i18n="food-facts_span_19">
+          Works without internet
+         </span>
+        </div>
+       </a>
+      </div>
+     </div>
+     <!-- Resources Dropdown -->
+     <div class="nav-item">
+      <div class="dropdown-trigger">
+       Resources
+       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+        <polyline points="6 9 12 15 18 9">
+        </polyline>
+       </svg>
+      </div>
+      <div class="dropdown-menu">
+       <a class="dropdown-item" href="../food-facts.html">
+        <div class="dropdown-icon">
+         🍏
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="food-facts_span_20">
+          Smart Food Facts
+         </span>
+         <span class="dropdown-desc" data-i18n="food-facts_span_21">
+          Health &amp; Superfoods guide
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../blog.html">
+        <div class="dropdown-icon">
+         ✍️
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="food-facts_span_22">
+          Our Blog
+         </span>
+         <span class="dropdown-desc" data-i18n="food-facts_span_23">
+          Shopping tips &amp; updates
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../grocery-list-app.html">
+        <div class="dropdown-icon">
+         🛒
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="food-facts_span_24">
+          Shopping Guide
+         </span>
+         <span class="dropdown-desc" data-i18n="food-facts_span_25">
+          Best grocery list app 2026
+         </span>
+        </div>
+       </a>
+      </div>
+     </div>
+     <div class="nav-item">
+      <a class="nav-link" data-i18n="food-facts_a_12" href="../faq.html">
+       FAQ
+      </a>
+     </div>
+     <a class="btn-nav" data-i18n="food-facts_a_13" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" style="margin-left: 1rem;" target="_blank">
+      Download App
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main>
+   <section class="page-header">
+    <div class="container">
+     <h1 class="page-title" data-i18n="food-facts_h1_0">
+      Smart Food Facts
+     </h1>
+     <p class="page-subtitle" data-i18n="food-facts_p_0">
+      Elevate your grocery shopping with science-backed nutrition insights. Discover
+                    superfoods that fuel your body and mind.
+     </p>
+    </div>
+   </section>
+   <section class="container">
+    <div class="food-grid">
+     <!-- Papaya -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Fresh Halved Papaya" src="../assets/food-papaya.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_26">
+        Digestion &amp; Skin
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_0">
+        Papaya
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_1">
+        Contains papain, an enzyme that aids digestion, and high levels of Vitamin C and lycopene for glowing, healthy skin.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Digestive Enzyme Papain
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_27">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Flaxseeds -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Brown Flaxseeds" src="../assets/food-flaxseeds.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_28">
+        Fiber &amp; Lignans
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_1">
+        Flaxseeds
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_2">
+        An exceptional source of lignans (which reduce cancer risk) and plant-based ALA Omega-3 fats for heart health.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        High Lignan content
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_29">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Artichokes -->
+     <div class="food-card reveal-right">
+      <div class="food-image-box">
+       <img alt="Fresh Green Artichoke" src="../assets/food-artichoke.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_30">
+        Liver Detox &amp; Prebiotics
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_2">
+        Artichokes
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_3">
+        High in cynarin and silymarin, artichokes support liver health and are one of the best whole-food sources of prebiotic fiber.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Supports Liver Function
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_31">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Cacao Nibs -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Pure Cacao Nibs" src="../assets/food-cacao-nibs.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_32">
+        Pure Antioxidants
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_3">
+        Cacao Nibs
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_4">
+        The purest form of chocolate. These 'nature's chocolate chips' are low in sugar and high in flavanols that boost mood and focus.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Intense Flavanols
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_33">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Wheatgrass -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Fresh Wheatgrass Pot" src="../assets/food-wheatgrass.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_34">
+        Chlorophyll Detox
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_4">
+        Wheatgrass
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_5">
+        A concentrated source of chlorophyll, amino acids, and enzymes that help alkaline the body and boost hemoglobin production.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        High Chlorophyll Density
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_35">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Kiwi -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Fresh Sliced Kiwi" src="../assets/food-kiwi.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_36">
+        Vitamin C &amp; Digestion
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_5">
+        Kiwi
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_6">
+        A digestive powerhouse containing actinidin and more Vitamin C than an orange, aiding in protein breakdown and immune support.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        High Vitamin C Boost
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_37">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Spirulina -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Spirulina Powder" src="../assets/food-spirulina.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_38">
+        Plant Protein &amp; Iron
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_6">
+        Spirulina
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_7">
+        Often called a 'superfood of the future', this blue-green algae is a complete protein source packed with iron and B-vitamins.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Concentrated Bio-Nutrients
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_39">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Matcha -->
+     <div class="food-card reveal-right">
+      <div class="food-image-box">
+       <img alt="Whisked Matcha Tea" src="../assets/food-matcha.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_40">
+        Focus &amp; Anti-Aging
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_7">
+        Matcha
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_8">
+        A concentrated green tea powder providing high levels of L-theanine for calm alertness and 10x the antioxidants of regular green tea.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Elite Antioxidant Source
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_41">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Lentils -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Red Lentils in Bowl" src="../assets/food-lentils.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_42">
+        Fiber &amp; Sustained Energy
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_8">
+        Lentils
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_9">
+        A heart-healthy legume that's high in folate, fiber, and iron. Lentils promote stable blood sugar and long-lasting energy.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Stable Energy Release
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_43">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Hemp Seeds -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Shelled Hemp Hearts" src="../assets/food-hempseeds.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_44">
+        Perfect Ratio Omega-3/6
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_9">
+        Hemp Seeds
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_10">
+        Rich in essential fatty acids and minerals like magnesium and zinc. Hemp seeds support skin health and reduce inflammation.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Anti-inflammatory Minerals
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_45">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Pomegranate -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Fresh Pomegranate Seeds" src="../assets/food-pomegranate.png"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_46">
+        Antioxidants &amp; Heart
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_10">
+        Pomegranate
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_11">
+        Packed with punicalagins and punicic acid, pomegranates offer powerful anti-inflammatory effects and support cardiovascular health.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Powerful Punicalagins
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_47">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Brazil Nuts -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Raw Brazil Nuts" src="../assets/food-brazil-nuts.png"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_48">
+        Selenium &amp; Thyroid
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_11">
+        Brazil Nuts
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_12">
+        Nature's richest source of selenium, just one or two nuts a day can meet your daily requirement for healthy thyroid function.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Optimal Selenium Source
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_49">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Kimchi -->
+     <div class="food-card reveal-right">
+      <div class="food-image-box">
+       <img alt="Traditional Kimchi" src="../assets/food-kimchi.png"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_50">
+        Probiotics &amp; Gut
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_12">
+        Kimchi
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_13">
+        A fermented superfood containing 'good' bacteria that boost digestion, improve immunity, and may even aid in weight management.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Live Probiotic Cultures
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_51">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Asparagus -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Fresh Green Asparagus" src="../assets/food-asparagus.png"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_52">
+        Folate &amp; Prebiotics
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_13">
+        Asparagus
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_14">
+        A great source of folate and fiber, asparagus acts as a prebiotic, feeding the beneficial bacteria in your gut for a healthy microbiome.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Prebiotic Fiber Boost
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_53">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Goji Berries -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Dried Goji Berries" src="../assets/food-goji-berries.png"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_54">
+        Vision &amp; Vitality
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_14">
+        Goji Berries
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_15">
+        Known for their high levels of zeaxanthin, these berries support eye health and provide a dense source of vitamins A and C.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Zeaxanthin Vision Support
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_55">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Avocado -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Fresh Avocado" src="../assets/food-avocado.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_56">
+        Heart Health
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_15">
+        Avocado
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_16">
+        Packed with monounsaturated fats, avocados help reduce bad cholesterol
+                            levels and lower the risk of heart disease.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Rich in Fiber &amp; Potassium
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_57">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Blueberries -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Fresh Blueberries" src="../assets/food-blueberries.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_58">
+        Brain Power
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_16">
+        Blueberries
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_17">
+        Often called 'Brain Berries', they are loaded with antioxidants that delay
+                        brain aging and improve memory.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        High in Anthocyanins
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_59">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Ginger -->
+     <div class="food-card reveal-right">
+      <div class="food-image-box">
+       <img alt="Fresh Ginger" src="../assets/food-ginger.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_60">
+        Immunity Booster
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_17">
+        Ginger
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_18">
+        A natural anti-inflammatory powerhouse that aids digestion and strengthens
+                        your immune system against common colds.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Powerful Anti-inflammatory
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_61">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Walnut -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Pure Walnuts" src="../assets/food-walnut.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_62">
+        Mental Focus
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_18">
+        Walnuts
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_19">
+        Walnuts have higher antioxidant activity than any other common nut,
+                        significantly improving cognitive function.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        The Ultimate Brain Nut
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_63">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Spinach -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Crisp Spinach" src="../assets/food-spinach.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_64">
+        Energy &amp; Strength
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_19">
+        Spinach
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_20">
+        High in iron and vitamins, spinach is essential for energy production and
+                        maintaining healthy blood pressure levels.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Iron-Rich Power Food
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_65">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Turmeric -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Vibrant Turmeric" src="../assets/food-turmeric.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_66">
+        Inflammation
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_20">
+        Turmeric
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_21">
+        The 'Golden Spice' contains curcumin, a bioactive compound with powerful
+                        medicinal properties that fight chronic inflammation.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Natural Curcumin Defense
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_67">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Broccoli -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Fresh Broccoli" src="../assets/food-broccoli.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_68">
+        Detox &amp; Fiber
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_21">
+        Broccoli
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_22">
+        High in sulforaphane, broccoli supports the body's natural detoxification
+                        processes and promotes optimal digestive health.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Detoxifying Sulforaphane
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_69">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Almonds -->
+     <div class="food-card reveal-right">
+      <div class="food-image-box">
+       <img alt="Fresh Almonds" src="../assets/food-almonds.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_70">
+        Skin &amp; Heart
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_22">
+        Almonds
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_23">
+        Almonds are a fantastic source of Vitamin E and antioxidants that protect
+                        your skin from aging and improve arterial health.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Vitamin E Powerhouse
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_71">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Chia Seeds -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Nutritious Chia Seeds" src="../assets/food-chia.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_72">
+        Omega-3 &amp; Energy
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_23">
+        Chia Seeds
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_24">
+        One of the best plant-based sources of Omega-3 fatty acids, providing
+                        sustained energy and supporting brain function.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Omega-3 Rich Energy
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_73">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Oats -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Healthy Oats" src="../assets/food-oats.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_74">
+        Cholesterol
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_24">
+        Oats
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_25">
+        Contains beta-glucan fiber, which is known for its ability to lower
+                        cholesterol and keep you feeling full for longer.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Beta-Glucan Fiber
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_75">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Salmon -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Fresh Salmon Fillet" src="../assets/food-salmon.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_76">
+        Heart &amp; Brain
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_25">
+        Salmon
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_26">
+        Rich in Omega-3 fatty acids, salmon is a powerhouse for reducing
+                        inflammation, supporting heart health, and boosting cognitive function.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Essential Omega-3 Source
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_77">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Greek Yogurt -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Creamy Greek Yogurt" src="../assets/food-yogurt.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_78">
+        Gut Health
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_26">
+        Greek Yogurt
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_27">
+        Packed with probiotics and high-quality protein, Greek yogurt supports a
+                        healthy microbiome and helps maintain muscle mass.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Probiotic Muscle Build
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_79">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Sweet Potato -->
+     <div class="food-card reveal-right">
+      <div class="food-image-box">
+       <img alt="Roasted Sweet Potato" src="../assets/food-sweet-potato.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_80">
+        Vision &amp; Immunity
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_27">
+        Sweet Potato
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_28">
+        An excellent source of beta-carotene, which the body converts to Vitamin A
+                        to support eye health, skin, and immune function.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Beta-Carotene Boost
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_81">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Dark Chocolate -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Pure Dark Chocolate" src="../assets/food-dark-chocolate.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_82">
+        Mood &amp; Antioxidants
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_28">
+        Dark Chocolate
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_29">
+        High in cocoa flavanols, dark chocolate can improve blood flow, lower blood
+                        pressure, and naturally enhance your mood.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Flavonoids &amp; Mood Lift
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_83">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Garlic -->
+     <div class="food-card reveal-right">
+      <div class="food-image-box">
+       <img alt="Fresh Garlic Bulbs" src="../assets/food-garlic.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_84">
+        Immunity Shield
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_29">
+        Garlic
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_30">
+        A natural antibiotic and immune system powerhouse, garlic contains allicin
+                        which helps fight infections and supports heart health.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Antibacterial &amp; Antiviral
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_85">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Green Tea -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Premium Green Tea" src="../assets/food-green-tea.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_86">
+        Metabolism Boost
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_30">
+        Green Tea
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_31">
+        Rich in polyphenols and catechins, green tea boosts metabolism, enhances
+                        fat burning, and provides a clean energy focus without the crash.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Antioxidant Powerhouse
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_87">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Quinoa -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Organic Quinoa Grains" src="../assets/food-quinoa.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_88">
+        Complete Protein
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_31">
+        Quinoa
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_32">
+        One of the few plant-based foods that contain all nine essential amino
+                        acids. High in fiber, magnesium, and B vitamins for sustained energy.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Gluten-Free Nutrient Gold
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_89">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Extra Virgin Olive Oil -->
+     <div class="food-card reveal-right">
+      <div class="food-image-box">
+       <img alt="Premium Olive Oil" src="../assets/food-olive-oil.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_90">
+        Heart Health
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_32">
+        Olive Oil
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_33">
+        The 'Liquid Gold' of the Mediterranean diet. Loaded with healthy
+                        monounsaturated fats and powerful antioxidants for cellular protection.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Healthy Mono-Fats
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_91">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Dragon Fruit -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Fresh Dragon Fruit" src="../assets/food-dragonfruit.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_92">
+        Antioxidants
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_33">
+        Dragon Fruit
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_34">
+        A visually stunning superfruit packed with phytonutrients and magnesium,
+                        promoting healthy gut bacteria and glowing skin.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Mineral-Rich Superfruit
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_93">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Beetroot -->
+     <div class="food-card reveal">
+      <div class="food-image-box">
+       <img alt="Fresh Beetroot" src="../assets/food-beetroot.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_94">
+        Blood &amp; Heart
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_34">
+        Beetroot
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_35">
+        Rich in dietary nitrates, beetroot helps improve blood flow, lower blood
+                        pressure, and boost physical performance.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Natural Stamina Booster
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_95">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Kale -->
+     <div class="food-card reveal-right">
+      <div class="food-image-box">
+       <img alt="Fresh Kale" src="../assets/food-kale.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_96">
+        Bone &amp; Eye Health
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_35">
+        Kale
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_36">
+        The 'King of Greens' is incredibly nutrient-dense, providing massive
+                        amounts of Vitamin K, A, and C for overall vitality.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Ultra Vitamin-K Support
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_97">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Pumpkin Seeds -->
+     <div class="food-card reveal-left">
+      <div class="food-image-box">
+       <img alt="Roasted Pumpkin Seeds" src="../assets/food-pumpkinseeds.webp"/>
+      </div>
+      <div class="food-content">
+       <span class="food-tag" data-i18n="food-facts_span_98">
+        Zinc &amp; Magnesium
+       </span>
+       <h2 class="food-name" data-i18n="food-facts_h2_36">
+        Pumpkin Seeds
+       </h2>
+       <p class="food-desc" data-i18n="food-facts_p_37">
+        Tiny but mighty seeds that are an excellent source of zinc and magnesium,
+                        essential for immune support and restful sleep.
+       </p>
+       <div class="food-benefit">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+         </path>
+         <polyline points="22 4 12 14.01 9 11.01">
+         </polyline>
+        </svg>
+        Zinc &amp; Magnesium Rich
+       </div>
+       <a class="food-cta" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+        <span data-i18n="food-facts_span_99">
+         Add to List
+        </span>
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24">
+         <line x1="12" x2="12" y1="5" y2="19">
+         </line>
+         <line x1="5" x2="19" y1="12" y2="12">
+         </line>
+        </svg>
+       </a>
+      </div>
+     </div>
+     <!-- Placeholder for daily update -->
+     <div class="food-card reveal" style="border: 2px dashed rgba(0,0,0,0.1); background: transparent; display: flex; align-items: center; justify-content: center; min-height: 400px;">
+      <div style="text-align: center; color: var(--text-light); padding: 2rem;">
+       <div style="font-size: 3rem; margin-bottom: 1.5rem;">
+        🥗
+       </div>
+       <h3 data-i18n="food-facts_h3_0" style="font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--text-color);">
+        Coming Soon!
+       </h3>
+       <p data-i18n="food-facts_p_38">
+        We add fresh superfood insights regularly to keep your shopping smart and healthy.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- CTA Section -->
+   <section style="background: var(--bg-secondary); padding: 100px 0; text-align: center;">
+    <div class="container">
+     <h2 data-i18n="food-facts_h2_37" style="font-size: 2.5rem; margin-bottom: 1.5rem;">
+      Shop Smarter, Live Healthier
+     </h2>
+     <p data-i18n="food-facts_p_39" style="font-size: 1.2rem; color: var(--text-light); max-width: 600px; margin: 0 auto 3rem;">
+      Ready to
+                    upgrade your grocery habits? Download ListKart and start planning your healthy meals today.
+     </p>
+     <a class="btn btn-primary" data-i18n="food-facts_a_51" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+      <svg style="width: 24px; height: 24px;" viewbox="0 0 24 24">
+       <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" fill="currentColor">
+       </path>
+      </svg>
+      Download ListKart Now
+     </a>
+    </div>
+   </section>
+  </main>
+  <footer class="mega-footer">
+   <div class="container">
+    <div class="footer-grid">
+     <div class="footer-brand">
+      <a class="logo" href="../index.html">
+       <img alt="ListKart Logo" src="../assets/logo.webp"/>
+       <span>
+        <span class="brand-list" data-i18n="food-facts_span_101">
+         List
+        </span>
+        <span class="brand-kart" data-i18n="food-facts_span_102">
+         Kart
+        </span>
+       </span>
+      </a>
+      <p data-i18n="food-facts_p_40">
+       One of the world's most localized shopping list apps, supporting 53+ languages. 100% free and designed for everyone.
+      </p>
+      <a class="footer-cta-btn" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+       <img alt="Get it on Google Play" src="../assets/google-play-badge.png"/>
+      </a>
+     </div>
+     <div class="footer-col">
+      <h4 class="footer-heading" data-i18n="food-facts_h4_0">
+       Explore
+      </h4>
+      <ul class="footer-links">
+       <li>
+        <a data-i18n="food-facts_a_54" href="../index.html#about">
+         About Us
+        </a>
+       </li>
+       <li>
+        <a data-i18n="food-facts_a_55" href="../blog.html">
+         Our Blog
+        </a>
+       </li>
+       <li>
+        <a data-i18n="food-facts_a_56" href="../faq.html">
+         Common Questions
+        </a>
+       </li>
+       <li>
+        <a data-i18n="food-facts_a_57" href="../privacy.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a data-i18n="food-facts_a_58" href="../sitemap.xml">
+         Sitemap
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-col">
+      <h4 class="footer-heading" data-i18n="food-facts_h4_1">
+       Features
+      </h4>
+      <ul class="footer-links">
+       <li>
+        <a data-i18n="food-facts_a_59" href="../food-facts.html">
+         Smart Food Facts
+        </a>
+       </li>
+       <li>
+        <a data-i18n="food-facts_a_60" href="../compare-grocery-list-apps.html">
+         Compare Apps
+        </a>
+       </li>
+       <li>
+        <a data-i18n="food-facts_a_61" href="../grocery-list-app.html">
+         Shopping Guide
+        </a>
+       </li>
+       <li>
+        <a data-i18n="food-facts_a_62" href="../index.html#budget-tracker">
+         Budget Tracking
+        </a>
+       </li>
+       <li>
+        <a data-i18n="food-facts_a_63" href="../index.html#family-sync">
+         Real-time Sync
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-col">
+      <h4 class="footer-heading" data-i18n="food-facts_h4_2">
+       Global Support
+      </h4>
+      <div class="lang-grid-footer">
+       <ul class="footer-links">
+        <li>
+         <a data-i18n="food-facts_a_64" href="../index.html#languages">
+          English
+         </a>
+        </li>
+        <li>
+         <a data-i18n="food-facts_a_65" href="../index.html#languages">
+          हिन्दी
+         </a>
+        </li>
+        <li>
+         <a data-i18n="food-facts_a_66" href="../index.html#languages">
+          Español
+         </a>
+        </li>
+        <li>
+         <a data-i18n="food-facts_a_67" href="../index.html#languages">
+          Français
+         </a>
+        </li>
+       </ul>
+       <ul class="footer-links">
+        <li>
+         <a data-i18n="food-facts_a_68" href="../index.html#languages">
+          मराठी
+         </a>
+        </li>
+        <li>
+         <a data-i18n="food-facts_a_69" href="../index.html#languages">
+          తెలుగు
+         </a>
+        </li>
+        <li>
+         <a data-i18n="food-facts_a_70" href="../index.html#languages">
+          தமிழ்
+         </a>
+        </li>
+        <li>
+         <a data-i18n="food-facts_a_71" href="../index.html#languages">
+          View All
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p data-i18n="food-facts_p_41">
+      © 2026 ListKart. All rights reserved. Built with ❤️ for shoppers worldwide.
+     </p>
+     <div class="footer-legal-links">
+      <a data-i18n="food-facts_a_72" href="../privacy.html">
+       Privacy
+      </a>
+      <a data-i18n="food-facts_a_73" href="../faq.html">
+       FAQ
+      </a>
+      <a data-i18n="food-facts_a_74" href="../contact.html">
+       Contact
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script>
+   const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => observer.observe(el));
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+                header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+                header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Mobile dropdown toggle
+        document.querySelectorAll('.dropdown-trigger').forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    const parent = trigger.closest('.nav-item');
+                    parent.classList.toggle('mobile-active');
+                }
+            });
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileToggle) {
+                    mobileToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+  </script>
+ </body>
+</html>
