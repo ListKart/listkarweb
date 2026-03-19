@@ -1,41 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-  <loc>https://getlistkart.com/index.html</loc>
-  <changefreq>weekly</changefreq>
-  <priority>1.0</priority>
-</url>
+  <url>
+    <loc>https://getlistkart.com/index.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-<url>
-  <loc>https://getlistkart.com/grocery-list-app.html</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.9</priority>
-</url>
+  <url>
+    <loc>https://getlistkart.com/grocery-list-app.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
-<url>
-  <loc>https://getlistkart.com/food-facts.html</loc>
-  <changefreq>daily</changefreq>
-  <priority>0.9</priority>
-</url>
+  <url>
+    <loc>https://getlistkart.com/food-facts.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
 
-<url>
-  <loc>https://getlistkart.com/blog.html</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://getlistkart.com/blog.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-  <loc>https://getlistkart.com/faq.html</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://getlistkart.com/faq.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-  <loc>https://getlistkart.com/privacy.html</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.5</priority>
-</url>
+  <url>
+    <loc>https://getlistkart.com/privacy.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://getlistkart.com/compare-grocery-list-apps.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <url>
     <loc>https://getlistkart.com/blog/healthy-eating-on-a-budget-2026.html</loc>
@@ -60,55 +73,58 @@
 
   <url>
     <loc>https://getlistkart.com/blog/family-shared-grocery-list.html</loc>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://getlistkart.com/blog/slash-grocery-bill-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://getlistkart.com/blog/solo-developer-vision-listkart.html</loc>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-<url>
-  <loc>https://getlistkart.com/blog/ultimate-grocery-list-2026.html</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://getlistkart.com/blog/ultimate-grocery-list-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-  <loc>https://getlistkart.com/blog/best-shopping-list-app-2026.html</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://getlistkart.com/blog/best-shopping-list-app-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-  <loc>https://getlistkart.com/blog/budget-tracking-shopping-list.html</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://getlistkart.com/blog/budget-tracking-shopping-list.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-  <loc>https://getlistkart.com/blog/multilingual-shopping-list.html</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://getlistkart.com/blog/multilingual-shopping-list.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-  <loc>https://getlistkart.com/join/index.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.5</priority>
-</url>
+  <url>
+    <loc>https://getlistkart.com/join/index.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 
-    <url>
-        <loc>https://getlistkart.com/compare-grocery-list-apps.html</loc>
-        <lastmod>2026-03-08</lastmod>
-        <priority>0.80</priority>
-    </url>
 </urlset>
