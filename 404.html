@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ListKart</title>
-    <style>
-        body {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title data-i18n="404_page_title">
+   ListKart
+  </title>
+  <style>
+   body {
             font-family: -apple-system, sans-serif;
             display: flex;
             align-items: center;
@@ -44,9 +45,9 @@
             text-decoration: none;
             font-weight: 600;
         }
-    </style>
-    <script>
-        // Handle /join/CODE deep links
+  </style>
+  <script>
+   // Handle /join/CODE deep links
         (function () {
             var path = window.location.pathname;
             if (path.indexOf('/join/') === 0) {
@@ -59,14 +60,21 @@
                 }
             }
         })();
-    </script>
-</head>
-
-<body>
-    <div class="card">
-        <h1>Redirecting...</h1>
-        <p>If you are not redirected automatically, <a href="/">go home</a>.</p>
-    </div>
+  </script>
+ </head>
+ <body>
+  <div class="card">
+   <h1 data-i18n="404_h1_0">
+    Redirecting...
+   </h1>
+   <p data-i18n="404_p_0">
+    If you are not redirected automatically,
+    <a data-i18n="404_a_0" href="/">
+     go home
+    </a>
+    .
+   </p>
+  </div>
+     <script src="i18n.js"></script>
 </body>
-
 </html>

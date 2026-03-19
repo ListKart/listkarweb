@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta name="google-site-verification" content="4Bc-6onxXfemoARrVTdS7U-xKGocVZ-xdKKPmxgBdI4" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Read the latest updates, shopping tips, and articles from ListKart.">
-    <meta name="keywords"
-        content="shopping list app, multilingual grocery list, listkart blog, smart grocery planner, shopping tips">
-    <title>Blog - ListKart</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/logo.webp">
-    <style>
-        .blog-header {
+ <head>
+  <meta content="4Bc-6onxXfemoARrVTdS7U-xKGocVZ-xdKKPmxgBdI4" name="google-site-verification"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Read the latest updates, shopping tips, and articles from ListKart." name="description"/>
+  <meta content="shopping list app, multilingual grocery list, listkart blog, smart grocery planner, shopping tips" name="keywords"/>
+  <title data-i18n="blog_page_title">
+   Blog - ListKart
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Outfit:wght@500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="assets/logo.webp" rel="icon" type="image/png"/>
+  <style>
+   .blog-header {
             padding-top: 140px;
             padding-bottom: 60px;
             background-color: var(--bg-color);
@@ -132,425 +130,656 @@
             align-items: center;
             gap: 0.25rem;
         }
-    </style>
-</head>
-
-<body>
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.webp" alt="ListKart Logo">
-                <span><span class="brand-list">List</span><span class="brand-kart">Kart</span></span>
-            </a>
-            <div class="mobile-toggle" id="mobile-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="nav-menu">
-                <div class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </div>
-                <!-- Product Dropdown -->
-                <div class="nav-item">
-                    <div class="dropdown-trigger">
-                        Product
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </div>
-                    <div class="dropdown-menu">
-                        <a href="index.html#about" class="dropdown-item">
-                            <div class="dropdown-icon">📖</div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">About ListKart</span>
-                                <span class="dropdown-desc">Our mission and story</span>
-                            </div>
-                        </a>
-                        <a href="index.html#features" class="dropdown-item">
-                            <div class="dropdown-icon">✨</div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">All Features</span>
-                                <span class="dropdown-desc">Smart lists, voice & scan</span>
-                            </div>
-                        </a>
-                        <a href="index.html#languages" class="dropdown-item">
-                            <div class="dropdown-icon">🌐</div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">53+ Languages</span>
-                                <span class="dropdown-desc">Shop in your native tongue</span>
-                            </div>
-                        </a>
-                        <a href="compare-grocery-list-apps.html" class="dropdown-item">
-                            <div class="dropdown-icon">📊</div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">Compare Apps</span>
-                                <span class="dropdown-desc">ListKart vs. The Others</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Solutions Dropdown -->
-                <div class="nav-item">
-                    <div class="dropdown-trigger">
-                        Solutions
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </div>
-                    <div class="dropdown-menu">
-                        <a href="index.html#features-sync" class="dropdown-item">
-                            <div class="dropdown-icon">👨‍👩‍👧</div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">Family Sync</span>
-                                <span class="dropdown-desc">Share lists with partners</span>
-                            </div>
-                        </a>
-                        <a href="index.html#features-budget" class="dropdown-item">
-                            <div class="dropdown-icon">💰</div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">Budget Tracker</span>
-                                <span class="dropdown-desc">Monitor your spending</span>
-                            </div>
-                        </a>
-                        <a href="index.html#features-offline" class="dropdown-item">
-                            <div class="dropdown-icon">📴</div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">Offline Mode</span>
-                                <span class="dropdown-desc">Works without internet</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Resources Dropdown -->
-                <div class="nav-item">
-                    <div class="dropdown-trigger">
-                        Resources
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </div>
-                    <div class="dropdown-menu">
-                        <a href="food-facts.html" class="dropdown-item">
-                            <div class="dropdown-icon">🍏</div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">Smart Food Facts</span>
-                                <span class="dropdown-desc">Health & Superfoods guide</span>
-                            </div>
-                        </a>
-                        <a href="blog.html" class="dropdown-item">
-                            <div class="dropdown-icon">✍️</div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">Our Blog</span>
-                                <span class="dropdown-desc">Shopping tips & updates</span>
-                            </div>
-                        </a>
-                        <a href="grocery-list-app.html" class="dropdown-item">
-                            <div class="dropdown-icon">🛒</div>
-                            <div class="dropdown-content">
-                                <span class="dropdown-title">Shopping Guide</span>
-                                <span class="dropdown-desc">Best grocery list app 2026</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="nav-item">
-                    <a href="faq.html" class="nav-link">FAQ</a>
-                </div>
-                <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN"
-                    class="btn-nav" target="_blank" style="margin-left: 1rem;">Download App</a>
-            </nav>
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <a class="logo" href="index.html">
+     <img alt="ListKart Logo" src="assets/logo.webp"/>
+     <span>
+      <span class="brand-list" data-i18n="blog_span_1">
+       List
+      </span>
+      <span class="brand-kart" data-i18n="blog_span_2">
+       Kart
+      </span>
+     </span>
+    </a>
+    <div class="mobile-toggle" id="mobile-toggle">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+    </div>
+    <nav class="nav-menu">
+     <div class="nav-item">
+      <a class="nav-link" data-i18n="blog_a_1" href="index.html">
+       Home
+      </a>
+     </div>
+     <!-- Product Dropdown -->
+     <div class="nav-item">
+      <div class="dropdown-trigger">
+       Product
+       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+        <polyline points="6 9 12 15 18 9">
+        </polyline>
+       </svg>
+      </div>
+      <div class="dropdown-menu">
+       <a class="dropdown-item" href="index.html#about">
+        <div class="dropdown-icon">
+         📖
         </div>
-    </header>
-
-    <main>
-        <div class="blog-header">
-            <div class="container">
-                <h1 class="blog-title">ListKart Blog</h1>
-                <p class="blog-subtitle">Shopping tips, product updates, and ideas to simplify your daily routine.</p>
-            </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="blog_span_6">
+          About ListKart
+         </span>
+         <span class="dropdown-desc" data-i18n="blog_span_7">
+          Our mission and story
+         </span>
         </div>
-
-        <section class="container">
-            <div class="blog-grid" id="blog-grid">
-                <!-- Blog Post: Budget Healthy Eating 2026 -->
-                <a href="blog/healthy-eating-on-a-budget-2026.html" class="blog-card">
-                    <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
-                        <img src="assets/blog-budget-healthy.webp" alt="Healthy Eating on a Budget"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="blog-card-content">
-                        <span class="blog-card-tag"
-                            style="background: linear-gradient(135deg, rgba(25, 152, 58, 0.1), rgba(255, 152, 0, 0.1)); color: var(--primary-color);">Lifestyle</span>
-                        <h2 class="blog-card-title">Mastering Budget-Friendly Healthy Eating in 2026</h2>
-                        <p class="blog-card-excerpt">Healthy eating doesn't have to be expensive. Learn how to optimize your grocery budget with staples, seasonal picks, and ListKart's smart features.</p>
-                        <div class="blog-card-footer">
-                            <span>Mar 19, 2026</span>
-                            <span class="read-more">Read Article &rarr;</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Blog Post: Sustainability 2026 -->
-                <a href="blog/sustainable-grocery-shopping-2026.html" class="blog-card">
-                    <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
-                        <img src="assets/blog-sustainability.webp" alt="Sustainable Grocery Shopping"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="blog-card-content">
-                        <span class="blog-card-tag"
-                            style="background: linear-gradient(135deg, rgba(25, 152, 58, 0.1), rgba(255, 152, 0, 0.1)); color: var(--primary-color);">Sustainability</span>
-                        <h2 class="blog-card-title">A Greener Pantry: Sustainable Grocery Shopping in 2026</h2>
-                        <p class="blog-card-excerpt">Learn how to shop with the planet in mind. From reducing plastic to seasonal choices, discover smart eco-habits for 2026.</p>
-                        <div class="blog-card-footer">
-                            <span>Mar 17, 2026</span>
-                            <span class="read-more">Read Article &rarr;</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Blog Post: Smart Savings -->
-
-                <!-- Blog Post: Smart Grocery Savings 2026 -->
-                <a href="blog/smart-grocery-savings-2026.html" class="blog-card">
-                    <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
-                        <img src="assets/blog-grocery-savings.png" alt="Smart Grocery Savings 2026"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="blog-card-content">
-                        <span class="blog-card-tag"
-                            style="background: linear-gradient(135deg, rgba(25, 152, 58, 0.1), rgba(255, 152, 0, 0.1)); color: var(--primary-color);">Smart
-                            Shopping</span>
-                        <h2 class="blog-card-title">5 Smart Ways to Save Money on Groceries in 2026</h2>
-                        <p class="blog-card-excerpt">Master your grocery budget in 2026. Discover 5 smart ways to save
-                            money, avoid impulse buys, and shop smarter with ListKart's advanced features.</p>
-                        <div class="blog-card-footer">
-                            <span>Mar 12, 2026</span>
-                            <span class="read-more">Read Article &rarr;</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Blog Post: Family Sync -->
-                <a href="blog/family-shared-grocery-list.html" class="blog-card">
-                    <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
-                        <img src="assets/blog-family-sync.webp" alt="Family Shared Grocery List"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="blog-card-content">
-                        <span class="blog-card-tag"
-                            style="background: linear-gradient(135deg, rgba(25, 152, 58, 0.1), rgba(255, 152, 0, 0.1)); color: var(--primary-color);">Life
-                            Skills</span>
-                        <h2 class="blog-card-title">Why Your Family Needs a Shared Grocery List in 2026</h2>
-                        <p class="blog-card-excerpt">Stop the "forgot the milk" cycle. Learn why a collaborative
+       </a>
+       <a class="dropdown-item" href="index.html#features">
+        <div class="dropdown-icon">
+         ✨
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="blog_span_8">
+          All Features
+         </span>
+         <span class="dropdown-desc" data-i18n="blog_span_9">
+          Smart lists, voice &amp; scan
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="index.html#languages">
+        <div class="dropdown-icon">
+         🌐
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="blog_span_10">
+          53+ Languages
+         </span>
+         <span class="dropdown-desc" data-i18n="blog_span_11">
+          Shop in your native tongue
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="compare-grocery-list-apps.html">
+        <div class="dropdown-icon">
+         📊
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="blog_span_12">
+          Compare Apps
+         </span>
+         <span class="dropdown-desc" data-i18n="blog_span_13">
+          ListKart vs. The Others
+         </span>
+        </div>
+       </a>
+      </div>
+     </div>
+     <!-- Solutions Dropdown -->
+     <div class="nav-item">
+      <div class="dropdown-trigger">
+       Solutions
+       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+        <polyline points="6 9 12 15 18 9">
+        </polyline>
+       </svg>
+      </div>
+      <div class="dropdown-menu">
+       <a class="dropdown-item" href="index.html#features-sync">
+        <div class="dropdown-icon">
+         👨‍👩‍👧
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="blog_span_14">
+          Family Sync
+         </span>
+         <span class="dropdown-desc" data-i18n="blog_span_15">
+          Share lists with partners
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="index.html#features-budget">
+        <div class="dropdown-icon">
+         💰
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="blog_span_16">
+          Budget Tracker
+         </span>
+         <span class="dropdown-desc" data-i18n="blog_span_17">
+          Monitor your spending
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="index.html#features-offline">
+        <div class="dropdown-icon">
+         📴
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="blog_span_18">
+          Offline Mode
+         </span>
+         <span class="dropdown-desc" data-i18n="blog_span_19">
+          Works without internet
+         </span>
+        </div>
+       </a>
+      </div>
+     </div>
+     <!-- Resources Dropdown -->
+     <div class="nav-item">
+      <div class="dropdown-trigger">
+       Resources
+       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+        <polyline points="6 9 12 15 18 9">
+        </polyline>
+       </svg>
+      </div>
+      <div class="dropdown-menu">
+       <a class="dropdown-item" href="food-facts.html">
+        <div class="dropdown-icon">
+         🍏
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="blog_span_20">
+          Smart Food Facts
+         </span>
+         <span class="dropdown-desc" data-i18n="blog_span_21">
+          Health &amp; Superfoods guide
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="blog.html">
+        <div class="dropdown-icon">
+         ✍️
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="blog_span_22">
+          Our Blog
+         </span>
+         <span class="dropdown-desc" data-i18n="blog_span_23">
+          Shopping tips &amp; updates
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="grocery-list-app.html">
+        <div class="dropdown-icon">
+         🛒
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title" data-i18n="blog_span_24">
+          Shopping Guide
+         </span>
+         <span class="dropdown-desc" data-i18n="blog_span_25">
+          Best grocery list app 2026
+         </span>
+        </div>
+       </a>
+      </div>
+     </div>
+     <div class="nav-item">
+      <a class="nav-link" data-i18n="blog_a_12" href="faq.html">
+       FAQ
+      </a>
+     </div>
+     <a class="btn-nav" data-i18n="blog_a_13" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" style="margin-left: 1rem;" target="_blank">
+      Download App
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main>
+   <div class="blog-header">
+    <div class="container">
+     <h1 class="blog-title" data-i18n="blog_h1_0">
+      ListKart Blog
+     </h1>
+     <p class="blog-subtitle" data-i18n="blog_p_0">
+      Shopping tips, product updates, and ideas to simplify your daily routine.
+     </p>
+    </div>
+   </div>
+   <section class="container">
+    <div class="blog-grid" id="blog-grid">
+     <!-- Blog Post: Budget Healthy Eating 2026 -->
+     <a class="blog-card" href="blog/healthy-eating-on-a-budget-2026.html">
+      <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
+       <img alt="Healthy Eating on a Budget" src="assets/blog-budget-healthy.webp" style="width: 100%; height: 100%; object-fit: cover;"/>
+      </div>
+      <div class="blog-card-content">
+       <span class="blog-card-tag" data-i18n="blog_span_26" style="background: linear-gradient(135deg, rgba(25, 152, 58, 0.1), rgba(255, 152, 0, 0.1)); color: var(--primary-color);">
+        Lifestyle
+       </span>
+       <h2 class="blog-card-title" data-i18n="blog_h2_0">
+        Mastering Budget-Friendly Healthy Eating in 2026
+       </h2>
+       <p class="blog-card-excerpt" data-i18n="blog_p_1">
+        Healthy eating doesn't have to be expensive. Learn how to optimize your grocery budget with staples, seasonal picks, and ListKart's smart features.
+       </p>
+       <div class="blog-card-footer">
+        <span data-i18n="blog_span_27">
+         Mar 19, 2026
+        </span>
+        <span class="read-more" data-i18n="blog_span_28">
+         Read Article →
+        </span>
+       </div>
+      </div>
+     </a>
+     <!-- Blog Post: Sustainability 2026 -->
+     <a class="blog-card" href="blog/sustainable-grocery-shopping-2026.html">
+      <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
+       <img alt="Sustainable Grocery Shopping" src="assets/blog-sustainability.webp" style="width: 100%; height: 100%; object-fit: cover;"/>
+      </div>
+      <div class="blog-card-content">
+       <span class="blog-card-tag" data-i18n="blog_span_29" style="background: linear-gradient(135deg, rgba(25, 152, 58, 0.1), rgba(255, 152, 0, 0.1)); color: var(--primary-color);">
+        Sustainability
+       </span>
+       <h2 class="blog-card-title" data-i18n="blog_h2_1">
+        A Greener Pantry: Sustainable Grocery Shopping in 2026
+       </h2>
+       <p class="blog-card-excerpt" data-i18n="blog_p_2">
+        Learn how to shop with the planet in mind. From reducing plastic to seasonal choices, discover smart eco-habits for 2026.
+       </p>
+       <div class="blog-card-footer">
+        <span data-i18n="blog_span_30">
+         Mar 17, 2026
+        </span>
+        <span class="read-more" data-i18n="blog_span_31">
+         Read Article →
+        </span>
+       </div>
+      </div>
+     </a>
+     <!-- Blog Post: Smart Savings -->
+     <!-- Blog Post: Smart Grocery Savings 2026 -->
+     <a class="blog-card" href="blog/smart-grocery-savings-2026.html">
+      <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
+       <img alt="Smart Grocery Savings 2026" src="assets/blog-grocery-savings.png" style="width: 100%; height: 100%; object-fit: cover;"/>
+      </div>
+      <div class="blog-card-content">
+       <span class="blog-card-tag" data-i18n="blog_span_32" style="background: linear-gradient(135deg, rgba(25, 152, 58, 0.1), rgba(255, 152, 0, 0.1)); color: var(--primary-color);">
+        Smart
+                            Shopping
+       </span>
+       <h2 class="blog-card-title" data-i18n="blog_h2_2">
+        5 Smart Ways to Save Money on Groceries in 2026
+       </h2>
+       <p class="blog-card-excerpt" data-i18n="blog_p_3">
+        Master your grocery budget in 2026. Discover 5 smart ways to save
+                            money, avoid impulse buys, and shop smarter with ListKart's advanced features.
+       </p>
+       <div class="blog-card-footer">
+        <span data-i18n="blog_span_33">
+         Mar 12, 2026
+        </span>
+        <span class="read-more" data-i18n="blog_span_34">
+         Read Article →
+        </span>
+       </div>
+      </div>
+     </a>
+     <!-- Blog Post: Family Sync -->
+     <a class="blog-card" href="blog/family-shared-grocery-list.html">
+      <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
+       <img alt="Family Shared Grocery List" src="assets/blog-family-sync.webp" style="width: 100%; height: 100%; object-fit: cover;"/>
+      </div>
+      <div class="blog-card-content">
+       <span class="blog-card-tag" data-i18n="blog_span_35" style="background: linear-gradient(135deg, rgba(25, 152, 58, 0.1), rgba(255, 152, 0, 0.1)); color: var(--primary-color);">
+        Life
+                            Skills
+       </span>
+       <h2 class="blog-card-title" data-i18n="blog_h2_3">
+        Why Your Family Needs a Shared Grocery List in 2026
+       </h2>
+       <p class="blog-card-excerpt" data-i18n="blog_p_4">
+        Stop the "forgot the milk" cycle. Learn why a collaborative
                             shopping list with real-time sync is the best way for couples and families to save money.
-                        </p>
-                        <div class="blog-card-footer">
-                            <span>Mar 7, 2026</span>
-                            <span class="read-more">Read Article &rarr;</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="blog/slash-grocery-bill-2026.html" class="blog-card">
-                    <div class="blog-card-content">
-                        <span class="blog-card-tag"
-                            style="background: linear-gradient(135deg, rgba(25, 152, 58, 0.1), rgba(255, 152, 0, 0.1)); color: var(--primary-color);">Smart
-                            Shopping</span>
-                        <h2 class="blog-card-title">How to Slash Your Grocery Bill by 25%: The Ultimate Global Guide
-                        </h2>
-                        <p class="blog-card-excerpt">Learn how to save significant money on groceries globally with
-                            these smart shopping tips and the ListKart budget tracker.</p>
-                        <div class="blog-card-footer">
-                            <span>Mar 1, 2026</span>
-                            <span class="read-more">Read Article &rarr;</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Blog Post: Solo Developer Vision -->
-                <a href="blog/solo-developer-vision-listkart.html" class="blog-card">
-                    <div class="blog-card-content">
-                        <span class="blog-card-tag"
-                            style="background: linear-gradient(135deg, rgba(25, 152, 58, 0.1), rgba(255, 152, 0, 0.1)); color: var(--primary-color);">Mission</span>
-                        <h2 class="blog-card-title">The Solo Developer's Vision: Why ListKart is Free Forever & Ad-Free
-                        </h2>
-                        <p class="blog-card-excerpt">Discover why ListKart was built to be different. A commitment to
-                            premium quality, user privacy, and an essential tool that stays free for everyone.</p>
-                        <div class="blog-card-footer">
-                            <span>Feb 15, 2026</span>
-                            <span class="read-more">Read Article &rarr;</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Blog Post 0 -->
-                <a href="blog/ultimate-grocery-list-2026.html" class="blog-card">
-                    <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
-                        <img src="assets/blog-ultimate-grocery.webp" alt="Ultimate Grocery List"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="blog-card-content">
-                        <span class="blog-card-tag"
-                            style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.1)); color: #d97706;">Guide</span>
-                        <h2 class="blog-card-title">50 Essential Grocery Items Every Kitchen Should Have (2026 Grocery
+       </p>
+       <div class="blog-card-footer">
+        <span data-i18n="blog_span_36">
+         Mar 7, 2026
+        </span>
+        <span class="read-more" data-i18n="blog_span_37">
+         Read Article →
+        </span>
+       </div>
+      </div>
+     </a>
+     <a class="blog-card" href="blog/slash-grocery-bill-2026.html">
+      <div class="blog-card-content">
+       <span class="blog-card-tag" data-i18n="blog_span_38" style="background: linear-gradient(135deg, rgba(25, 152, 58, 0.1), rgba(255, 152, 0, 0.1)); color: var(--primary-color);">
+        Smart
+                            Shopping
+       </span>
+       <h2 class="blog-card-title" data-i18n="blog_h2_4">
+        How to Slash Your Grocery Bill by 25%: The Ultimate Global Guide
+       </h2>
+       <p class="blog-card-excerpt" data-i18n="blog_p_5">
+        Learn how to save significant money on groceries globally with
+                            these smart shopping tips and the ListKart budget tracker.
+       </p>
+       <div class="blog-card-footer">
+        <span data-i18n="blog_span_39">
+         Mar 1, 2026
+        </span>
+        <span class="read-more" data-i18n="blog_span_40">
+         Read Article →
+        </span>
+       </div>
+      </div>
+     </a>
+     <!-- Blog Post: Solo Developer Vision -->
+     <a class="blog-card" href="blog/solo-developer-vision-listkart.html">
+      <div class="blog-card-content">
+       <span class="blog-card-tag" data-i18n="blog_span_41" style="background: linear-gradient(135deg, rgba(25, 152, 58, 0.1), rgba(255, 152, 0, 0.1)); color: var(--primary-color);">
+        Mission
+       </span>
+       <h2 class="blog-card-title" data-i18n="blog_h2_5">
+        The Solo Developer's Vision: Why ListKart is Free Forever &amp; Ad-Free
+       </h2>
+       <p class="blog-card-excerpt" data-i18n="blog_p_6">
+        Discover why ListKart was built to be different. A commitment to
+                            premium quality, user privacy, and an essential tool that stays free for everyone.
+       </p>
+       <div class="blog-card-footer">
+        <span data-i18n="blog_span_42">
+         Feb 15, 2026
+        </span>
+        <span class="read-more" data-i18n="blog_span_43">
+         Read Article →
+        </span>
+       </div>
+      </div>
+     </a>
+     <!-- Blog Post 0 -->
+     <a class="blog-card" href="blog/ultimate-grocery-list-2026.html">
+      <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
+       <img alt="Ultimate Grocery List" src="assets/blog-ultimate-grocery.webp" style="width: 100%; height: 100%; object-fit: cover;"/>
+      </div>
+      <div class="blog-card-content">
+       <span class="blog-card-tag" data-i18n="blog_span_44" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.1)); color: #d97706;">
+        Guide
+       </span>
+       <h2 class="blog-card-title" data-i18n="blog_h2_6">
+        50 Essential Grocery Items Every Kitchen Should Have (2026 Grocery
                             List Guide)
-                        </h2>
-                        <p class="blog-card-excerpt">Discover 50 essential grocery items every kitchen should have in
+       </h2>
+       <p class="blog-card-excerpt" data-i18n="blog_p_7">
+        Discover 50 essential grocery items every kitchen should have in
                             2026. Use this complete grocery list to plan smarter shopping and never forget important
-                            kitchen essentials.</p>
-                        <div class="blog-card-footer">
-                            <span>Feb 4, 2026</span>
-                            <span class="read-more">Read Article &rarr;</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Blog Post 1 -->
-                <a href="blog/multilingual-shopping-list.html" class="blog-card">
-                    <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
-                        <img src="assets/blog-cover.webp" alt="Multilingual Shopping List iOS Android"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="blog-card-content">
-                        <span class="blog-card-tag"
-                            style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1)); color: #059669;">Global</span>
-                        <h2 class="blog-card-title">How ListKart Bridges the Language Gap with Native Support</h2>
-                        <p class="blog-card-excerpt">Shopping in a globalized world shouldn't mean struggling with
+                            kitchen essentials.
+       </p>
+       <div class="blog-card-footer">
+        <span data-i18n="blog_span_45">
+         Feb 4, 2026
+        </span>
+        <span class="read-more" data-i18n="blog_span_46">
+         Read Article →
+        </span>
+       </div>
+      </div>
+     </a>
+     <!-- Blog Post 1 -->
+     <a class="blog-card" href="blog/multilingual-shopping-list.html">
+      <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
+       <img alt="Multilingual Shopping List iOS Android" src="assets/blog-cover.webp" style="width: 100%; height: 100%; object-fit: cover;"/>
+      </div>
+      <div class="blog-card-content">
+       <span class="blog-card-tag" data-i18n="blog_span_47" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1)); color: #059669;">
+        Global
+       </span>
+       <h2 class="blog-card-title" data-i18n="blog_h2_7">
+        How ListKart Bridges the Language Gap with Native Support
+       </h2>
+       <p class="blog-card-excerpt" data-i18n="blog_p_8">
+        Shopping in a globalized world shouldn't mean struggling with
                             translations. Discover how ListKart breaks language barriers supporting 40+ native
-                            languages...</p>
-                        <div class="blog-card-footer">
-                            <span>Jan 25, 2026</span>
-                            <span class="read-more">Read Article &rarr;</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Blog Post 2 -->
-                <a href="blog/budget-tracking-shopping-list.html" class="blog-card">
-                    <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
-                        <img src="assets/blog-budget-tracker.webp" alt="Budget Tracker App"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="blog-card-content">
-                        <span class="blog-card-tag"
-                            style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1)); color: #3b82f6;">Budgeting</span>
-                        <h2 class="blog-card-title">Master Your Spending: Using ListKart as a Smart Budget Tracker</h2>
-                        <p class="blog-card-excerpt">Learn how to track your shopping budget effortlessly. Discover
-                            features like pie-charts, category-wise spending, and budget limits.</p>
-                        <div class="blog-card-footer">
-                            <span>Jan 18, 2026</span>
-                            <span class="read-more">Read Article &rarr;</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Blog Post 3 -->
-                <a href="blog/best-shopping-list-app-2026.html" class="blog-card">
-                    <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
-                        <img src="assets/blog-cover.webp" alt="Best Shopping List App"
-                            style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="blog-card-content">
-                        <span class="blog-card-tag">Productivity</span>
-                        <h2 class="blog-card-title">Best Shopping List App in 2026 – Why ListKart is the Smartest Choice
-                        </h2>
-                        <p class="blog-card-excerpt">Forgetting items while shopping is one of the most common daily
-                            problems. Discover why ListKart is designed to make everyday planning effortless.</p>
-                        <div class="blog-card-footer">
-                            <span>Jan 12, 2026</span>
-                            <span class="read-more">Read Article &rarr;</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Placeholder for future blog post -->
-                <div class="blog-card"
-                    style="opacity: 0.6; pointer-events: none; border: 1px dashed rgba(0,0,0,0.1); background: transparent; display: flex; align-items: center; justify-content: center; min-height: 400px;">
-                    <div style="text-align: center; color: var(--text-light);">
-                        <div style="font-size: 2rem; margin-bottom: 1rem;">✍️</div>
-                        <p style="font-weight: 500;">More articles coming soon!</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </main>
-
-    <footer class="mega-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">
-                        <img src="assets/logo.webp" alt="ListKart Logo">
-                        <span><span class="brand-list">List</span><span class="brand-kart">Kart</span></span>
-                    </a>
-                    <p>One of the world's most localized shopping list apps, supporting 53+ languages. 100% free and designed for everyone.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&hl=en_IN" class="footer-cta-btn" target="_blank">
-                        <img src="assets/google-play-badge.png" alt="Get it on Google Play">
-                    </a>
-                </div>
-                
-                <div class="footer-col">
-                    <h4 class="footer-heading">Explore</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="blog.html">Our Blog</a></li>
-                        <li><a href="faq.html">Common Questions</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="sitemap.xml">Sitemap</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4 class="footer-heading">Features</h4>
-                    <ul class="footer-links">
-                        <li><a href="food-facts.html">Smart Food Facts</a></li>
-                        <li><a href="compare-grocery-list-apps.html">Compare Apps</a></li>
-                        <li><a href="grocery-list-app.html">Shopping Guide</a></li>
-                        <li><a href="index.html#budget-tracker">Budget Tracking</a></li>
-                        <li><a href="index.html#family-sync">Real-time Sync</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4 class="footer-heading">Global Support</h4>
-                    <div class="lang-grid-footer">
-                        <ul class="footer-links">
-                            <li><a href="index.html#languages">English</a></li>
-                            <li><a href="index.html#languages">हिन्दी</a></li>
-                            <li><a href="index.html#languages">Español</a></li>
-                            <li><a href="index.html#languages">Français</a></li>
-                        </ul>
-                        <ul class="footer-links">
-                            <li><a href="index.html#languages">मराठी</a></li>
-                            <li><a href="index.html#languages">తెలుగు</a></li>
-                            <li><a href="index.html#languages">தமிழ்</a></li>
-                            <li><a href="index.html#languages">View All</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 ListKart. All rights reserved. Built with ❤️ for shoppers worldwide.</p>
-                <div class="footer-legal-links">
-                    <a href="privacy.html">Privacy</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Navbar scroll effect
+                            languages...
+       </p>
+       <div class="blog-card-footer">
+        <span data-i18n="blog_span_48">
+         Jan 25, 2026
+        </span>
+        <span class="read-more" data-i18n="blog_span_49">
+         Read Article →
+        </span>
+       </div>
+      </div>
+     </a>
+     <!-- Blog Post 2 -->
+     <a class="blog-card" href="blog/budget-tracking-shopping-list.html">
+      <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
+       <img alt="Budget Tracker App" src="assets/blog-budget-tracker.webp" style="width: 100%; height: 100%; object-fit: cover;"/>
+      </div>
+      <div class="blog-card-content">
+       <span class="blog-card-tag" data-i18n="blog_span_50" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1)); color: #3b82f6;">
+        Budgeting
+       </span>
+       <h2 class="blog-card-title" data-i18n="blog_h2_8">
+        Master Your Spending: Using ListKart as a Smart Budget Tracker
+       </h2>
+       <p class="blog-card-excerpt" data-i18n="blog_p_9">
+        Learn how to track your shopping budget effortlessly. Discover
+                            features like pie-charts, category-wise spending, and budget limits.
+       </p>
+       <div class="blog-card-footer">
+        <span data-i18n="blog_span_51">
+         Jan 18, 2026
+        </span>
+        <span class="read-more" data-i18n="blog_span_52">
+         Read Article →
+        </span>
+       </div>
+      </div>
+     </a>
+     <!-- Blog Post 3 -->
+     <a class="blog-card" href="blog/best-shopping-list-app-2026.html">
+      <div class="blog-card-image" style="background-color: transparent; overflow: hidden; padding: 0;">
+       <img alt="Best Shopping List App" src="assets/blog-cover.webp" style="width: 100%; height: 100%; object-fit: cover;"/>
+      </div>
+      <div class="blog-card-content">
+       <span class="blog-card-tag" data-i18n="blog_span_53">
+        Productivity
+       </span>
+       <h2 class="blog-card-title" data-i18n="blog_h2_9">
+        Best Shopping List App in 2026 – Why ListKart is the Smartest Choice
+       </h2>
+       <p class="blog-card-excerpt" data-i18n="blog_p_10">
+        Forgetting items while shopping is one of the most common daily
+                            problems. Discover why ListKart is designed to make everyday planning effortless.
+       </p>
+       <div class="blog-card-footer">
+        <span data-i18n="blog_span_54">
+         Jan 12, 2026
+        </span>
+        <span class="read-more" data-i18n="blog_span_55">
+         Read Article →
+        </span>
+       </div>
+      </div>
+     </a>
+     <!-- Placeholder for future blog post -->
+     <div class="blog-card" style="opacity: 0.6; pointer-events: none; border: 1px dashed rgba(0,0,0,0.1); background: transparent; display: flex; align-items: center; justify-content: center; min-height: 400px;">
+      <div style="text-align: center; color: var(--text-light);">
+       <div style="font-size: 2rem; margin-bottom: 1rem;">
+        ✍️
+       </div>
+       <p data-i18n="blog_p_11" style="font-weight: 500;">
+        More articles coming soon!
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="mega-footer">
+   <div class="container">
+    <div class="footer-grid">
+     <div class="footer-brand">
+      <a class="logo" href="index.html">
+       <img alt="ListKart Logo" src="assets/logo.webp"/>
+       <span>
+        <span class="brand-list" data-i18n="blog_span_57">
+         List
+        </span>
+        <span class="brand-kart" data-i18n="blog_span_58">
+         Kart
+        </span>
+       </span>
+      </a>
+      <p data-i18n="blog_p_12">
+       One of the world's most localized shopping list apps, supporting 53+ languages. 100% free and designed for everyone.
+      </p>
+      <a class="footer-cta-btn" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
+       <img alt="Get it on Google Play" src="assets/google-play-badge.png"/>
+      </a>
+     </div>
+     <div class="footer-col">
+      <h4 class="footer-heading" data-i18n="blog_h4_0">
+       Explore
+      </h4>
+      <ul class="footer-links">
+       <li>
+        <a data-i18n="blog_a_26" href="index.html#about">
+         About Us
+        </a>
+       </li>
+       <li>
+        <a data-i18n="blog_a_27" href="blog.html">
+         Our Blog
+        </a>
+       </li>
+       <li>
+        <a data-i18n="blog_a_28" href="faq.html">
+         Common Questions
+        </a>
+       </li>
+       <li>
+        <a data-i18n="blog_a_29" href="privacy.html">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a data-i18n="blog_a_30" href="sitemap.xml">
+         Sitemap
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-col">
+      <h4 class="footer-heading" data-i18n="blog_h4_1">
+       Features
+      </h4>
+      <ul class="footer-links">
+       <li>
+        <a data-i18n="blog_a_31" href="food-facts.html">
+         Smart Food Facts
+        </a>
+       </li>
+       <li>
+        <a data-i18n="blog_a_32" href="compare-grocery-list-apps.html">
+         Compare Apps
+        </a>
+       </li>
+       <li>
+        <a data-i18n="blog_a_33" href="grocery-list-app.html">
+         Shopping Guide
+        </a>
+       </li>
+       <li>
+        <a data-i18n="blog_a_34" href="index.html#budget-tracker">
+         Budget Tracking
+        </a>
+       </li>
+       <li>
+        <a data-i18n="blog_a_35" href="index.html#family-sync">
+         Real-time Sync
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-col">
+      <h4 class="footer-heading" data-i18n="blog_h4_2">
+       Global Support
+      </h4>
+      <div class="lang-grid-footer">
+       <ul class="footer-links">
+        <li>
+         <a data-i18n="blog_a_36" href="index.html#languages">
+          English
+         </a>
+        </li>
+        <li>
+         <a data-i18n="blog_a_37" href="index.html#languages">
+          हिन्दी
+         </a>
+        </li>
+        <li>
+         <a data-i18n="blog_a_38" href="index.html#languages">
+          Español
+         </a>
+        </li>
+        <li>
+         <a data-i18n="blog_a_39" href="index.html#languages">
+          Français
+         </a>
+        </li>
+       </ul>
+       <ul class="footer-links">
+        <li>
+         <a data-i18n="blog_a_40" href="index.html#languages">
+          मराठी
+         </a>
+        </li>
+        <li>
+         <a data-i18n="blog_a_41" href="index.html#languages">
+          తెలుగు
+         </a>
+        </li>
+        <li>
+         <a data-i18n="blog_a_42" href="index.html#languages">
+          தமிழ்
+         </a>
+        </li>
+        <li>
+         <a data-i18n="blog_a_43" href="index.html#languages">
+          View All
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <p data-i18n="blog_p_13">
+      © 2026 ListKart. All rights reserved. Built with ❤️ for shoppers worldwide.
+     </p>
+     <div class="footer-legal-links">
+      <a data-i18n="blog_a_44" href="privacy.html">
+       Privacy
+      </a>
+      <a data-i18n="blog_a_45" href="faq.html">
+       FAQ
+      </a>
+      <a data-i18n="blog_a_46" href="contact.html">
+       Contact
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script>
+   // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 20) {
@@ -592,8 +821,7 @@
                 }
             });
         });
-    </script>
+  </script>
+     <script src="i18n.js"></script>
 </body>
-
 </html>
-
