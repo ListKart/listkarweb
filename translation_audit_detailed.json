@@ -1,0 +1,904 @@
+{
+  "am.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "ar.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "as.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "az.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "be.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "ca.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "cs.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "da.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "de.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "el.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "es.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "et.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "fa.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "fi.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "fr.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "gu.json": {
+    "total": 972,
+    "missingCount": 829,
+    "translatedEnglishCount": 4,
+    "trulyTranslatedCount": 139,
+    "percentage": "14.30",
+    "missingSample": [
+      "index_span_33",
+      "index_span_34",
+      "index_span_35",
+      "index_span_36",
+      "index_span_37"
+    ],
+    "translatedEnglishSample": [
+      "index_a_12",
+      "index_span_29",
+      "index_span_31",
+      "index_a_37"
+    ]
+  },
+  "ha.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "he.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "hi.json": {
+    "total": 972,
+    "missingCount": 829,
+    "translatedEnglishCount": 8,
+    "trulyTranslatedCount": 135,
+    "percentage": "13.89",
+    "missingSample": [
+      "index_span_33",
+      "index_span_34",
+      "index_span_35",
+      "index_span_36",
+      "index_span_37"
+    ],
+    "translatedEnglishSample": [
+      "index_span_29",
+      "index_span_31",
+      "index_a_28",
+      "index_a_30",
+      "index_a_31"
+    ]
+  },
+  "hr.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "hu.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "hy.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "id.json": {
+    "total": 972,
+    "missingCount": 829,
+    "translatedEnglishCount": 4,
+    "trulyTranslatedCount": 139,
+    "percentage": "14.30",
+    "missingSample": [
+      "index_span_33",
+      "index_span_34",
+      "index_span_35",
+      "index_span_36",
+      "index_span_37"
+    ],
+    "translatedEnglishSample": [
+      "index_a_12",
+      "index_span_29",
+      "index_span_31",
+      "index_a_37"
+    ]
+  },
+  "is.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "it.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "ka.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "kk.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "km.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "kn.json": {
+    "total": 972,
+    "missingCount": 829,
+    "translatedEnglishCount": 8,
+    "trulyTranslatedCount": 135,
+    "percentage": "13.89",
+    "missingSample": [
+      "index_span_33",
+      "index_span_34",
+      "index_span_35",
+      "index_span_36",
+      "index_span_37"
+    ],
+    "translatedEnglishSample": [
+      "index_span_29",
+      "index_span_31",
+      "index_a_28",
+      "index_a_30",
+      "index_a_31"
+    ]
+  },
+  "lt.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "lv.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "mg.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "mn.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "mr.json": {
+    "total": 972,
+    "missingCount": 829,
+    "translatedEnglishCount": 8,
+    "trulyTranslatedCount": 135,
+    "percentage": "13.89",
+    "missingSample": [
+      "index_span_33",
+      "index_span_34",
+      "index_span_35",
+      "index_span_36",
+      "index_span_37"
+    ],
+    "translatedEnglishSample": [
+      "index_span_29",
+      "index_span_31",
+      "index_a_28",
+      "index_a_30",
+      "index_a_31"
+    ]
+  },
+  "ms.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "my.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "nl.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "no.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "or.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "pa.json": {
+    "total": 972,
+    "missingCount": 829,
+    "translatedEnglishCount": 9,
+    "trulyTranslatedCount": 134,
+    "percentage": "13.79",
+    "missingSample": [
+      "index_span_33",
+      "index_span_34",
+      "index_span_35",
+      "index_span_36",
+      "index_span_37"
+    ],
+    "translatedEnglishSample": [
+      "index_span_29",
+      "index_span_31",
+      "index_a_28",
+      "index_a_29",
+      "index_a_30"
+    ]
+  },
+  "pl.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "pt-BR.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "pt.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "ro.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "ru.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "sk.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "sl.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "sr.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "sv.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "sw.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "ta.json": {
+    "total": 972,
+    "missingCount": 829,
+    "translatedEnglishCount": 8,
+    "trulyTranslatedCount": 135,
+    "percentage": "13.89",
+    "missingSample": [
+      "index_span_33",
+      "index_span_34",
+      "index_span_35",
+      "index_span_36",
+      "index_span_37"
+    ],
+    "translatedEnglishSample": [
+      "index_span_29",
+      "index_span_31",
+      "index_a_28",
+      "index_a_30",
+      "index_a_31"
+    ]
+  },
+  "th.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "tl.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 3,
+    "trulyTranslatedCount": 28,
+    "percentage": "2.88",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": [
+      "index_h3_3",
+      "index_h3_4",
+      "index_h3_7"
+    ]
+  },
+  "tr.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "uk.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "ur.json": {
+    "total": 972,
+    "missingCount": 941,
+    "translatedEnglishCount": 0,
+    "trulyTranslatedCount": 31,
+    "percentage": "3.19",
+    "missingSample": [
+      "index_span_1",
+      "index_span_2",
+      "index_a_1",
+      "index_span_6",
+      "index_span_7"
+    ],
+    "translatedEnglishSample": []
+  },
+  "vi.json": {
+    "total": 972,
+    "missingCount": 829,
+    "translatedEnglishCount": 2,
+    "trulyTranslatedCount": 141,
+    "percentage": "14.51",
+    "missingSample": [
+      "index_span_33",
+      "index_span_34",
+      "index_span_35",
+      "index_span_36",
+      "index_span_37"
+    ],
+    "translatedEnglishSample": [
+      "index_span_29",
+      "index_span_31"
+    ]
+  }
+}
