@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hi">
  <head>
   <meta charset="utf-8"/>
@@ -6,7 +6,7 @@
   <meta content="ListKart is the world's most accessible shopping list app, supporting 53+ languages. Create smart grocery lists in your native language - free, ad-free, and privacy-focused." name="description"/>
   <meta content="shopping list app, multilingual grocery list, pantry tracker, ad-free shopping list, listkart, 53 languages support, regional grocery app" name="keywords"/>
   <title data-i18n="index_page_title">
-   लिस्टकार्ट - स्मार्ट शॉपिंग ऐप
+   લિસ્ટકાર્ટ - સ્માર્ટ શોપિંગ લિસ્ટ એપ
   </title>
   <meta content="ListKart - The Ultimate Multilingual Shopping List App" property="og:title"/>
   <meta content="https://getlistkart.com/assets/hero-illustration.webp" property="og:image"/>
@@ -22,6 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;family=Outfit:wght@500;700;900&amp;display=swap" rel="stylesheet"/>
   <link href="../style.css" rel="stylesheet"/>
   <link href="../assets/logo.webp" rel="icon" type="image/png"/>
+  <link href="../assets/chatbot.css" rel="stylesheet"/>
   <!-- International SEO: hreflang tags -->
   <link href="https://getlistkart.com/" hreflang="x-default" rel="alternate"/>
   <link href="https://getlistkart.com/" hreflang="en" rel="alternate"/>
@@ -86,11 +87,7 @@
      <!-- Product Dropdown -->
      <div class="nav-item">
       <div class="dropdown-trigger" data-i18n="index_nav_product">
-       उत्पाद
-       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
-        <polyline points="6 9 12 15 18 9">
-        </polyline>
-       </svg>
+       प्रोडक्ट
       </div>
       <div class="dropdown-menu">
        <a class="dropdown-item" href="#about">
@@ -148,75 +145,114 @@
       </div>
      </div>
      <!-- Solutions Dropdown -->
-      <div class="nav-item">
-       <div class="dropdown-trigger">
-        Solutions
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
-         <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-       </div>
-       <div class="dropdown-menu">
-        <!-- Primary Solutions -->
-        <a class="dropdown-item" href="../index.html#family-sync">
-         <div class="dropdown-icon">👨‍👩‍👧</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">Family Sync</span>
-          <span class="dropdown-desc">Share lists with partners</span>
-         </div>
-        </a>
-        <a class="dropdown-item" href="../index.html#budget-tracker">
-         <div class="dropdown-icon">💰</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">Budget Tracker</span>
-          <span class="dropdown-desc">Monitor your spending</span>
-         </div>
-        </a>
-        <a class="dropdown-item" href="../index.html#offline-mode">
-         <div class="dropdown-icon">📴</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">Offline Mode</span>
-          <span class="dropdown-desc">Works without internet</span>
-         </div>
-        </a>
-        <!-- Creative Solutions -->
-        <a class="dropdown-item" href="../solutions/multilingual-shopping.html">
-         <div class="dropdown-icon">🌐</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">Grocery Translator</span>
-          <span class="dropdown-desc">Shop in 53+ languages</span>
-         </div>
-        </a>
-        <a class="dropdown-item" href="../solutions/new-home-essentials.html">
-         <div class="dropdown-icon">🏠</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">New Home Kit</span>
-          <span class="dropdown-desc">First-day life essentials</span>
-         </div>
-        </a>
-        <a class="dropdown-item" href="../solutions/party-planner.html">
-         <div class="dropdown-icon">🎉</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">Party Survival</span>
-          <span class="dropdown-desc">Stress-free event sync</span>
-         </div>
-        </a>
-        <a class="dropdown-item" href="../solutions/offline-shopping.html">
-         <div class="dropdown-icon">📴</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">Offline Hero</span>
-          <span class="dropdown-desc">Zero-signal deep shopping</span>
-         </div>
-        </a>
-       </div>
-      </div>
-      <!-- Resources Dropdown -->
      <div class="nav-item">
-      <div class="dropdown-trigger" data-i18n="index_nav_resources">
-       संसाधन
+      <div class="dropdown-trigger">
+       Solutions
        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
         <polyline points="6 9 12 15 18 9">
         </polyline>
        </svg>
+      </div>
+      <div class="dropdown-menu">
+       <!-- Primary Solutions -->
+       <a class="dropdown-item" href="../index.html#family-sync">
+        <div class="dropdown-icon">
+         👨‍👩‍👧
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          Family Sync
+         </span>
+         <span class="dropdown-desc">
+          Share lists with partners
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../index.html#budget-tracker">
+        <div class="dropdown-icon">
+         💰
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          Budget Tracker
+         </span>
+         <span class="dropdown-desc">
+          Monitor your spending
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../index.html#offline-mode">
+        <div class="dropdown-icon">
+         📴
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          Offline Mode
+         </span>
+         <span class="dropdown-desc">
+          Works without internet
+         </span>
+        </div>
+       </a>
+       <!-- Creative Solutions -->
+       <a class="dropdown-item" href="../solutions/multilingual-shopping.html">
+        <div class="dropdown-icon">
+         🌐
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          Grocery Translator
+         </span>
+         <span class="dropdown-desc">
+          Shop in 53+ languages
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../solutions/new-home-essentials.html">
+        <div class="dropdown-icon">
+         🏠
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          New Home Kit
+         </span>
+         <span class="dropdown-desc">
+          First-day life essentials
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../solutions/party-planner.html">
+        <div class="dropdown-icon">
+         🎉
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          Party Survival
+         </span>
+         <span class="dropdown-desc">
+          Stress-free event sync
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../solutions/offline-shopping.html">
+        <div class="dropdown-icon">
+         📴
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          Offline Hero
+         </span>
+         <span class="dropdown-desc">
+          Zero-signal deep shopping
+         </span>
+        </div>
+       </a>
+      </div>
+     </div>
+     <!-- Resources Dropdown -->
+     <div class="nav-item">
+      <div class="dropdown-trigger" data-i18n="index_nav_resources">
+       रिसोर्स
       </div>
       <div class="dropdown-menu">
        <a class="dropdown-item" href="../food-facts.html">
@@ -228,7 +264,7 @@
           स्मार्ट फूड फैक्ट्स
          </span>
          <span class="dropdown-desc" data-i18n="index_span_21">
-          हेल्थ और सुपरफूड गाइड
+          सेहत और सुपरफूड गाइड
          </span>
         </div>
        </a>
@@ -254,7 +290,7 @@
           शॉपिंग गाइड
          </span>
          <span class="dropdown-desc" data-i18n="index_span_25">
-          सर्वश्रेष्ठ ग्रॉसरी लिस्ट ऐप 2026
+          2026 की सबसे अच्छी ग्रॉसरी ऐप
          </span>
         </div>
        </a>
@@ -262,11 +298,11 @@
      </div>
      <div class="nav-item">
       <a class="nav-link" data-i18n="index_a_12" href="../faq.html">
-       FAQ
+       सवाल-जवाब (FAQ)
       </a>
      </div>
      <a class="btn-nav" data-i18n="index_a_13" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
-      ऐप प्राप्त करें
+      ऐप डाउनलोड करें
      </a>
     </nav>
    </div>
@@ -284,14 +320,14 @@
        </span>
       </h1>
       <p class="hero-tagline" data-i18n="index_p_0">
-       कभी कुछ मत भूलें
+       अब कोई सामान नहीं छूटेगा
       </p>
       <h2 data-i18n="index_h2_0" style="font-size: 1.25rem; line-height: 1.6; margin-top: 1.5rem; margin-bottom: 2rem; font-weight: 500; color: var(--text-light); text-align: left;">
-       दुनिया का सबसे सुलभ बहुभाषी शॉपिंग ऐप
+       दुनिया की सबसे आसान बहुभाषी शॉपिंग ऐप - अब इन भाषाओं में
       </h2>
       <div class="cta-group">
        <a class="btn btn-primary" data-i18n="index_a_14" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
-        गूगल प्ले पर प्राप्त करें
+        गूगल प्ले से डाउनलोड करें
        </a>
       </div>
      </div>
@@ -308,24 +344,18 @@
      <div class="about-card">
       <div class="about-header">
        <div class="solo-badge" data-i18n="index_badge_solo">
-        अकेले डेवलपर की मेहनत
+        एक अकेले डेवलपर की मेहनत
        </div>
        <h2 data-i18n="index_h2_1">
-        एक प्रीमियम अनुभव, अब सबके लिए
+        प्रीमियम अनुभव, जो हमेशा मुफ्त रहेगा
        </h2>
       </div>
       <div class="about-body">
        <p class="professional-text" data-i18n="index_p_1">
-        लिस्टकार्ट को आपकी शॉपिंग आसान बनाने के लिए बनाया गया है।
+        लिस्टकार्ट को एक बहुत ही सरल सोच के साथ बनाया गया है: हर किसी को बिना किसी खर्च के एक शानदार और वर्ल्ड-क्लास अनुभव मिलना चाहिए। मेरा मानना है कि ज़रूरी टूल्स के लिए पैसे नहीं लेने चाहिए और न ही विज्ञापनों से आपको परेशान करना चाहिए।
        </p>
        <p class="professional-text" data-i18n="index_p_2">
-        एक सोलो डेवलपर के रूप में, हमने इस ऐप को बनाने में अपनी पूरी जान लगा दी है ताकि यह आपको एक प्रीमियम अनुभव दे, और सबसे अच्छी बात यह है कि यह
-                            प्रीमियम प्रोडक्ट जैसा महसूस हो और
-        <strong data-i18n="index_strong_0">
-         हमेशा के लिए फ्री
-        </strong>
-        . My commitment to you is
-                            unwavering - the core features you love today will always be accessible at no cost.
+        एक अकेले डेवलपर के तौर पर, हमने इस ऐप को बनाने में अपनी पूरी जान लगा दी है ताकि ये आपको एक लग्जरी प्रोडक्ट जैसा लगे, और सबसे अच्छी बात ये है कि ये
        </p>
        <div class="mission-points">
         <div class="mission-item">
@@ -337,9 +367,7 @@
            भरोसेमंद भविष्य
           </span>
           <p data-i18n="index_p_3">
-           ऐप को चालू रखने और नई चीज़ें जोड़ने के लिए, भविष्य में शायद छोटे विज्ञापन दिए जाएँ
-                                        लेकिन वे आपके प्रीमियम अनुभव के साथ कभी समझौता नहीं करेंगे।
-                                        
+           ऐप को चलाने और इसे बेहतर बनाने के लिए भविष्य में कभी-कभी छोटे और बिना परेशान करने वाले विज्ञापन दिख सकते हैं, लेकिन उनसे आपके काम में कभी कोई रुकावट नहीं आएगी।
           </p>
          </div>
         </div>
@@ -352,8 +380,7 @@
            सुपर फास्ट और आसान
           </span>
           <p data-i18n="index_p_4">
-           इस ऐप की कोडिंग हमने खुद बहुत बारीकी से की है ताकि यह सुपर फास्ट चले और आपकी प्राइवेसी हमेशा सुरक्षित रहे।
-                                        
+           इस ऐप की कोडिंग हमने खुद बहुत बारीकी से की है ताकि ये बहुत तेज़ चले और आपकी प्राइवेसी हमेशा सुरक्षित रहे, क्योंकि आपके समय और डेटा की फिक्र हमें उतनी ही है जितनी आपको है।
           </p>
          </div>
         </div>
@@ -367,16 +394,15 @@
     <div class="container">
      <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
       <h2 data-i18n="index_h2_2" style="font-size: 3rem; margin-bottom: 1.5rem; font-weight: 900;">
-       आपकी लाइफस्टाइल के लिए खास समाधान
-                        
+       आपकी लाइफस्टाइल के लिए सही सॉल्यूशन
       </h2>
       <p class="lead-text" data-i18n="index_p_5">
-       परिवारों से लेकर अकेले खरीदारी करने वालों तक, लिस्टकार्ट आपके दैनिक जीवन को व्यवस्थित और तनावमुक्त रखने के लिए बेहतरीन उपकरण प्रदान करता है।
+       चाहे बड़ा परिवार हो या आप अकेले रहते हों, लिस्टकार्ट आपके रोजमर्रा के कामों को आसान और तनाव-मुक्त बनाने के लिए बेस्ट है।
       </p>
      </div>
      <div class="spotlight-grid">
       <!-- Family Sync -->
-      <div class="spotlight-item" id="family-sync">
+      <div class="spotlight-item reveal-left" id="family-sync">
        <div class="spotlight-image">
         <div class="spotlight-image-container">
          <img alt="Family Sync Solution" class="responsive-mockup" src="../assets/solutions/family-sync-premium.png"/>
@@ -384,35 +410,35 @@
        </div>
        <div class="spotlight-content">
         <h3 data-i18n="index_h3_0">
-         फैमिली सिंक
+         रियल-टाइम फैमिली सिंक
         </h3>
         <p data-i18n="index_p_6">
-         पूरे परिवार के साथ रियल-टाइम में लिस्ट शेयर करें।
+         घर के कामों के लिए तालमेल बहुत ज़रूरी है। फैमिली सिंक ये पक्का करता है कि घर का हर सदस्य अपडेट रहे। चाहे आपके पार्टनर दुकान पर हों या आप घर से लिस्ट बना रहे हों, अपडेट तुरंत हो जाता है। अब वो दिन गए जब कोई कहता था - 'अरे! मुझे लगा कि तुम दूध ले आए होगे'!
         </p>
         <ul class="spotlight-features">
          <li data-i18n="index_li_0">
-          तुरंत शेयरिंग
+          लिंक या क्यूआर कोड से तुरंत लिस्ट शेयर करें
          </li>
          <li data-i18n="index_li_1">
-          बहुभाषी सपोर्ट
+          अलग-अलग भाषाओं में भी साथ मिलकर काम करें
          </li>
          <li data-i18n="index_li_2">
-          अंग्रेजी में शेयर करें, अपनी भाषा में देखें
+          इंग्लिश में शेयर करें, अपनी भाषा में देखें
          </li>
          <li data-i18n="index_li_3">
           व्हाट्सएप या ईमेल पर बस एक क्लिक में शेयर करें
          </li>
          <li data-i18n="index_li_4">
-          कौन क्या सामान खरीद रहा है, यह लाइव देखें
+          लाइव देखें कि कौन क्या सामान खरीद रहा है
          </li>
          <li data-i18n="index_li_5">
-          साथ काम करने वालों के लिए किसी अकाउंट की ज़रूरत नहीं
+          सामने वाले को ऐप में लॉगिन करने की ज़रूरत नहीं
          </li>
         </ul>
        </div>
       </div>
       <!-- Budget Tracker -->
-      <div class="spotlight-item" id="budget-tracker">
+      <div class="spotlight-item reveal-right" id="budget-tracker">
        <div class="spotlight-image">
         <div class="spotlight-image-container">
          <img alt="Budget Tracker Solution" src="../assets/solutions/budget-tracker-premium.png"/>
@@ -420,65 +446,68 @@
        </div>
        <div class="spotlight-content">
         <h3 data-i18n="index_h3_1">
-         बजट ट्रैकर
+         स्मार्ट बजट ट्रैकिंग
         </h3>
         <p data-i18n="index_p_7">
-         अपने खर्चों पर नज़र रखें और पैसे बचाएं।
+         जटिल हिसाब-किताब वाले ऐप्स के चक्कर में न पड़ें, अपने खर्चों पर पूरा कंट्रोल रखें। लिस्टकार्ट का बजट ट्रैकर आम लोगों के लिए बनाया गया है। ये आपको दिखाता है कि पैसा कहाँ खर्च हो रहा है, बजट की लिमिट आने पर आपको टोकता भी है, ताकि आप ज़्यादा बचत कर सकें।
         </p>
         <ul class="spotlight-features">
          <li data-i18n="index_li_6">
-          दैनिक खर्च सीमा
+          हर दिन और महीने के खर्च की लिमिट तय करें
          </li>
-         <li data-i18n="index_li_7">
-          कितना ज़्यादा या कम खर्च हुआ, उसका तुरंत हिसाब
+         <li data-i18n="index_li_135">
+          Auto-calculate over/under spending
          </li>
          <li data-i18n="index_li_8">
-          कहाँ कितने पैसे गए, सब अलग-अलग देखें
+          कहाँ कितना पैसा गया, सब अलग-अलग देखें
          </li>
-         <li data-i18n="index_li_9">
-          पुराने भाव और रेट का पूरा डेटा देखें
+         <li data-i18n="index_li_136">
+          Historical price trend analysis
          </li>
-         <li data-i18n="index_li_10">
-          कुल कीमत और सामान की गिनती का तुरंत जोड़
+         <li data-i18n="index_li_137">
+          Instant total price &amp; quantity sum
          </li>
          <li data-i18n="index_li_11">
-          अपनी करेंसी और पैसों के हिसाब से हिसाब रखें
+          अपनी करंसी और पैसों के हिसाब से हिसाब रखें
          </li>
         </ul>
        </div>
       </div>
-      <!-- Offline Mode -->
-      <div class="spotlight-item" id="offline-mode">
+      <!-- Grocery Translator -->
+      <div class="spotlight-item reveal-left">
        <div class="spotlight-image">
         <div class="spotlight-image-container">
-         <img alt="Offline Mode Solution" src="../assets/solutions/offline-mode.webp"/>
+         <img alt="Grocery Translator" src="../assets/solutions/multilingual-translator.png"/>
         </div>
        </div>
        <div class="spotlight-content">
-        <h3 data-i18n="index_h3_2">
-         ऑफ़लाइन मोड
+        <h3>
+         The Grocery Translator
         </h3>
-        <p data-i18n="index_p_8">
-         बिना इंटरनेट के भी काम करता है।
+        <p>
+         Shop in 53+ languages effortlessly. Whether you're an expat or traveler, write in your native language and shop like a local in any country.
         </p>
         <ul class="spotlight-features">
-         <li data-i18n="index_li_12">
-          100% ऑफ़लाइन
+         <li>
+          Support for 53+ native languages
          </li>
-         <li data-i18n="index_li_13">
-          सुपर-फास्ट लोकल डेटाबेस इंजन
+         <li>
+          Global staple translator for local markets
          </li>
-         <li data-i18n="index_li_14">
-          लोकल-फर्स्ट भरोसे के लिए ऑप्टिमाइज़ किया गया
+         <li>
+          Expat-friendly user interface
          </li>
-         <li data-i18n="index_li_15">
-          बैटरी बचाने वाला लोकल स्टोरेज
+         <li>
+          Offline translation for remote shopping
          </li>
-         <li data-i18n="index_li_16">
-          ऑफ़लाइन होने पर भी वॉयस इनपुट काम करता है
+         <li>
+          Voice-to-text input in native tongue
          </li>
-         <li data-i18n="index_li_17">
-          कोई लोडिंग स्क्रीन नहीं, कोई देरी नहीं
+         <li>
+          Smart food facts integration
+         </li>
+         <li>
+          No signal required for core translation
          </li>
         </ul>
        </div>
@@ -490,7 +519,7 @@
    <section class="features-section reveal" id="features">
     <div class="container" style="text-align: center;">
      <h2 data-i18n="index_h2_3" style="font-size: 2.5rem; margin-bottom: 3rem;">
-      प्रीमियम फीचर्स
+      स्मार्ट लोगों के लिए प्रीमियम फीचर्स
      </h2>
      <div class="feature-grid">
       <!-- Feature Items -->
@@ -514,7 +543,7 @@
        </h3>
        <ul class="feature-sub-list">
         <li data-i18n="index_li_18">
-         महीने और दिन की लिमिट तय करें
+         मईने और दिन की लिमिट तय करें
         </li>
         <li data-i18n="index_li_19">
          कितना बचा, कितना गया - सब ऑटोमैटिक
@@ -540,7 +569,7 @@
         <img alt="Offline" src="../assets/features/offline.png"/>
        </div>
        <h3 data-i18n="index_h3_6">
-        पूरी तरह ऑफ़लाइन
+        पूरी तरह ऑफ़लाइन
        </h3>
        <p data-i18n="index_p_11">
         बिना किसी इंटरनेट के मज़े से चलाएँ।
@@ -551,10 +580,10 @@
         <img alt="Voice" src="../assets/features/voice.png"/>
        </div>
        <h3 data-i18n="index_h3_7">
-        वॉयस इनपुट
+        बोलकर जोड़ें
        </h3>
        <p data-i18n="index_p_12">
-        टाइप करने की ज़रूरत नहीं, बस बोलें और सामान जुड़ जाएगा।
+        टाइप करने की ज़रूरत नहीं, बस बोलें और सामान जुड़ जाएगा।
        </p>
       </div>
       <div class="feature-card reveal-right" id="features-privacy">
@@ -565,7 +594,7 @@
         प्राइवेसी सबसे पहले
        </h3>
        <p data-i18n="index_p_13">
-        शुरू करने के लिए किसी अकाउंट या साइन-अप की ज़रूरत नहीं।
+        शुरू करने के लिए किसी अकाउंट या साइन-अप की ज़रूरत नहीं।
        </p>
       </div>
      </div>
@@ -574,7 +603,7 @@
    <section class="how-it-works reveal" id="how-it-works">
     <div class="container">
      <h2 data-i18n="index_h2_4">
-      कैसे शुरू करें
+      ये काम कैसे करता है?
      </h2>
      <div class="steps-grid">
       <div class="step-item">
@@ -585,7 +614,7 @@
         शुरू करें
        </h3>
        <p data-i18n="index_p_14">
-        ऐप डाउनलोड करें और तुरंत लिस्ट बनाना शुरू करें।
+        ऐप डाउनलोड करें और बस कुछ ही सेकंड में अपनी पहली लिस्ट बनाएँ।
        </p>
       </div>
       <div class="step-item">
@@ -593,10 +622,10 @@
         2
        </div>
        <h3 data-i18n="index_h3_10">
-        आइटम्स जोड़ें
+        सामान जोड़ें
        </h3>
        <p data-i18n="index_p_15">
-        टाइप करें, बोलें या स्कैन करें।
+        टाइप करें, बोलें या हाथ से लिखी लिस्ट स्कैन करें। लिस्टकार्ट सब समझता है।
        </p>
       </div>
       <div class="step-item">
@@ -604,10 +633,10 @@
         3
        </div>
        <h3 data-i18n="index_h3_11">
-        सिंक और शेयर
+        सिंक करें
        </h3>
        <p data-i18n="index_p_16">
-        अपनी लिस्ट परिवार के साथ शेयर करें। जब आप साथ शॉपिंग करेंगे, तो सबको रियल-टाइम में अपडेट मिलता रहेगा।
+        अपनी लिस्ट शेयर करें। जब कोई सामान खरीदेगा, तो आपको घर बैठे पता चल जाएगा।
        </p>
       </div>
       <div class="step-item">
@@ -618,7 +647,7 @@
         स्मार्ट बनें
        </h3>
        <p data-i18n="index_p_17">
-        सामान पर टिक करें और अपना बजट तुरंत ट्रैक करें। हर बार समय और पैसा बचाएं।
+        बजट ट्रैक करें और फालतू खर्च रोकें। हर बार समय और पैसा बचाएँ।
        </p>
       </div>
      </div>
@@ -667,11 +696,7 @@
        पूरी लिस्ट (All Features)
       </h2>
       <p data-i18n="index_p_18" style="color: var(--text-light); max-width: 800px; margin: 0 auto;">
-       Unlimited shopping lists,
-                        shared grocery list syncing, camera OCR scan for handwritten lists, voice input, widgets,
-                        offline shopping list app mode, budget tracker and price calculator, dark mode and left-hand
-                        mode, 16 themes, healthy templates, pantry list support, privacy-first design, no ads, 100% free
-                        forever.
+       अनलिमिटेड लिस्ट, शेयर्ड सिंक, कैमरा ओसीआर स्कैन, वॉयस इनपुट, विजेट्स, ऑफ़लाइन मोड, बजट ट्रैकर, प्राइस कैलकुलेटर, डार्क मोड, लेफ्ट-हैंड मोड, 16 थीम, हेल्दी टेम्प्लेट्स, पेंट्री सपोर्ट, प्राइवेसी-फर्स्ट, कोई विज्ञापन नहीं, 100% हमेशा के लिए फ्री।
       </p>
      </div>
     </div>
@@ -679,438 +704,332 @@
    <section class="languages-section reveal" id="languages">
     <div class="container">
      <h2 data-i18n="index_h2_7">
-      53+ भाषाओं का सपोर्ट
+      दुनिया के लिए बना, आपके लिए खास
      </h2>
      <p class="lead-text" data-i18n="index_p_19">
-      अपनी मातृभाषा में खरीदारी करें।
+      हमारा मानना है कि शॉपिंग आपकी अपनी भाषा में होनी चाहिए। इसीलिए लिस्टकार्ट
      </p>
      <div class="marquee-wrapper">
       <div class="marquee-content">
        <!-- ORIGINAL LIST -->
        <span class="lang-chip" data-i18n="index_span_33">
-        <img alt="UK" class="lang-flag" src="https://flagcdn.com/w40/gb.webp"/>
-        English
+        English (अंग्रेज़ी)
        </span>
        <span class="lang-chip" data-i18n="index_span_34">
-        <img alt="India" class="lang-flag" src="https://flagcdn.com/w40/in.webp"/>
         हिन्दी (Hindi)
        </span>
        <span class="lang-chip" data-i18n="index_span_35">
-        <img alt="Poland" class="lang-flag" src="https://flagcdn.com/w40/pl.webp"/>
-        Polski (Polish)
+        Polski (पोलिश)
        </span>
        <span class="lang-chip" data-i18n="index_span_36">
-        <img alt="France" class="lang-flag" src="https://flagcdn.com/w40/fr.webp"/>
-        Français (French)
+        Français (फ़्रेंच)
        </span>
        <span class="lang-chip" data-i18n="index_span_37">
-        <img alt="Germany" class="lang-flag" src="https://flagcdn.com/w40/de.webp"/>
-        Deutsch (German)
+        Deutsch (जर्मन)
        </span>
        <span class="lang-chip" data-i18n="index_span_38">
-        <img alt="Spain" class="lang-flag" src="https://flagcdn.com/w40/es.webp"/>
-        Español (Spanish)
+        Español (स्पैनिश)
        </span>
        <span class="lang-chip" data-i18n="index_span_39">
-        <img alt="Portugal" class="lang-flag" src="https://flagcdn.com/w40/pt.webp"/>
-        Português (Portuguese)
+        Português (पुर्तगाली)
        </span>
        <span class="lang-chip" data-i18n="index_span_40">
-        <img alt="Iceland" class="lang-flag" src="https://flagcdn.com/w40/is.webp"/>
-        Íslenska (Icelandic)
+        Íslenska (आइसलैंडिक)
        </span>
        <span class="lang-chip" data-i18n="index_span_41">
-        <img alt="Norway" class="lang-flag" src="https://flagcdn.com/w40/no.webp"/>
-        Norsk (Norwegian)
+        Norsk (नार्वेजियन)
        </span>
        <span class="lang-chip" data-i18n="index_span_42">
-        <img alt="Sweden" class="lang-flag" src="https://flagcdn.com/w40/se.webp"/>
-        Svenska (Swedish)
+        Svenska (स्वीडिश)
        </span>
        <span class="lang-chip" data-i18n="index_span_43">
-        <img alt="Denmark" class="lang-flag" src="https://flagcdn.com/w40/dk.webp"/>
-        Dansk (Danish)
+        Dansk (डेनिश)
        </span>
        <span class="lang-chip" data-i18n="index_span_44">
-        <img alt="Finland" class="lang-flag" src="https://flagcdn.com/w40/fi.webp"/>
-        Suomi (Finnish)
+        Suomi (फिनिश)
        </span>
        <span class="lang-chip" data-i18n="index_span_45">
-        <img alt="Netherlands" class="lang-flag" src="https://flagcdn.com/w40/nl.webp"/>
-        Nederlands (Dutch)
+        Nederlands (डच)
        </span>
        <span class="lang-chip" data-i18n="index_span_46">
-        <img alt="Estonia" class="lang-flag" src="https://flagcdn.com/w40/ee.webp"/>
-        Eesti (Estonian)
+        Eesti (एस्टोनियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_47">
-        <img alt="Japan" class="lang-flag" src="https://flagcdn.com/w40/jp.webp"/>
-        日本語 (Japanese)
+        日本語 (जापानी)
        </span>
        <span class="lang-chip" data-i18n="index_span_48">
-        <img alt="Korea" class="lang-flag" src="https://flagcdn.com/w40/kr.webp"/>
-        한국어 (Korean)
+        한국어 (कोरियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_49">
-        <img alt="Indonesia" class="lang-flag" src="https://flagcdn.com/w40/id.webp"/>
-        Bahasa Indonesia
+        Bahasa Indonesia (इंडोनेशियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_50">
-        <img alt="Russia" class="lang-flag" src="https://flagcdn.com/w40/ru.webp"/>
-        Русский (Russian)
+        Русский (रूसी)
        </span>
        <span class="lang-chip" data-i18n="index_span_51">
-        <img alt="China" class="lang-flag" src="https://flagcdn.com/w40/cn.webp"/>
-        中文 (Chinese)
+        中文 (चीनी)
        </span>
        <span class="lang-chip" data-i18n="index_span_52">
-        <img alt="Bangladesh" class="lang-flag" src="https://flagcdn.com/w40/bd.webp"/>
-        বাংলা (Bengali)
+        বাংলা (बंगाली)
        </span>
        <span class="lang-chip" data-i18n="index_span_53">
-        <img alt="Malaysia" class="lang-flag" src="https://flagcdn.com/w40/my.webp"/>
-        Bahasa Melayu
+        Bahasa Melayu (मलय)
        </span>
        <span class="lang-chip" data-i18n="index_span_54">
-        <img alt="Saudi Arabia" class="lang-flag" src="https://flagcdn.com/w40/sa.webp"/>
-        العربية (Arabic)
+        العربية (अरबी)
        </span>
        <span class="lang-chip" data-i18n="index_span_55">
-        <img alt="Bulgaria" class="lang-flag" src="https://flagcdn.com/w40/bg.webp"/>
-        Български (Bulgarian)
+        Български (बुल्गेरियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_56">
-        <img alt="Czech" class="lang-flag" src="https://flagcdn.com/w40/cz.webp"/>
-        Čeština (Czech)
+        Čeština (चेक)
        </span>
        <span class="lang-chip" data-i18n="index_span_57">
-        <img alt="Greece" class="lang-flag" src="https://flagcdn.com/w40/gr.webp"/>
-        Ελληνικά (Greek)
+        Ελληνικά (ग्रीक)
        </span>
        <span class="lang-chip" data-i18n="index_span_58">
-        <img alt="Croatia" class="lang-flag" src="https://flagcdn.com/w40/hr.webp"/>
-        Hrvatski (Croatian)
+        Hrvatski (क्रोएशियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_59">
-        <img alt="Hungary" class="lang-flag" src="https://flagcdn.com/w40/hu.webp"/>
-        Magyar (Hungarian)
+        Magyar (हंगेरियन)
        </span>
        <span class="lang-chip" data-i18n="index_span_60">
-        <img alt="Pakistan" class="lang-flag" src="https://flagcdn.com/w40/pk.webp"/>
-        اردو (Urdu)
+        اردو (उर्दू)
        </span>
        <span class="lang-chip" data-i18n="index_span_61">
-        <img alt="India" class="lang-flag" src="https://flagcdn.com/w40/in.webp"/>
-        தமிழ் (Tamil)
+        தமிழ் (तमिल)
        </span>
        <span class="lang-chip" data-i18n="index_span_62">
-        <img alt="India" class="lang-flag" src="https://flagcdn.com/w40/in.webp"/>
-        తెలుగు (Telugu)
+        తెలుగు (तेलुगु)
        </span>
        <span class="lang-chip" data-i18n="index_span_63">
-        <img alt="India" class="lang-flag" src="https://flagcdn.com/w40/in.webp"/>
-        मराठी (Marathi)
+        मराठी (मराठी)
        </span>
        <span class="lang-chip" data-i18n="index_span_64">
-        <img alt="India" class="lang-flag" src="https://flagcdn.com/w40/in.webp"/>
-        ಕನ್ನಡ (Kannada)
+        ಕನ್ನಡ (कन्नड़)
        </span>
        <span class="lang-chip" data-i18n="index_span_65">
-        <img alt="India" class="lang-flag" src="https://flagcdn.com/w40/in.webp"/>
-        ગુજરાતી (Gujarati)
+        ગુજરાતી (गुजराती)
        </span>
        <span class="lang-chip" data-i18n="index_span_66">
-        <img alt="Iran" class="lang-flag" src="https://flagcdn.com/w40/ir.webp"/>
-        فارسی (Persian)
+        فारसी (फारसी)
        </span>
        <span class="lang-chip" data-i18n="index_span_67">
-        <img alt="Tanzania" class="lang-flag" src="https://flagcdn.com/w40/tz.webp"/>
-        Kiswahili (Swahili)
+        Kiswahili (स्वाहिली)
        </span>
        <span class="lang-chip" data-i18n="index_span_68">
-        <img alt="Madagascar" class="lang-flag" src="https://flagcdn.com/w40/mg.webp"/>
-        Malagasy (Malagasy)
+        Malagasy (मालागासी)
        </span>
        <span class="lang-chip" data-i18n="index_span_69">
-        <img alt="Israel" class="lang-flag" src="https://flagcdn.com/w40/il.webp"/>
-        עברית (Hebrew)
+        עבריत (हिब्रू)
        </span>
        <span class="lang-chip" data-i18n="index_span_70">
-        <img alt="Lithuania" class="lang-flag" src="https://flagcdn.com/w40/lt.webp"/>
-        Lietuvių (Lithuanian)
+        Lietuvių (लिथुआनियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_71">
-        <img alt="Latvia" class="lang-flag" src="https://flagcdn.com/w40/lv.webp"/>
-        Latviešu (Latvian)
+        Latviešu (लातवियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_72">
-        <img alt="Romania" class="lang-flag" src="https://flagcdn.com/w40/ro.webp"/>
-        Română (Romanian)
+        Română (रोमानियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_73">
-        <img alt="Slovakia" class="lang-flag" src="https://flagcdn.com/w40/sk.webp"/>
-        Slovenčina (Slovak)
+        Slovenčina (स्लोवाक)
        </span>
        <span class="lang-chip" data-i18n="index_span_74">
-        <img alt="Slovenia" class="lang-flag" src="https://flagcdn.com/w40/si.webp"/>
-        Slovenščina (Slovenian)
+        Slovenščina (स्लोवेनियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_75">
-        <img alt="Serbia" class="lang-flag" src="https://flagcdn.com/w40/rs.webp"/>
-        Српски (Serbian)
+        Српски (सर्बियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_76">
-        <img alt="Thailand" class="lang-flag" src="https://flagcdn.com/w40/th.webp"/>
-        ไทย (Thai)
+        ไทย (थाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_77">
-        <img alt="Philippines" class="lang-flag" src="https://flagcdn.com/w40/ph.webp"/>
-        Filipino (Filipino)
+        Filipino (फिलिपिनो)
        </span>
        <span class="lang-chip" data-i18n="index_span_78">
-        <img alt="Turkey" class="lang-flag" src="https://flagcdn.com/w40/tr.webp"/>
-        Türkçe (Turkish)
+        Türkçe (तुर्की)
        </span>
        <span class="lang-chip" data-i18n="index_span_79">
-        <img alt="Ukraine" class="lang-flag" src="https://flagcdn.com/w40/ua.webp"/>
-        Українська (Ukrainian)
+        Українська (यूक्रेनी)
        </span>
        <span class="lang-chip" data-i18n="index_span_80">
-        <img alt="Vietnam" class="lang-flag" src="https://flagcdn.com/w40/vn.webp"/>
-        Tiếng Việt (Vietnamese)
+        Tiếng Việt (वियतनामी)
        </span>
        <span class="lang-chip" data-i18n="index_span_81">
-        <img alt="South Africa" class="lang-flag" src="https://flagcdn.com/w40/za.webp"/>
-        Afrikaans
+        Afrikaans (अफ्रीकी)
        </span>
        <span class="lang-chip" data-i18n="index_span_82">
-        <img alt="Belarus" class="lang-flag" src="https://flagcdn.com/w40/by.webp"/>
-        Беларуская (Belarusian)
+        Беларуская (बेलारूसी)
        </span>
        <span class="lang-chip" data-i18n="index_span_83">
-        <img alt="Catalunya" class="lang-flag" src="https://flagcdn.com/w40/ad.webp"/>
-        Català (Catalan)
+        Català (कैटलन)
        </span>
        <span class="lang-chip" data-i18n="index_span_84">
-        <img alt="Italy" class="lang-flag" src="https://flagcdn.com/w40/it.webp"/>
-        Italiano (Italian)
+        Italiano (इतालवी)
        </span>
        <span class="lang-chip" data-i18n="index_span_85">
-        <img alt="Georgia" class="lang-flag" src="https://flagcdn.com/w40/ge.webp"/>
-        ქართული (Georgian)
+        ქართული (जॉर्जियाई)
        </span>
        <!-- DUPLICATE LIST FOR INFINITE SCROLL -->
        <span class="lang-chip" data-i18n="index_span_86">
-        <img alt="UK" class="lang-flag" src="https://flagcdn.com/w40/gb.webp"/>
-        English
+        English (अंग्रेज़ी)
        </span>
        <span class="lang-chip" data-i18n="index_span_87">
-        <img alt="India" class="lang-flag" src="https://flagcdn.com/w40/in.webp"/>
         हिन्दी (Hindi)
        </span>
        <span class="lang-chip" data-i18n="index_span_88">
-        <img alt="Poland" class="lang-flag" src="https://flagcdn.com/w40/pl.webp"/>
-        Polski (Polish)
+        Polski (पोलिश)
        </span>
        <span class="lang-chip" data-i18n="index_span_89">
-        <img alt="France" class="lang-flag" src="https://flagcdn.com/w40/fr.webp"/>
-        Français (French)
+        Français (फ़्रेंच)
        </span>
        <span class="lang-chip" data-i18n="index_span_90">
-        <img alt="Germany" class="lang-flag" src="https://flagcdn.com/w40/de.webp"/>
-        Deutsch (German)
+        Deutsch (जर्मन)
        </span>
        <span class="lang-chip" data-i18n="index_span_91">
-        <img alt="Spain" class="lang-flag" src="https://flagcdn.com/w40/es.webp"/>
-        Español (Spanish)
+        Español (स्पैनिश)
        </span>
        <span class="lang-chip" data-i18n="index_span_92">
-        <img alt="Portugal" class="lang-flag" src="https://flagcdn.com/w40/pt.webp"/>
-        Português (Portuguese)
+        Português (पुर्तगाली)
        </span>
        <span class="lang-chip" data-i18n="index_span_93">
-        <img alt="Iceland" class="lang-flag" src="https://flagcdn.com/w40/is.webp"/>
-        Íslenska (Icelandic)
+        Íslenska (आइसलैंडिक)
        </span>
        <span class="lang-chip" data-i18n="index_span_94">
-        <img alt="Norway" class="lang-flag" src="https://flagcdn.com/w40/no.webp"/>
-        Norsk (Norwegian)
+        Norsk (नार्वेजियन)
        </span>
        <span class="lang-chip" data-i18n="index_span_95">
-        <img alt="Sweden" class="lang-flag" src="https://flagcdn.com/w40/se.webp"/>
-        Svenska (Swedish)
+        Svenska (स्वीडिश)
        </span>
        <span class="lang-chip" data-i18n="index_span_96">
-        <img alt="Denmark" class="lang-flag" src="https://flagcdn.com/w40/dk.webp"/>
-        Dansk (Danish)
+        Dansk (डेनिश)
        </span>
        <span class="lang-chip" data-i18n="index_span_97">
-        <img alt="Finland" class="lang-flag" src="https://flagcdn.com/w40/fi.webp"/>
-        Suomi (Finnish)
+        Suomi (फिनिश)
        </span>
        <span class="lang-chip" data-i18n="index_span_98">
-        <img alt="Netherlands" class="lang-flag" src="https://flagcdn.com/w40/nl.webp"/>
-        Nederlands (Dutch)
+        Nederlands (डच)
        </span>
        <span class="lang-chip" data-i18n="index_span_99">
-        <img alt="Estonia" class="lang-flag" src="https://flagcdn.com/w40/ee.webp"/>
-        Eesti (Estonian)
+        Eesti (एस्टोनियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_100">
-        <img alt="Japan" class="lang-flag" src="https://flagcdn.com/w40/jp.webp"/>
-        日本語 (Japanese)
+        日本語 (जापानी)
        </span>
        <span class="lang-chip" data-i18n="index_span_101">
-        <img alt="Korea" class="lang-flag" src="https://flagcdn.com/w40/kr.webp"/>
-        한국어 (Korean)
+        한국어 (कोरियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_102">
-        <img alt="Indonesia" class="lang-flag" src="https://flagcdn.com/w40/id.webp"/>
-        Bahasa Indonesia
+        Bahasa Indonesia (इंडोनेशियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_103">
-        <img alt="Russia" class="lang-flag" src="https://flagcdn.com/w40/ru.webp"/>
-        Русский (Russian)
+        Русский (रूसी)
        </span>
        <span class="lang-chip" data-i18n="index_span_104">
-        <img alt="China" class="lang-flag" src="https://flagcdn.com/w40/cn.webp"/>
-        中文 (Chinese)
+        中文 (चीनी)
        </span>
        <span class="lang-chip" data-i18n="index_span_105">
-        <img alt="Bangladesh" class="lang-flag" src="https://flagcdn.com/w40/bd.webp"/>
-        বাংলা (Bengali)
+        বাংলা (बंगाली)
        </span>
        <span class="lang-chip" data-i18n="index_span_106">
-        <img alt="Malaysia" class="lang-flag" src="https://flagcdn.com/w40/my.webp"/>
-        Bahasa Melayu
+        Bahasa Melayu (मलय)
        </span>
        <span class="lang-chip" data-i18n="index_span_107">
-        <img alt="Saudi Arabia" class="lang-flag" src="https://flagcdn.com/w40/sa.webp"/>
-        العربية (Arabic)
+        العربية (अरबी)
        </span>
        <span class="lang-chip" data-i18n="index_span_108">
-        <img alt="Bulgaria" class="lang-flag" src="https://flagcdn.com/w40/bg.webp"/>
-        Български (Bulgarian)
+        Български (बुल्गेरियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_109">
-        <img alt="Czech" class="lang-flag" src="https://flagcdn.com/w40/cz.webp"/>
-        Čeština (Czech)
+        Čeština (चेक)
        </span>
        <span class="lang-chip" data-i18n="index_span_110">
-        <img alt="Greece" class="lang-flag" src="https://flagcdn.com/w40/gr.webp"/>
-        Ελληνικά (Greek)
+        Ελληνικά (ग्रीक)
        </span>
        <span class="lang-chip" data-i18n="index_span_111">
-        <img alt="Croatia" class="lang-flag" src="https://flagcdn.com/w40/hr.webp"/>
-        Hrvatski (Croatian)
+        Hrvatski (क्रोएशियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_112">
-        <img alt="Hungary" class="lang-flag" src="https://flagcdn.com/w40/hu.webp"/>
-        Magyar (Hungarian)
+        Magyar (हंगेरियन)
        </span>
        <span class="lang-chip" data-i18n="index_span_113">
-        <img alt="Pakistan" class="lang-flag" src="https://flagcdn.com/w40/pk.webp"/>
-        اردو (Urdu)
+        اردو (उर्दू)
        </span>
        <span class="lang-chip" data-i18n="index_span_114">
-        <img alt="India" class="lang-flag" src="https://flagcdn.com/w40/in.webp"/>
-        தமிழ் (Tamil)
+        தமிழ் (तमिल)
        </span>
        <span class="lang-chip" data-i18n="index_span_115">
-        <img alt="India" class="lang-flag" src="https://flagcdn.com/w40/in.webp"/>
-        తెలుగు (Telugu)
+        తెలుగు (तेलुगु)
        </span>
        <span class="lang-chip" data-i18n="index_span_116">
-        <img alt="India" class="lang-flag" src="https://flagcdn.com/w40/in.webp"/>
-        मराठी (Marathi)
+        मराठी (मराठी)
        </span>
        <span class="lang-chip" data-i18n="index_span_117">
-        <img alt="India" class="lang-flag" src="https://flagcdn.com/w40/in.webp"/>
-        ಕನ್ನಡ (Kannada)
+        ಕನ್ನಡ (कन्नड़)
        </span>
        <span class="lang-chip" data-i18n="index_span_118">
-        <img alt="India" class="lang-flag" src="https://flagcdn.com/w40/in.webp"/>
-        ગુજરાતી (Gujarati)
+        ગુજરાતી (गुजराती)
        </span>
        <span class="lang-chip" data-i18n="index_span_119">
-        <img alt="Iran" class="lang-flag" src="https://flagcdn.com/w40/ir.webp"/>
-        فارسی (Persian)
+        فारसी (फारसी)
        </span>
        <span class="lang-chip" data-i18n="index_span_120">
-        <img alt="Tanzania" class="lang-flag" src="https://flagcdn.com/w40/tz.webp"/>
-        Kiswahili (Swahili)
+        Kiswahili (स्वाहिली)
        </span>
        <span class="lang-chip" data-i18n="index_span_121">
-        <img alt="Madagascar" class="lang-flag" src="https://flagcdn.com/w40/mg.webp"/>
-        Malagasy (Malagasy)
+        Malagasy (मालागासी)
        </span>
        <span class="lang-chip" data-i18n="index_span_122">
-        <img alt="Israel" class="lang-flag" src="https://flagcdn.com/w40/il.webp"/>
-        עברית (Hebrew)
+        עבריत (हिब्रू)
        </span>
        <span class="lang-chip" data-i18n="index_span_123">
-        <img alt="Lithuania" class="lang-flag" src="https://flagcdn.com/w40/lt.webp"/>
-        Lietuvių (Lithuanian)
+        Lietuvių (लिथुआनियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_124">
-        <img alt="Latvia" class="lang-flag" src="https://flagcdn.com/w40/lv.webp"/>
-        Latviešu (Latvian)
+        Latviešu (लातवियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_125">
-        <img alt="Romania" class="lang-flag" src="https://flagcdn.com/w40/ro.webp"/>
-        Română (Romanian)
+        Română (रोमानियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_126">
-        <img alt="Slovakia" class="lang-flag" src="https://flagcdn.com/w40/sk.webp"/>
-        Slovenčina (Slovak)
+        Slovenčina (स्लोवाक)
        </span>
        <span class="lang-chip" data-i18n="index_span_127">
-        <img alt="Slovenia" class="lang-flag" src="https://flagcdn.com/w40/si.webp"/>
-        Slovenščina (Slovenian)
+        Slovenščina (स्लोवेनियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_128">
-        <img alt="Serbia" class="lang-flag" src="https://flagcdn.com/w40/rs.webp"/>
-        Српски (Serbian)
+        Српски (सर्बियाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_129">
-        <img alt="Thailand" class="lang-flag" src="https://flagcdn.com/w40/th.webp"/>
-        ไทย (Thai)
+        ไทย (थाई)
        </span>
        <span class="lang-chip" data-i18n="index_span_130">
-        <img alt="Philippines" class="lang-flag" src="https://flagcdn.com/w40/ph.webp"/>
-        Filipino (Filipino)
+        Filipino (फिलिपिनो)
        </span>
        <span class="lang-chip" data-i18n="index_span_131">
-        <img alt="Turkey" class="lang-flag" src="https://flagcdn.com/w40/tr.webp"/>
-        Türkçe (Turkish)
+        Türkçe (तुर्की)
        </span>
        <span class="lang-chip" data-i18n="index_span_132">
-        <img alt="Ukraine" class="lang-flag" src="https://flagcdn.com/w40/ua.webp"/>
-        Українська (Ukrainian)
+        Українська (यूक्रेनी)
        </span>
        <span class="lang-chip" data-i18n="index_span_133">
-        <img alt="Vietnam" class="lang-flag" src="https://flagcdn.com/w40/vn.webp"/>
-        Tiếng Việt (Vietnamese)
+        Tiếng Việt (वियतनामी)
        </span>
        <span class="lang-chip" data-i18n="index_span_134">
-        <img alt="South Africa" class="lang-flag" src="https://flagcdn.com/w40/za.webp"/>
-        Afrikaans
+        Afrikaans (अफ्रीकी)
        </span>
        <span class="lang-chip" data-i18n="index_span_135">
-        <img alt="Belarus" class="lang-flag" src="https://flagcdn.com/w40/by.webp"/>
-        Беларуская (Belarusian)
+        Беларуская (बेलारूसी)
        </span>
        <span class="lang-chip" data-i18n="index_span_136">
-        <img alt="Catalunya" class="lang-flag" src="https://flagcdn.com/w40/ad.webp"/>
-        Català (Catalan)
+        Català (कैटलन)
        </span>
        <span class="lang-chip" data-i18n="index_span_137">
-        <img alt="Italy" class="lang-flag" src="https://flagcdn.com/w40/it.webp"/>
-        Italiano (Italian)
+        Italiano (इतालवी)
        </span>
        <span class="lang-chip" data-i18n="index_span_138">
-        <img alt="Georgia" class="lang-flag" src="https://flagcdn.com/w40/ge.webp"/>
-        ქართული (Georgian)
+        ქართული (जॉर्जियाई)
        </span>
       </div>
      </div>
@@ -1120,17 +1039,16 @@
    <section class="global-map-section reveal">
     <div class="container">
      <h2 data-i18n="index_h2_8">
-      Used in 100+ Countries
+      100+ देशों में लोग इस्तेमाल कर रहे हैं
      </h2>
      <p class="lead-text" data-i18n="index_p_20">
-      From bustling markets in Mumbai to quiet pantries in Paris, ListKart is helping
-                    millions shop smarter.
+      समझता है - ताकि आपको अपना सामान खरीदने के लिए ट्रांसलेट न करना पड़े। चाहे वो 'Tamatar' हो या 'Tomato', हम सब समझते हैं।
      </p>
      <div class="map-container">
       <!-- World Map SVG (Interactive) -->
       <svg class="world-map-svg" height="458.627px" id="world-map" version="1.1" viewbox="30.767 241.591 784.077 458.627" width="784.077px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
        <title data-i18n="index_page_title">
-        लिस्टकार्ट - स्मार्ट शॉपिंग ऐप
+        લિસ્ટકાર્ટ - સ્માર્ટ શોપિંગ લિસ્ટ એપ
        </title>
        <desc>
         Author: Al MacDonald
@@ -1849,18 +1767,12 @@
    <section class="support" id="support">
     <div class="container">
      <h2 data-i18n="index_h2_9">
-      Support
+      मदद और सपोर्ट
      </h2>
      <p data-i18n="index_p_21">
-      Have questions or need help? Our team is here for you.
+      कोई सवाल है या मदद चाहिए? हमारी टीम आपके लिए हाज़िर है।
      </p>
      <a class="support-email" data-i18n="index_a_15" href="mailto:support@getlistkart.com">
-      <svg class="mail-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
-       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-       </path>
-       <polyline points="22,6 12,13 2,6">
-       </polyline>
-      </svg>
       support@getlistkart.com
      </a>
     </div>
@@ -1882,7 +1794,7 @@
        </span>
       </a>
       <p data-i18n="index_p_22">
-       100% मुफ्त और सुरक्षित।
+       दुनिया की सबसे बेहतरीन लोकलाइज्ड ऐप्स में से एक, जो 53 से भी ज़्यादा भाषाओं का सपोर्ट करती है। 100% फ्री और सुरक्षित।
       </p>
       <a class="footer-cta-btn" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
        <img alt="Get it on Google Play" src="../assets/google-play-badge.png"/>
@@ -1895,66 +1807,66 @@
       <ul class="footer-links">
        <li>
         <a data-i18n="index_a_18" href="../index.html#about">
-         About Us
+         हमारे बारे में
         </a>
        </li>
        <li>
         <a data-i18n="index_a_19" href="../blog.html">
-         Our Blog
+         ब्लॉग
         </a>
        </li>
        <li>
         <a data-i18n="index_a_20" href="../faq.html">
-         Common Questions
+         सवाल-जवाब
         </a>
        </li>
        <li>
         <a data-i18n="index_a_21" href="../privacy.html">
-         Privacy Policy
+         प्राइवेसी पॉलिसी
         </a>
        </li>
        <li>
         <a data-i18n="index_a_22" href="../sitemap.xml">
-         Sitemap
+         साइटमैप
         </a>
        </li>
       </ul>
      </div>
      <div class="footer-col">
       <h4 class="footer-heading" data-i18n="index_h4_1">
-       फीचर्स
+       खास फीचर्स
       </h4>
       <ul class="footer-links">
        <li>
         <a data-i18n="index_a_23" href="../food-facts.html">
-         Smart Food Facts
+         फूड फैक्ट्स (Food Facts)
         </a>
        </li>
        <li>
         <a data-i18n="index_a_24" href="../compare-grocery-list-apps.html">
-         Compare Apps
+         ऐप्स की तुलना
         </a>
        </li>
        <li>
         <a data-i18n="index_a_25" href="../grocery-list-app.html">
-         Shopping Guide
+         शॉपिंग गाइड
         </a>
        </li>
        <li>
         <a data-i18n="index_a_26" href="../index.html#budget-tracker">
-         Budget Tracking
+         बजट ट्रैकिंग
         </a>
        </li>
        <li>
         <a data-i18n="index_a_27" href="../index.html#family-sync">
-         Real-time Sync
+         रियल-टाइम सिंक
         </a>
        </li>
       </ul>
      </div>
      <div class="footer-col">
       <h4 class="footer-heading" data-i18n="index_h4_2">
-       ग्लोबल सपोर्ट
+       सबके लिए
       </h4>
       <div class="lang-grid-footer">
        <ul class="footer-links">
@@ -1965,7 +1877,7 @@
         </li>
         <li>
          <a data-i18n="index_a_29" href="../hi/">
-          हिन्दी
+          हिन्दी (Hindi)
          </a>
         </li>
         <li>
@@ -1982,7 +1894,7 @@
        <ul class="footer-links">
         <li>
          <a data-i18n="index_a_32" href="../mr/">
-          मराठी
+          मराठी (Marathi)
          </a>
         </li>
         <li>
@@ -1997,7 +1909,7 @@
         </li>
         <li>
          <a data-i18n="index_a_35" href="../index.html#languages">
-          सब देखें
+          सभी देखें
          </a>
         </li>
        </ul>
@@ -2010,13 +1922,13 @@
      </p>
      <div class="footer-legal-links">
       <a data-i18n="index_a_36" href="../privacy.html">
-       Privacy
+       प्राइवेसी
       </a>
       <a data-i18n="index_a_37" href="../faq.html">
        FAQ
       </a>
       <a data-i18n="index_a_38" href="../contact.html">
-       Contact
+       संपर्क करें
       </a>
      </div>
     </div>
@@ -2128,6 +2040,8 @@
                 });
             });
         });
+  </script>
+  <script src="../assets/chatbot.js">
   </script>
  </body>
 </html>

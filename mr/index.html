@@ -6,7 +6,7 @@
   <meta content="ListKart is the world's most accessible shopping list app, supporting 53+ languages. Create smart grocery lists in your native language - free, ad-free, and privacy-focused." name="description"/>
   <meta content="shopping list app, multilingual grocery list, pantry tracker, ad-free shopping list, listkart, 53 languages support, regional grocery app" name="keywords"/>
   <title data-i18n="index_page_title">
-   लिस्टकार्ट - स्मार्ट शॉपिंग ॲप
+   लिटरकार्ट - स्मार्ट शॉपिंग ॲप
   </title>
   <meta content="ListKart - The Ultimate Multilingual Shopping List App" property="og:title"/>
   <meta content="https://getlistkart.com/assets/hero-illustration.webp" property="og:image"/>
@@ -22,6 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;family=Outfit:wght@500;700;900&amp;display=swap" rel="stylesheet"/>
   <link href="../style.css" rel="stylesheet"/>
   <link href="../assets/logo.webp" rel="icon" type="image/png"/>
+  <link href="../assets/chatbot.css" rel="stylesheet"/>
   <!-- International SEO: hreflang tags -->
   <link href="https://getlistkart.com/" hreflang="x-default" rel="alternate"/>
   <link href="https://getlistkart.com/" hreflang="en" rel="alternate"/>
@@ -87,10 +88,6 @@
      <div class="nav-item">
       <div class="dropdown-trigger" data-i18n="index_nav_product">
        उत्पादने
-       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
-        <polyline points="6 9 12 15 18 9">
-        </polyline>
-       </svg>
       </div>
       <div class="dropdown-menu">
        <a class="dropdown-item" href="#about">
@@ -148,75 +145,114 @@
       </div>
      </div>
      <!-- Solutions Dropdown -->
-      <div class="nav-item">
-       <div class="dropdown-trigger">
-        Solutions
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
-         <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-       </div>
-       <div class="dropdown-menu">
-        <!-- Primary Solutions -->
-        <a class="dropdown-item" href="../index.html#family-sync">
-         <div class="dropdown-icon">👨‍👩‍👧</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">Family Sync</span>
-          <span class="dropdown-desc">Share lists with partners</span>
-         </div>
-        </a>
-        <a class="dropdown-item" href="../index.html#budget-tracker">
-         <div class="dropdown-icon">💰</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">Budget Tracker</span>
-          <span class="dropdown-desc">Monitor your spending</span>
-         </div>
-        </a>
-        <a class="dropdown-item" href="../index.html#offline-mode">
-         <div class="dropdown-icon">📴</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">Offline Mode</span>
-          <span class="dropdown-desc">Works without internet</span>
-         </div>
-        </a>
-        <!-- Creative Solutions -->
-        <a class="dropdown-item" href="../solutions/multilingual-shopping.html">
-         <div class="dropdown-icon">🌐</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">Grocery Translator</span>
-          <span class="dropdown-desc">Shop in 53+ languages</span>
-         </div>
-        </a>
-        <a class="dropdown-item" href="../solutions/new-home-essentials.html">
-         <div class="dropdown-icon">🏠</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">New Home Kit</span>
-          <span class="dropdown-desc">First-day life essentials</span>
-         </div>
-        </a>
-        <a class="dropdown-item" href="../solutions/party-planner.html">
-         <div class="dropdown-icon">🎉</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">Party Survival</span>
-          <span class="dropdown-desc">Stress-free event sync</span>
-         </div>
-        </a>
-        <a class="dropdown-item" href="../solutions/offline-shopping.html">
-         <div class="dropdown-icon">📴</div>
-         <div class="dropdown-content">
-          <span class="dropdown-title">Offline Hero</span>
-          <span class="dropdown-desc">Zero-signal deep shopping</span>
-         </div>
-        </a>
-       </div>
-      </div>
-      <!-- Resources Dropdown -->
      <div class="nav-item">
-      <div class="dropdown-trigger" data-i18n="index_nav_resources">
-       रिसोर्स
+      <div class="dropdown-trigger">
+       Solutions
        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
         <polyline points="6 9 12 15 18 9">
         </polyline>
        </svg>
+      </div>
+      <div class="dropdown-menu">
+       <!-- Primary Solutions -->
+       <a class="dropdown-item" href="../index.html#family-sync">
+        <div class="dropdown-icon">
+         👨‍👩‍👧
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          Family Sync
+         </span>
+         <span class="dropdown-desc">
+          Share lists with partners
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../index.html#budget-tracker">
+        <div class="dropdown-icon">
+         💰
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          Budget Tracker
+         </span>
+         <span class="dropdown-desc">
+          Monitor your spending
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../index.html#offline-mode">
+        <div class="dropdown-icon">
+         📴
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          Offline Mode
+         </span>
+         <span class="dropdown-desc">
+          Works without internet
+         </span>
+        </div>
+       </a>
+       <!-- Creative Solutions -->
+       <a class="dropdown-item" href="../solutions/multilingual-shopping.html">
+        <div class="dropdown-icon">
+         🌐
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          Grocery Translator
+         </span>
+         <span class="dropdown-desc">
+          Shop in 53+ languages
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../solutions/new-home-essentials.html">
+        <div class="dropdown-icon">
+         🏠
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          New Home Kit
+         </span>
+         <span class="dropdown-desc">
+          First-day life essentials
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../solutions/party-planner.html">
+        <div class="dropdown-icon">
+         🎉
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          Party Survival
+         </span>
+         <span class="dropdown-desc">
+          Stress-free event sync
+         </span>
+        </div>
+       </a>
+       <a class="dropdown-item" href="../solutions/offline-shopping.html">
+        <div class="dropdown-icon">
+         📴
+        </div>
+        <div class="dropdown-content">
+         <span class="dropdown-title">
+          Offline Hero
+         </span>
+         <span class="dropdown-desc">
+          Zero-signal deep shopping
+         </span>
+        </div>
+       </a>
+      </div>
+     </div>
+     <!-- Resources Dropdown -->
+     <div class="nav-item">
+      <div class="dropdown-trigger" data-i18n="index_nav_resources">
+       रिसोर्स
       </div>
       <div class="dropdown-menu">
        <a class="dropdown-item" href="../food-facts.html">
@@ -262,7 +298,7 @@
      </div>
      <div class="nav-item">
       <a class="nav-link" data-i18n="index_a_12" href="../faq.html">
-       FAQ
+       प्रश्नोत्तरे (FAQ)
       </a>
      </div>
      <a class="btn-nav" data-i18n="index_a_13" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
@@ -284,14 +320,14 @@
        </span>
       </h1>
       <p class="hero-tagline" data-i18n="index_p_0">
-       काहीही कधीही विसरू नका
+       आता काहीही विसरणार नाही
       </p>
       <h2 data-i18n="index_h2_0" style="font-size: 1.25rem; line-height: 1.6; margin-top: 1.5rem; margin-bottom: 2rem; font-weight: 500; color: var(--text-light); text-align: left;">
-       जगातील सर्वात सुलभ बहुभाषिक शॉपिंग ॲप
+       जगातील सर्वात सोपे बहुभाषिक शॉपिंग ॲप - आता तुमच्या भाषेत
       </h2>
       <div class="cta-group">
        <a class="btn btn-primary" data-i18n="index_a_14" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
-        गूगल प्ले वर मिळवा
+        गूगल प्ले वरून डाउनलोड करा
        </a>
       </div>
      </div>
@@ -311,19 +347,15 @@
         एका सोलो डेव्हलपरची मेहनत
        </div>
        <h2 data-i18n="index_h2_1">
-        एक प्रीमियम अनुभव, आता सर्वांसाठी
+        एक प्रीमियम अनुभव, जो नेहमी विनामूल्य राहील
        </h2>
       </div>
       <div class="about-body">
        <p class="professional-text" data-i18n="index_p_1">
-        लिस्टकार्ट तुमची खरेदी सोपी करण्यासाठी डिझाइन केलेले आहे.
+        लिस्टकार्ट एका साध्या विचाराने बनवले गेले आहे: प्रत्येकाला कोणत्याही खर्चाशिवाय जागतिक दर्जाचा अनुभव मिळायला हवा. माझे असे मत आहे की आवश्यक साधनांसाठी पैसे आकारू नयेत आणि जाहिरातींनी तुम्हाला त्रास देऊ नये.
        </p>
        <p class="professional-text" data-i18n="index_p_2">
         एक सोलो डेव्हलपर म्हणून, आम्ही हे ॲप बनवण्यात आमचे सर्वस्व पणाला लावले आहे जेणेकरून ते तुम्हाला एक लक्झरी उत्पादन वाटेल आणि सर्वात चांगली गोष्ट म्हणजे ते
-        <strong data-i18n="index_strong_0">
-         नेहमीसाठी मोफत
-        </strong>
-        . माझे असे मत आहे की आवश्यक साधनांसाठी पैसे आकारू नयेत आणि जाहिरातींनी तुम्हाला त्रास देऊ नये.
        </p>
        <div class="mission-points">
         <div class="mission-item">
@@ -370,7 +402,7 @@
      </div>
      <div class="spotlight-grid">
       <!-- Family Sync -->
-      <div class="spotlight-item" id="family-sync">
+      <div class="spotlight-item reveal-left" id="family-sync">
        <div class="spotlight-image">
         <div class="spotlight-image-container">
          <img alt="Family Sync Solution" class="responsive-mockup" src="../assets/solutions/family-sync-premium.png"/>
@@ -378,17 +410,17 @@
        </div>
        <div class="spotlight-content">
         <h3 data-i18n="index_h3_0">
-         फॅमिली सिंक
+         रिअल-टाइम फॅमिली सिंक
         </h3>
         <p data-i18n="index_p_6">
-         संपूर्ण कुटुंबासह रिअल-टाइममध्ये लिस्ट शेअर करा.
+         घरातील कामांसाठी ताळमेळ खूप महत्त्वाचा असतो. फॅमिली सिंक हे सुनिश्चित करते की घरातील प्रत्येक सदस्य अपडेट राहील. तुम्ही दुकानात असाल किंवा घरून लिस्ट बनवत असाल, अपडेट लगेच होतो.
         </p>
         <ul class="spotlight-features">
          <li data-i18n="index_li_0">
-          झटपट शेअरिंग
+          लिंक किंवा QR कोडद्वारे त्वरित लिस्ट शेअर करा
          </li>
          <li data-i18n="index_li_1">
-          बहुभाषिक सपोर्ट
+          वेगवेगळ्या भाषांमध्येही एकत्र काम करा
          </li>
          <li data-i18n="index_li_2">
           इंग्रजीमध्ये शेअर करा, तुमच्या भाषेत पहा
@@ -406,7 +438,7 @@
        </div>
       </div>
       <!-- Budget Tracker -->
-      <div class="spotlight-item" id="budget-tracker">
+      <div class="spotlight-item reveal-right" id="budget-tracker">
        <div class="spotlight-image">
         <div class="spotlight-image-container">
          <img alt="Budget Tracker Solution" src="../assets/solutions/budget-tracker-premium.png"/>
@@ -414,65 +446,68 @@
        </div>
        <div class="spotlight-content">
         <h3 data-i18n="index_h3_1">
-         बजेट ट्रॅकर
+         स्मार्ट बजेट ट्रॅकिंग
         </h3>
         <p data-i18n="index_p_7">
-         तुमच्या खर्चावर लक्ष ठेवा आणि पैसे वाचवा.
+         क्लिष्ट हिशोबांच्या ॲप्सच्या भानगडीत पडू नका, तुमच्या खर्चावर पूर्ण नियंत्रण ठेवा. लिस्टकार्टचा बजेट ट्रॅकर कर्ज सामान्य लोकांसाठी बनवला आहे. हे तुम्हाला दाखवते की पैसे कुठे खर्च होत आहेत.
         </p>
         <ul class="spotlight-features">
          <li data-i18n="index_li_6">
-          दैनंदिन खर्च मर्यादा
+          दैनंदिन आणि मासिक खर्चाची मर्यादा ठरवा
          </li>
-         <li data-i18n="index_li_7">
-          कितकी जास्त किंवा कमी खर्च झाला याचा त्वरित हिशोब
+         <li data-i18n="index_li_135">
+          Auto-calculate over/under spending
          </li>
          <li data-i18n="index_li_8">
           कुठे किती पैसे खर्च झाले, सर्व वेगळे पहा
          </li>
-         <li data-i18n="index_li_9">
+         <li data-i18n="index_li_136">
           Historical price trend analysis
          </li>
-         <li data-i18n="index_li_10">
+         <li data-i18n="index_li_137">
           Instant total price &amp; quantity sum
          </li>
          <li data-i18n="index_li_11">
-          Currency-aware localization
+          तुमच्या चलनानुसार हिशोब ठेवा
          </li>
         </ul>
        </div>
       </div>
-      <!-- Offline Mode -->
-      <div class="spotlight-item" id="offline-mode">
+      <!-- Grocery Translator -->
+      <div class="spotlight-item reveal-left">
        <div class="spotlight-image">
         <div class="spotlight-image-container">
-         <img alt="Offline Mode Solution" src="../assets/solutions/offline-mode.webp"/>
+         <img alt="Grocery Translator" src="../assets/solutions/multilingual-translator.png"/>
         </div>
        </div>
        <div class="spotlight-content">
-        <h3 data-i18n="index_h3_2">
-         ऑफलाईन मोड
+        <h3>
+         The Grocery Translator
         </h3>
-        <p data-i18n="index_p_8">
-         इंटरनेटशिवायही कार्य करते.
+        <p>
+         Shop in 53+ languages effortlessly. Whether you're an expat or traveler, write in your native language and shop like a local in any country.
         </p>
         <ul class="spotlight-features">
-         <li data-i18n="index_li_12">
-          १००% ऑफलाईन
+         <li>
+          Support for 53+ native languages
          </li>
-         <li data-i18n="index_li_13">
-          Ultra-fast local database engine
+         <li>
+          Global staple translator for local markets
          </li>
-         <li data-i18n="index_li_14">
-          Optimized for local-first reliability
+         <li>
+          Expat-friendly user interface
          </li>
-         <li data-i18n="index_li_15">
-          Battery-optimized local storage
+         <li>
+          Offline translation for remote shopping
          </li>
-         <li data-i18n="index_li_16">
-          Voice input works while offline
+         <li>
+          Voice-to-text input in native tongue
          </li>
-         <li data-i18n="index_li_17">
-          Zero loading screens, zero delays
+         <li>
+          Smart food facts integration
+         </li>
+         <li>
+          No signal required for core translation
          </li>
         </ul>
        </div>
@@ -484,7 +519,7 @@
    <section class="features-section reveal" id="features">
     <div class="container" style="text-align: center;">
      <h2 data-i18n="index_h2_3" style="font-size: 2.5rem; margin-bottom: 3rem;">
-      प्रीमियम फीचर्स
+      स्मार्ट लोकांसाठी प्रीमियम फीचर्स
      </h2>
      <div class="feature-grid">
       <!-- Feature Items -->
@@ -504,7 +539,7 @@
         <img alt="Budget" src="../assets/features/budget.png"/>
        </div>
        <h3 data-i18n="index_h3_4">
-        बजेट
+        बजेट ट्रॅकर
        </h3>
        <ul class="feature-sub-list">
         <li data-i18n="index_li_18">
@@ -669,10 +704,10 @@
    <section class="languages-section reveal" id="languages">
     <div class="container">
      <h2 data-i18n="index_h2_7">
-      ५३+ भाषा सपोर्ट
+      जगासाठी बनवले, तुमच्यासाठी खास
      </h2>
      <p class="lead-text" data-i18n="index_p_19">
-      तुमच्या मातृभाषेत खरेदी करा.
+      आमचा असा विश्वास आहे की शॉपिंग तुमच्या स्वतःच्या भाषेत असायला हवी. म्हणूनच लिस्टकार्ट
      </p>
      <div class="marquee-wrapper">
       <div class="marquee-content">
@@ -1110,17 +1145,16 @@
    <section class="global-map-section reveal">
     <div class="container">
      <h2 data-i18n="index_h2_8">
-      Used in 100+ Countries
+      १००+ देशांमध्ये लोक वापरत आहेत
      </h2>
      <p class="lead-text" data-i18n="index_p_20">
-      From bustling markets in Mumbai to quiet pantries in Paris, ListKart is helping
-                    millions shop smarter.
+      समजते - जेणेकरून तुम्हाला वस्तू खरेदी करण्यासाठी ट्रान्सलेट करावे लागणार नाही. ते 'Tamatar' असो किंवा 'Tomato', आम्हाला सर्व समजते.
      </p>
      <div class="map-container">
       <!-- World Map SVG (Interactive) -->
       <svg class="world-map-svg" height="458.627px" id="world-map" version="1.1" viewbox="30.767 241.591 784.077 458.627" width="784.077px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
        <title data-i18n="index_page_title">
-        लिस्टकार्ट - स्मार्ट शॉपिंग ॲप
+        लिटरकार्ट - स्मार्ट शॉपिंग ॲप
        </title>
        <desc>
         Author: Al MacDonald
@@ -1839,18 +1873,12 @@
    <section class="support" id="support">
     <div class="container">
      <h2 data-i18n="index_h2_9">
-      Support
+      मदत आणि सपोर्ट
      </h2>
      <p data-i18n="index_p_21">
-      Have questions or need help? Our team is here for you.
+      काही प्रश्न आहेत किंवा मदत हवी आहे? आमची टीम तुमच्यासाठी हजर आहे.
      </p>
      <a class="support-email" data-i18n="index_a_15" href="mailto:support@getlistkart.com">
-      <svg class="mail-icon" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
-       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-       </path>
-       <polyline points="22,6 12,13 2,6">
-       </polyline>
-      </svg>
       support@getlistkart.com
      </a>
     </div>
@@ -1872,7 +1900,7 @@
        </span>
       </a>
       <p data-i18n="index_p_22">
-       १००% मोफत आणि सुरक्षित.
+       जगातील सर्वोत्कृष्ट लोकलाईज्ड ॲप्सपैकी एक, जे ५३ पेक्षा जास्त भाषांना सपोर्ट करते. १००% मोफत आणि सुरक्षित.
       </p>
       <a class="footer-cta-btn" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app&amp;hl=en_IN" target="_blank">
        <img alt="Get it on Google Play" src="../assets/google-play-badge.png"/>
@@ -1880,71 +1908,71 @@
      </div>
      <div class="footer-col">
       <h4 class="footer-heading" data-i18n="index_h4_0">
-       Explore
+       एक्सप्लोर करा
       </h4>
       <ul class="footer-links">
        <li>
         <a data-i18n="index_a_18" href="../index.html#about">
-         About Us
+         आमच्याबद्दल
         </a>
        </li>
        <li>
         <a data-i18n="index_a_19" href="../blog.html">
-         Our Blog
+         ब्लॉग
         </a>
        </li>
        <li>
         <a data-i18n="index_a_20" href="../faq.html">
-         Common Questions
+         प्रश्नोत्तरे
         </a>
        </li>
        <li>
         <a data-i18n="index_a_21" href="../privacy.html">
-         Privacy Policy
+         प्रायव्हसी पॉलिसी
         </a>
        </li>
        <li>
         <a data-i18n="index_a_22" href="../sitemap.xml">
-         Sitemap
+         साइटमॅप
         </a>
        </li>
       </ul>
      </div>
      <div class="footer-col">
       <h4 class="footer-heading" data-i18n="index_h4_1">
-       Features
+       खास फीचर्स
       </h4>
       <ul class="footer-links">
        <li>
         <a data-i18n="index_a_23" href="../food-facts.html">
-         Smart Food Facts
+         फूड फॅक्ट्स (Food Facts)
         </a>
        </li>
        <li>
         <a data-i18n="index_a_24" href="../compare-grocery-list-apps.html">
-         Compare Apps
+         ॲप्सची तुलना
         </a>
        </li>
        <li>
         <a data-i18n="index_a_25" href="../grocery-list-app.html">
-         Shopping Guide
+         शॉपिंग गाईड
         </a>
        </li>
        <li>
         <a data-i18n="index_a_26" href="../index.html#budget-tracker">
-         Budget Tracking
+         बजेट ट्रॅकिंग
         </a>
        </li>
        <li>
         <a data-i18n="index_a_27" href="../index.html#family-sync">
-         Real-time Sync
+         रिअल-टाइम सिंक
         </a>
        </li>
       </ul>
      </div>
      <div class="footer-col">
       <h4 class="footer-heading" data-i18n="index_h4_2">
-       Global Support
+       सर्वांसाठी
       </h4>
       <div class="lang-grid-footer">
        <ul class="footer-links">
@@ -1955,7 +1983,7 @@
         </li>
         <li>
          <a data-i18n="index_a_29" href="../hi/">
-          हिन्दी
+          हिन्दी (Hindi)
          </a>
         </li>
         <li>
@@ -1972,7 +2000,7 @@
        <ul class="footer-links">
         <li>
          <a data-i18n="index_a_32" href="../mr/">
-          मराठी
+          मराठी (Marathi)
          </a>
         </li>
         <li>
@@ -1987,7 +2015,7 @@
         </li>
         <li>
          <a data-i18n="index_a_35" href="../index.html#languages">
-          View All
+          सर्व पहा
          </a>
         </li>
        </ul>
@@ -2000,13 +2028,13 @@
      </p>
      <div class="footer-legal-links">
       <a data-i18n="index_a_36" href="../privacy.html">
-       Privacy
+       प्रायव्हसी
       </a>
       <a data-i18n="index_a_37" href="../faq.html">
        FAQ
       </a>
       <a data-i18n="index_a_38" href="../contact.html">
-       Contact
+       संपर्क करा
       </a>
      </div>
     </div>
@@ -2118,6 +2146,8 @@
                 });
             });
         });
+  </script>
+  <script src="../assets/chatbot.js">
   </script>
  </body>
 </html>
