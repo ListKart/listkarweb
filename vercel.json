@@ -52,6 +52,17 @@
     ],
     "rewrites": [
         {
+            "source": "/.well-known/assetlinks.json",
+            "has": [
+                {
+                    "type": "header",
+                    "key": "host",
+                    "value": "getlistkart.com"
+                }
+            ],
+            "destination": "/.well-known/assetlinks.json"
+        },
+        {
             "source": "/(.*)\\.js",
             "destination": "/404.html"
         },
