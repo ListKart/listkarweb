@@ -35,12 +35,25 @@
                     "value": "1; mode=block"
                 }
             ]
+        },
+        {
+            "source": "/.well-known/assetlinks.json",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                }
+            ]
         }
     ],
-    "rewrites": [
+        },
         {
-            "source": "/(.*)\\.js",
-            "destination": "/404.html"
+            "source": "/.well-known/assetlinks.json",
+            "destination": "/.well-known/assetlinks.json"
         },
         {
             "source": "/(.*)\\.json",
