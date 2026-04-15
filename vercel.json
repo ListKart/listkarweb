@@ -50,6 +50,10 @@
             ]
         }
     ],
+    "rewrites": [
+        {
+            "source": "/(.*)\\.js",
+            "destination": "/404.html"
         },
         {
             "source": "/.well-known/assetlinks.json",
