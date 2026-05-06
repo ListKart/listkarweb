@@ -1,0 +1,9 @@
+@echo off
+echo Adding changes to git...
+git add .
+echo Committing changes...
+git commit -m "Refactor: Remove ad-free claims and update translations"
+echo Pushing to GitHub...
+git push
+echo Done!
+pause

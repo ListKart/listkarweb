@@ -35,7 +35,7 @@
             },
             ads: {
                 keywords: ["ads", "advertisement", "annoying", "clutter"],
-                response: "Currently, ListKart is **completely ad-free**. We focus on a premium, clean experience. In the future, we might add tiny, non-intrusive ads to keep the servers running, but never the annoying ones! 🚫"
+                response: "ListKart features subtle, non-intrusive advertisements to support ongoing development and server costs while keeping the experience premium, fast, and clean! 🚫"
             },
             sharing: {
                 keywords: ["share", "sync", "family", "partner", "wife", "husband", "friend", "send", "link"],
