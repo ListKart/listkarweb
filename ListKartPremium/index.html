@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+    <meta name="description" content="ListKart is the world's most accessible shopping list app, supporting 53+ languages. Create smart grocery lists in your native language - 100% free and privacy-focused."/>
+    <title>ListKart - The Ultimate Multilingual Shopping List App</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="./style.css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- Premium Navigation -->
+    <header class="glass-nav">
+        <div class="container nav-container">
+            <a class="logo" href="index.html">
+                <img src="./assets/logo.webp" alt="ListKart Logo"/>
+                <span><span class="brand-list">List</span><span class="brand-kart">Kart</span></span>
+            </a>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                
+                <!-- Product Dropdown -->
+                <div class="nav-dropdown">
+                    <button class="dropdown-trigger">Product ▾</button>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" href="#about">
+                            <div class="dropdown-icon">📖</div>
+                            <div>
+                                <span class="dropdown-title">About ListKart</span>
+                                <span class="dropdown-desc">Our mission and story</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#features">
+                            <div class="dropdown-icon">✨</div>
+                            <div>
+                                <span class="dropdown-title">All Features</span>
+                                <span class="dropdown-desc">Smart lists, voice & scan</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#languages">
+                            <div class="dropdown-icon">🌐</div>
+                            <div>
+                                <span class="dropdown-title">53+ Languages</span>
+                                <span class="dropdown-desc">Shop in your native tongue</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="./compare-grocery-list-apps.html">
+                            <div class="dropdown-icon">📊</div>
+                            <div>
+                                <span class="dropdown-title">Compare Apps</span>
+                                <span class="dropdown-desc">ListKart vs. The Others</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Solutions Dropdown -->
+                <div class="nav-dropdown">
+                    <button class="dropdown-trigger">Solutions ▾</button>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" href="#family-sync">
+                            <div class="dropdown-icon">👨‍👩‍👧</div>
+                            <div>
+                                <span class="dropdown-title">Family Sync</span>
+                                <span class="dropdown-desc">Share lists with partners</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#budget-tracker">
+                            <div class="dropdown-icon">💰</div>
+                            <div>
+                                <span class="dropdown-title">Budget Tracker</span>
+                                <span class="dropdown-desc">Monitor your spending</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="./solutions/multilingual-shopping.html">
+                            <div class="dropdown-icon">🌐</div>
+                            <div>
+                                <span class="dropdown-title">Grocery Translator</span>
+                                <span class="dropdown-desc">Shop in 53+ languages</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="./solutions/offline-shopping.html">
+                            <div class="dropdown-icon">📴</div>
+                            <div>
+                                <span class="dropdown-title">Offline Hero</span>
+                                <span class="dropdown-desc">Zero-signal deep shopping</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resources Dropdown -->
+                <div class="nav-dropdown">
+                    <button class="dropdown-trigger">Resources ▾</button>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" href="./food-facts.html">
+                            <div class="dropdown-icon">🍏</div>
+                            <div>
+                                <span class="dropdown-title">Smart Food Facts</span>
+                                <span class="dropdown-desc">Health & Superfoods guide</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="./blog.html">
+                            <div class="dropdown-icon">✍️</div>
+                            <div>
+                                <span class="dropdown-title">Our Blog</span>
+                                <span class="dropdown-desc">Shopping tips & updates</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="./grocery-list-app.html">
+                            <div class="dropdown-icon">🛒</div>
+                            <div>
+                                <span class="dropdown-title">Shopping Guide</span>
+                                <span class="dropdown-desc">Best grocery list app 2026</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="./faq.html">FAQ</a>
+                <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" target="_blank" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Get App</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Massive Hero Section -->
+        <section class="hero-section">
+            <div class="ambient-glow glow-green"></div>
+            <div class="ambient-glow glow-orange"></div>
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1 class="hero-title">Never forget <span class="gradient-text">anything</span>.</h1>
+                    <p class="hero-description">The world's most accessible, multilingual shopping list app. Designed for 53+ languages, zero friction, and maximum efficiency. Free forever.</p>
+                    <div class="hero-ctas">
+                        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" target="_blank">
+                            Get Started Free
+                        </a>
+                        <a class="btn btn-outline" href="#how-it-works">
+                            How it works
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-mockup">
+                    <img src="./assets/hero-illustration.webp" alt="ListKart Premium App Interface">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section (Solo Developer Story) -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="story-card">
+                    <div class="story-badge">Built by a Solo Developer</div>
+                    <h2>A Vision for a Premium, Free Future</h2>
+                    <p>ListKart was born from a simple yet powerful vision: every shopper deserves a world-class, premium experience without a price tag. I believe that essential productivity tools shouldn't be hidden behind subscriptions or cluttered with intrusive interruptions.</p>
+                    <p>As a solo developer, I've poured my passion into crafting an app that feels like a luxury product while remaining <strong>Free Forever</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features & Solutions Bento Box -->
+        <section class="section" id="features">
+            <div class="ambient-glow glow-green" style="top: 20%; left: -200px;"></div>
+            <div class="ambient-glow glow-orange" style="bottom: 20%; right: -200px;"></div>
+            <div class="container">
+                <h2 class="section-title">A powerhouse of functionality. <br><span class="text-primary" style="color: var(--accent-green);">Invisible interface.</span></h2>
+                <p class="section-subtitle">Everything you need to master your grocery shopping, packed into a sleek, ultra-fast experience.</p>
+                
+                <div class="bento-grid">
+                    <!-- Large Bento 1: Family Sync -->
+                    <div class="bento-card bento-large" id="family-sync">
+                        <div class="bento-icon">👨‍👩‍👧</div>
+                        <h3>Real-Time Family Sync</h3>
+                        <p>Coordination is the key to a stress-free household. Share lists instantly. Everyone sees updates in real-time, no matter the language.</p>
+                        <div class="bento-image">
+                            <img src="./assets/solutions/family-sync-premium.png" alt="Family Sync Dashboard">
+                        </div>
+                    </div>
+
+                    <!-- Tall Bento 1: Offline -->
+                    <div class="bento-card bento-tall">
+                        <div class="bento-icon">📴</div>
+                        <h3>Full Offline Mode</h3>
+                        <p>Deep in the supermarket with no signal? ListKart works flawlessly without the internet, syncing instantly when you reconnect.</p>
+                        <div class="bento-image" style="margin-top: 2rem;">
+                            <img src="./assets/features/offline.png" alt="Offline" style="width: 100px; border: none; filter: none; object-fit: contain; background: transparent;">
+                        </div>
+                    </div>
+
+                    <!-- Standard Bento 1: Scan -->
+                    <div class="bento-card">
+                        <div class="bento-icon">📷</div>
+                        <h3>Scan & Add</h3>
+                        <p>Digitize handwritten lists using your camera in seconds.</p>
+                    </div>
+
+                    <!-- Standard Bento 2: Voice -->
+                    <div class="bento-card">
+                        <div class="bento-icon">🎙️</div>
+                        <h3>Voice Input</h3>
+                        <p>Add items by simply speaking. ListKart understands.</p>
+                    </div>
+
+                    <!-- Large Bento 2: Budget Tracker -->
+                    <div class="bento-card bento-large" id="budget-tracker">
+                        <div class="bento-icon">💰</div>
+                        <h3>Smart Budget Tracking</h3>
+                        <p>Take full control of your finances. Visualize where your money goes and get warned when nearing your limit.</p>
+                        <div class="bento-image">
+                            <img src="./assets/solutions/budget-tracker-premium.png" alt="Budget Tracker Interface">
+                        </div>
+                    </div>
+
+                    <!-- Standard Bento 3: Privacy -->
+                    <div class="bento-card">
+                        <div class="bento-icon">🔒</div>
+                        <h3>Privacy First</h3>
+                        <p>No account required to start. Your data belongs entirely to you.</p>
+                    </div>
+
+                    <!-- Standard Bento 4: Translator -->
+                    <div class="bento-card">
+                        <div class="bento-icon">🌐</div>
+                        <h3>Grocery Translator</h3>
+                        <p>Shop in 53+ languages effortlessly. Write in your native language, shop locally.</p>
+                    </div>
+
+                    <!-- Standard Bento 5: Sync -->
+                    <div class="bento-card">
+                        <div class="bento-icon">⚡</div>
+                        <h3>Instant Sync</h3>
+                        <p>Changes push to all your devices in milliseconds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="section section-alt" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Four simple steps to transform your grocery shopping forever.</p>
+                
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3>Get Started</h3>
+                        <p>Download the app and start your first list in seconds. No login required.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3>Add Items</h3>
+                        <p>Type, scan handwritten lists with camera, or just speak.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3>Sync & Share</h3>
+                        <p>Share your list with family. Everyone sees updates in real-time.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h3>Shop Smarter</h3>
+                        <p>Tick off items and track your budget instantly. Save time and money.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perfect For Section -->
+        <section class="section">
+            <div class="container perfect-for-grid">
+                <div class="perfect-image">
+                    <img src="./assets/perfect-for.webp" alt="Happy Users">
+                </div>
+                <div>
+                    <h2 class="section-title" style="text-align: left;">Perfect For Every Shopper</h2>
+                    <ul class="check-list">
+                        <li>Weekly grocery shopping</li>
+                        <li>Supermarket checklist organisation</li>
+                        <li>Shared family shopping lists</li>
+                        <li>Meal planning and recipe ingredients</li>
+                        <li>Pantry tracking & household essentials</li>
+                        <li>Budget-conscious shopping</li>
+                        <li>Healthy food planning</li>
+                        <li>Offline shopping trips</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog & Insights -->
+        <section class="section section-alt" id="blog">
+            <div class="container">
+                <h2 class="section-title">Latest from our <span class="text-primary">Blog</span></h2>
+                <p class="section-subtitle">Tips, guides, and insights to help you master your grocery shopping.</p>
+                
+                <div class="bento-grid">
+                    <div class="bento-card" style="padding: 0;">
+                        <img src="./assets/blog-budget-healthy.webp" alt="Blog Post" style="width: 100%; border-radius: var(--radius-lg) var(--radius-lg) 0 0; aspect-ratio: 16/9; object-fit: cover;">
+                        <div style="padding: 2rem;">
+                            <h3 style="font-size: 1.5rem;">Eating Healthy on a Budget</h3>
+                            <p style="margin-bottom: 1.5rem;">Learn how to plan nutritious meals without breaking the bank.</p>
+                            <a href="./blog/healthy-eating-on-a-budget-2026.html" class="text-primary" style="font-weight: 700; text-decoration: none;">Read Article →</a>
+                        </div>
+                    </div>
+                    <div class="bento-card" style="padding: 0;">
+                        <img src="./assets/blog-family-sync.webp" alt="Blog Post" style="width: 100%; border-radius: var(--radius-lg) var(--radius-lg) 0 0; aspect-ratio: 16/9; object-fit: cover;">
+                        <div style="padding: 2rem;">
+                            <h3 style="font-size: 1.5rem;">Mastering Family Shared Lists</h3>
+                            <p style="margin-bottom: 1.5rem;">The ultimate guide to keeping your household in sync.</p>
+                            <a href="./blog/family-shared-grocery-list.html" class="text-primary" style="font-weight: 700; text-decoration: none;">Read Article →</a>
+                        </div>
+                    </div>
+                    <div class="bento-card" style="padding: 0;">
+                        <img src="./assets/blog-grocery-savings.webp" alt="Blog Post" style="width: 100%; border-radius: var(--radius-lg) var(--radius-lg) 0 0; aspect-ratio: 16/9; object-fit: cover;">
+                        <div style="padding: 2rem;">
+                            <h3 style="font-size: 1.5rem;">Smart Grocery Savings 2026</h3>
+                            <p style="margin-bottom: 1.5rem;">Actionable strategies to cut your grocery bill by 20%.</p>
+                            <a href="./blog/smart-grocery-savings-2026.html" class="text-primary" style="font-weight: 700; text-decoration: none;">Read Article →</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="./blog.html" class="btn btn-outline">Read All Articles</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Smart Food Facts -->
+        <section class="section" id="food-facts">
+            <div class="container">
+                <h2 class="section-title">Smart <span class="text-primary">Food Facts</span></h2>
+                <p class="section-subtitle">Discover the health benefits of your favorite ingredients.</p>
+                
+                <div class="bento-grid">
+                    <div class="bento-card" style="display: flex; align-items: center; gap: 1.5rem; padding: 2rem;">
+                        <img src="./assets/food-avocado.webp" alt="Avocado" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm);">
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Avocado</h3>
+                            <p style="font-size: 1rem;">Rich in heart-healthy fats and packed with fiber.</p>
+                        </div>
+                    </div>
+                    <div class="bento-card" style="display: flex; align-items: center; gap: 1.5rem; padding: 2rem;">
+                        <img src="./assets/food-almonds.webp" alt="Almonds" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm);">
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Almonds</h3>
+                            <p style="font-size: 1rem;">Excellent source of vitamin E and magnesium.</p>
+                        </div>
+                    </div>
+                    <div class="bento-card" style="display: flex; align-items: center; gap: 1.5rem; padding: 2rem;">
+                        <img src="./assets/food-spinach.webp" alt="Spinach" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm);">
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Spinach</h3>
+                            <p style="font-size: 1rem;">Loaded with iron, vitamins, and antioxidants.</p>
+                        </div>
+                    </div>
+                    <div class="bento-card" style="display: flex; align-items: center; gap: 1.5rem; padding: 2rem;">
+                        <img src="./assets/food-broccoli.webp" alt="Broccoli" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm);">
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Broccoli</h3>
+                            <p style="font-size: 1rem;">High in vitamins K and C, supports digestion.</p>
+                        </div>
+                    </div>
+                    <div class="bento-card" style="display: flex; align-items: center; gap: 1.5rem; padding: 2rem;">
+                        <img src="./assets/food-quinoa.webp" alt="Quinoa" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm);">
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Quinoa</h3>
+                            <p style="font-size: 1rem;">Complete protein with all essential amino acids.</p>
+                        </div>
+                    </div>
+                    <div class="bento-card" style="display: flex; align-items: center; gap: 1.5rem; padding: 2rem;">
+                        <img src="./assets/food-salmon.webp" alt="Salmon" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-sm);">
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Salmon</h3>
+                            <p style="font-size: 1rem;">Packed with omega-3 fatty acids for brain health.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="./food-facts.html" class="btn btn-outline">Explore All Food Facts</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Smooth Language Marquee -->
+        <section class="section section-alt" id="languages" style="padding-bottom: 0;">
+            <div class="container">
+                <h2 class="section-title">Built for the world. <span class="text-primary">Made for you.</span></h2>
+                <p class="section-subtitle">We believe shopping lists should be personal. That's why ListKart speaks 53 Languages - so you don't have to translate your needs. Whether it's 'Tomato', 'Tamatar', or 'Tomate', we understand you.</p>
+            </div>
+            
+            <div class="marquee-wrapper">
+                <div class="marquee-content">
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/gb.webp" alt="UK"> English</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/in.webp" alt="India"> हिन्दी (Hindi)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/pl.webp" alt="Poland"> Polski (Polish)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/fr.webp" alt="France"> Français (French)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/de.webp" alt="Germany"> Deutsch (German)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/es.webp" alt="Spain"> Español (Spanish)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/pt.webp" alt="Portugal"> Português (Portuguese)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/is.webp" alt="Iceland"> Íslenska (Icelandic)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/no.webp" alt="Norway"> Norsk (Norwegian)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/se.webp" alt="Sweden"> Svenska (Swedish)</span>
+                    
+                    <!-- Duplicate for infinite loop -->
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/gb.webp" alt="UK"> English</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/in.webp" alt="India"> हिन्दी (Hindi)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/pl.webp" alt="Poland"> Polski (Polish)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/fr.webp" alt="France"> Français (French)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/de.webp" alt="Germany"> Deutsch (German)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/es.webp" alt="Spain"> Español (Spanish)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/pt.webp" alt="Portugal"> Português (Portuguese)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/is.webp" alt="Iceland"> Íslenska (Icelandic)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/no.webp" alt="Norway"> Norsk (Norwegian)</span>
+                    <span class="lang-chip"><img src="https://flagcdn.com/w40/se.webp" alt="Sweden"> Svenska (Swedish)</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="logo" href="#">
+                        <img src="./assets/logo.webp" alt="ListKart Logo"/>
+                        <span><span class="brand-list">List</span><span class="brand-kart">Kart</span></span>
+                    </a>
+                    <p>Deeply localized shopping for 53+ languages. Built by a solo developer. 100% Free & Private.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <a href="#about">About Us</a>
+                    <a href="./blog.html">Our Blog</a>
+                    <a href="./faq.html">FAQ</a>
+                    <a href="./privacy.html">Privacy Policy</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Solutions</h4>
+                    <a href="#family-sync">Family Sync</a>
+                    <a href="#budget-tracker">Budget Tracker</a>
+                    <a href="./solutions/multilingual-shopping.html">Grocery Translator</a>
+                    <a href="./solutions/offline-shopping.html">Offline Hero</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ListKart. Crafted by a Solo Developer.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js" defer></script>
+</body>
+</html>

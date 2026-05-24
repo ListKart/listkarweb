@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Read the latest updates, shopping tips, and articles from ListKart." name="description"/>
+    <title>Blog - ListKart Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --primary-green: #19983A;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --card-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            --bg-light: #f8fafc;
+        }
+        
+        body { background-color: var(--bg-light); color: var(--text-dark); font-family: 'Outfit', sans-serif; }
+        
+        /* Premium Nav override for Light Page */
+        .glass-nav { background: rgba(255, 255, 255, 0.8) !important; border-bottom: 1px solid rgba(0,0,0,0.05) !important; }
+        .nav-links a { color: var(--text-dark) !important; }
+        .brand-list { color: var(--primary-green) !important; }
+        .brand-kart { color: #f97316 !important; }
+
+        .blog-header { padding: 12rem 0 5rem; text-align: center; }
+        .blog-title { font-size: 4.5rem; font-weight: 900; margin-bottom: 1.5rem; letter-spacing: -0.04em; color: var(--text-dark); }
+        .blog-subtitle { font-size: 1.35rem; color: var(--text-muted); max-width: 750px; margin: 0 auto; line-height: 1.6; }
+
+        .blog-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            gap: 2.5rem; 
+            padding-bottom: 10rem;
+        }
+        
+        .blog-item-card { 
+            background: #ffffff; 
+            border-radius: 35px; 
+            overflow: hidden; 
+            display: flex; 
+            flex-direction: column; 
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.02);
+            height: 100%;
+        }
+        .blog-item-card:hover { transform: translateY(-12px); box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+        
+        .blog-img-container { 
+            width: 100%; 
+            height: 250px; 
+            overflow: hidden;
+            background: #fff;
+        }
+        .blog-img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.6s var(--transition);
+        }
+        .blog-item-card:hover .blog-img { transform: scale(1.05); }
+        
+        .blog-info { padding: 2.5rem 2rem; flex-grow: 1; display: flex; flex-direction: column; align-items: center; }
+        
+        .blog-tag { 
+            background: rgba(25, 152, 58, 0.08); 
+            color: var(--primary-green); 
+            padding: 0.5rem 1.25rem; 
+            border-radius: 100px; 
+            font-size: 0.75rem; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+        
+        .blog-card-title { font-size: 1.8rem; font-weight: 900; margin-bottom: 1.25rem; color: var(--text-dark); line-height: 1.3; }
+        .blog-excerpt { font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem; flex-grow: 1; }
+        
+        .blog-meta { 
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .btn-read-more {
+            background: var(--primary-green);
+            color: #fff !important;
+            padding: 1.1rem 2.5rem;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 1.15rem;
+            text-decoration: none;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(25, 152, 58, 0.2);
+            display: inline-block;
+        }
+        .btn-read-more:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(25, 152, 58, 0.3);
+            background: #15803d;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title { font-size: 3rem; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .blog-item-card { margin: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="glass-nav scrolled">
+        <div class="container nav-container">
+            <a class="logo" href="index.html">
+                <img src="./assets/logo.webp" alt="ListKart Logo"/>
+                <span><span class="brand-list">List</span><span class="brand-kart">Kart</span></span>
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="food-facts.html">Food Facts</a>
+                <a href="blog.html">Blog</a>
+                <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn btn-primary" target="_blank">Download</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-header">
+            <div class="container">
+                <h1 class="blog-title">ListKart <span style="color: var(--primary-green);">Blog</span></h1>
+                <p class="blog-subtitle">Insights, tips, and updates to help you master your grocery shopping and live a more organized life.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="blog-grid">
+                <!-- Article 1 -->
+                <div class="blog-item-card">
+                    <div class="blog-img-container"><img src="assets/blog-budget-mastery.png" class="blog-img" alt="Budget Mastery"></div>
+                    <div class="blog-info">
+                        <span class="blog-tag">Budgeting</span>
+                        <h2 class="blog-card-title">Mastering Your Monthly Grocery Budget: 5 Proven Strategies for 2026</h2>
+                        <p class="blog-excerpt">Learn how to control your grocery spending, track expenses in real-time, and save money with smart shopping list strategies.</p>
+                        <div class="blog-meta">May 4, 2026 • 5 min read</div>
+                        <a href="blog/mastering-grocery-budget-2026.html" class="btn-read-more">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="blog-item-card">
+                    <div class="blog-img-container"><img src="assets/blog-family-sync.webp" class="blog-img" alt="Family Sync"></div>
+                    <div class="blog-info">
+                        <span class="blog-tag">Life Skills</span>
+                        <h2 class="blog-card-title">Why Your Family Needs a Shared Grocery List</h2>
+                        <p class="blog-excerpt">Stop the "forgot the milk" cycle forever with real-time collaboration. Learn how sharing lists improves family dynamics.</p>
+                        <div class="blog-meta">Mar 7, 2026 • 4 min read</div>
+                        <a href="blog/family-shared-grocery-list.html" class="btn-read-more">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="blog-item-card">
+                    <div class="blog-img-container"><img src="assets/blog-shopping-psychology.png" class="blog-img" alt="Psychology"></div>
+                    <div class="blog-info">
+                        <span class="blog-tag">Smart Shopping</span>
+                        <h2 class="blog-card-title">The Psychology of Grocery Shopping</h2>
+                        <p class="blog-excerpt">Discover the hidden tricks stores use to make you buy more and how a prepared list acts as your psychological shield.</p>
+                        <div class="blog-meta">Apr 7, 2026 • 6 min read</div>
+                        <a href="blog/psychology-of-grocery-shopping-2026.html" class="btn-read-more">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article 4 -->
+                <div class="blog-item-card">
+                    <div class="blog-img-container"><img src="assets/blog-global-superfoods.webp" class="blog-img" alt="Superfoods"></div>
+                    <div class="blog-info">
+                        <span class="blog-tag">World Nutrition</span>
+                        <h2 class="blog-card-title">5 Global Superfoods You Need on Your 2026 Shopping List</h2>
+                        <p class="blog-excerpt">Discover potent nutritional secrets from the Amazon to the Himalayas. Learn how to find these global powerhouses.</p>
+                        <div class="blog-meta">Mar 31, 2026 • 8 min read</div>
+                        <a href="blog/global-superfoods-2026.html" class="btn-read-more">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="blog-item-card">
+                    <div class="blog-img-container"><img src="assets/blog-grocery-translator.webp" class="blog-img" alt="Translator"></div>
+                    <div class="blog-info">
+                        <span class="blog-tag">Global</span>
+                        <h2 class="blog-card-title">The Grocery Translator: Shop in 53+ Languages</h2>
+                        <p class="blog-excerpt">How ListKart breaks language barriers with native support, making grocery shopping seamless for expats and travelers.</p>
+                        <div class="blog-meta">Mar 28, 2026 • 3 min read</div>
+                        <a href="blog/the-grocery-translator.html" class="btn-read-more">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="blog-item-card">
+                    <div class="blog-img-container"><img src="assets/blog-ai-icons.webp" class="blog-img" alt="AI Icons"></div>
+                    <div class="blog-info">
+                        <span class="blog-tag">Innovation</span>
+                        <h2 class="blog-card-title">The AI Revolution: Perfect Visual Experience</h2>
+                        <p class="blog-excerpt">Explore our 2100+ AI-generated 3D icons designed for faster scanning and a beautiful, modern app experience.</p>
+                        <div class="blog-meta">Mar 27, 2026 • 4 min read</div>
+                        <a href="blog/ai-icon-revolution-2026.html" class="btn-read-more">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article 7 -->
+                <div class="blog-item-card">
+                    <div class="blog-img-container"><img src="assets/blog-offline-best.png" class="blog-img" alt="Offline Best"></div>
+                    <div class="blog-info">
+                        <span class="blog-tag">App Spotlight</span>
+                        <h2 class="blog-card-title">Why ListKart is the Best Offline Shopping List App</h2>
+                        <p class="blog-excerpt">Discover the premium features that work without internet—widgets, sync, and budget tracking even in dead zones.</p>
+                        <div class="blog-meta">Mar 26, 2026 • 5 min read</div>
+                        <a href="blog/why-listkart-best-offline-shopping-list.html" class="btn-read-more">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article 8 -->
+                <div class="blog-item-card">
+                    <div class="blog-img-container"><img src="assets/blog-budget-healthy.webp" class="blog-img" alt="Healthy Budget"></div>
+                    <div class="blog-info">
+                        <span class="blog-tag">Lifestyle</span>
+                        <h2 class="blog-card-title">Healthy Eating on a Budget</h2>
+                        <p class="blog-excerpt">Learn how to optimize your budget with smart seasonal picks and nutrient-dense foods that won't break the bank.</p>
+                        <div class="blog-meta">Mar 19, 2026 • 6 min read</div>
+                        <a href="blog/healthy-eating-on-a-budget-2026.html" class="btn-read-more">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article 9 -->
+                <div class="blog-item-card">
+                    <div class="blog-img-container"><img src="assets/blog-sustainability.webp" class="blog-img" alt="Sustainability"></div>
+                    <div class="blog-info">
+                        <span class="blog-tag">Eco-Habits</span>
+                        <h2 class="blog-card-title">A Greener Pantry: Sustainable Shopping</h2>
+                        <p class="blog-excerpt">How to reduce plastic waste and shop with the planet in mind using smarter planning and bulk buying strategies.</p>
+                        <div class="blog-meta">Mar 17, 2026 • 5 min read</div>
+                        <a href="blog/sustainable-grocery-shopping-2026.html" class="btn-read-more">Read Article →</a>
+                    </div>
+                </div>
+
+                <!-- Article 10 -->
+                <div class="blog-item-card">
+                    <div class="blog-img-container" style="background: var(--primary-green); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 4rem;">🚀</div>
+                    <div class="blog-info">
+                        <span class="blog-tag">Our Mission</span>
+                        <h2 class="blog-card-title">The Solo Developer's Vision: Free & Privacy-First</h2>
+                        <p class="blog-excerpt">A commitment to premium quality and user privacy. Discover why ListKart was built to be different from every other app.</p>
+                        <div class="blog-meta">Feb 15, 2026 • 7 min read</div>
+                        <a href="blog/solo-developer-vision-listkart.html" class="btn-read-more">Read Full Story →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center; padding: 4rem 0;">
+            <p style="color: var(--text-muted);">&copy; 2026 ListKart. Premium insights for smart shoppers.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

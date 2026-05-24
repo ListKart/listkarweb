@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Discover powerful Superfoods and healthy grocery shopping tips with ListKart. Improve your heart health, immunity, and brain power." name="description"/>
+    <title>Smart Food Facts & Superfoods - ListKart Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --primary-green: #19983A;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --card-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            --bg-light: #f8fafc;
+        }
+        
+        body { background-color: var(--bg-light); color: var(--text-dark); font-family: 'Outfit', sans-serif; }
+        
+        /* Premium Nav override for Light Page */
+        .glass-nav { background: rgba(255, 255, 255, 0.8) !important; border-bottom: 1px solid rgba(0,0,0,0.05) !important; }
+        .nav-links a { color: var(--text-dark) !important; }
+        .brand-list { color: var(--primary-green) !important; }
+        .brand-kart { color: #f97316 !important; }
+
+        .facts-header { padding: 12rem 0 5rem; text-align: center; }
+        .facts-title { font-size: 4.5rem; font-weight: 900; margin-bottom: 1.5rem; letter-spacing: -0.04em; color: var(--text-dark); }
+        .facts-subtitle { font-size: 1.35rem; color: var(--text-muted); max-width: 750px; margin: 0 auto; line-height: 1.6; }
+
+        .food-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            gap: 2.5rem; 
+            padding-bottom: 10rem;
+        }
+        
+        .food-item-card { 
+            background: #ffffff; 
+            border-radius: 35px; 
+            overflow: hidden; 
+            display: flex; 
+            flex-direction: column; 
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.02);
+            height: 100%;
+        }
+        .food-item-card:hover { transform: translateY(-12px); box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+        
+        .food-img-container { 
+            width: 100%; 
+            height: 300px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: #fff;
+        }
+        .food-img { 
+            max-width: 100%; 
+            max-height: 100%; 
+            object-fit: contain; 
+            transition: transform 0.6s var(--transition);
+        }
+        .food-item-card:hover .food-img { transform: scale(1.05); }
+        
+        .food-info { padding: 0 2.5rem 2.5rem; flex-grow: 1; display: flex; flex-direction: column; align-items: center; }
+        
+        .food-label { 
+            background: rgba(25, 152, 58, 0.08); 
+            color: var(--primary-green); 
+            padding: 0.6rem 1.5rem; 
+            border-radius: 100px; 
+            font-size: 0.8rem; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+        
+        .food-name { font-size: 2.4rem; font-weight: 900; margin-bottom: 1.25rem; color: var(--text-dark); }
+        .food-benefit-desc { font-size: 1.1rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem; flex-grow: 1; }
+        
+        .food-check-list { 
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+        .check-item { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 0.75rem; 
+            color: var(--primary-green); 
+            font-weight: 700; 
+            font-size: 1.1rem;
+        }
+        .check-item svg { width: 22px; height: 22px; stroke-width: 3.5; }
+
+        .btn-add-list {
+            background: var(--primary-green);
+            color: #fff !important;
+            padding: 1.1rem 2.5rem;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 1.15rem;
+            text-decoration: none;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(25, 152, 58, 0.2);
+            display: inline-block;
+        }
+        .btn-add-list:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(25, 152, 58, 0.3);
+            background: #15803d;
+        }
+
+        @media (max-width: 768px) {
+            .facts-title { font-size: 3rem; }
+            .food-grid { grid-template-columns: 1fr; }
+            .food-item-card { margin: 0 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="glass-nav scrolled">
+        <div class="container nav-container">
+            <a class="logo" href="index.html">
+                <img src="./assets/logo.webp" alt="ListKart Logo"/>
+                <span><span class="brand-list">List</span><span class="brand-kart">Kart</span></span>
+            </a>
+            <button class="mobile-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="food-facts.html">Food Facts</a>
+                <a href="blog.html">Blog</a>
+                <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn btn-primary" target="_blank">Download</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="facts-header">
+            <div class="container">
+                <h1 class="facts-title">Smart <span style="color: var(--primary-green);">Food Facts</span></h1>
+                <p class="facts-subtitle">Science-backed nutrition insights for your grocery list. Discover the world's most powerful superfoods.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="food-grid">
+                <!-- 1. Papaya -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-papaya.webp" class="food-img" alt="Papaya"></div>
+                    <div class="food-info">
+                        <span class="food-label">DIGESTION & SKIN</span>
+                        <h2 class="food-name">Papaya</h2>
+                        <p class="food-benefit-desc">Contains papain, an enzyme that aids digestion, and high levels of Vitamin C and lycopene for glowing, healthy skin.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Digestive Enzyme Papain</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 2. Flaxseeds -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-flaxseeds.webp" class="food-img" alt="Flaxseeds"></div>
+                    <div class="food-info">
+                        <span class="food-label">FIBER & LIGNANS</span>
+                        <h2 class="food-name">Flaxseeds</h2>
+                        <p class="food-benefit-desc">An exceptional source of lignans (which reduce cancer risk) and plant-based ALA Omega-3 fats for heart health.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>High Lignan content</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 3. Artichokes -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-artichoke.webp" class="food-img" alt="Artichoke"></div>
+                    <div class="food-info">
+                        <span class="food-label">LIVER DETOX & PREBIOTICS</span>
+                        <h2 class="food-name">Artichokes</h2>
+                        <p class="food-benefit-desc">High in cynarin and silymarin, artichokes support liver health and are one of the best whole-food sources of prebiotic fiber.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Supports Liver Function</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 4. Cacao Nibs -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-cacao-nibs.webp" class="food-img" alt="Cacao Nibs"></div>
+                    <div class="food-info">
+                        <span class="food-label">PURE ANTIOXIDANTS</span>
+                        <h2 class="food-name">Cacao Nibs</h2>
+                        <p class="food-benefit-desc">The purest form of chocolate. These 'nature's chocolate chips' are low in sugar and high in flavanols that boost mood and focus.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Intense Flavanols</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 5. Wheatgrass -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-wheatgrass.webp" class="food-img" alt="Wheatgrass"></div>
+                    <div class="food-info">
+                        <span class="food-label">CHLOROPHYLL DETOX</span>
+                        <h2 class="food-name">Wheatgrass</h2>
+                        <p class="food-benefit-desc">A concentrated source of chlorophyll, amino acids, and enzymes that help alkaline the body and boost hemoglobin production.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>High Chlorophyll Density</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 6. Kiwi -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-kiwi.webp" class="food-img" alt="Kiwi"></div>
+                    <div class="food-info">
+                        <span class="food-label">VITAMIN C & DIGESTION</span>
+                        <h2 class="food-name">Kiwi</h2>
+                        <p class="food-benefit-desc">A digestive powerhouse containing actinidin and more Vitamin C than an orange, aiding in protein breakdown and immune support.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>High Vitamin C Boost</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 7. Spirulina -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-spirulina.webp" class="food-img" alt="Spirulina"></div>
+                    <div class="food-info">
+                        <span class="food-label">BLUE-GREEN ALGAE</span>
+                        <h2 class="food-name">Spirulina</h2>
+                        <p class="food-benefit-desc">A complete protein source packed with iron. One of the most nutrient-dense foods on Earth, perfect for energy and immunity.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Rich in Iron & Protein</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 8. Matcha -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-matcha.webp" class="food-img" alt="Matcha"></div>
+                    <div class="food-info">
+                        <span class="food-label">L-THEANINE & FOCUS</span>
+                        <h2 class="food-name">Matcha</h2>
+                        <p class="food-benefit-desc">10x the antioxidants of regular green tea. Promotes calm alertness without the jitters, perfect for mental clarity.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Extreme Antioxidants</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 9. Lentils -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-lentils.webp" class="food-img" alt="Lentils"></div>
+                    <div class="food-info">
+                        <span class="food-label">FIBER & ENERGY</span>
+                        <h2 class="food-name">Lentils</h2>
+                        <p class="food-benefit-desc">Heart-healthy and high in folate. Promotes stable blood sugar and long-lasting energy release for your busy day.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Stable Blood Sugar</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 10. Hemp Seeds -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-hempseeds.webp" class="food-img" alt="Hemp Seeds"></div>
+                    <div class="food-info">
+                        <span class="food-label">OMEGA-3 & 6</span>
+                        <h2 class="food-name">Hemp Seeds</h2>
+                        <p class="food-benefit-desc">Perfect ratio of essential fats. Rich in magnesium and zinc for skin health and inflammation reduction.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Essential Fatty Acids</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 11. Pomegranate -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-pomegranate.png" class="food-img" alt="Pomegranate"></div>
+                    <div class="food-info">
+                        <span class="food-label">HEART & IMMUNITY</span>
+                        <h2 class="food-name">Pomegranate</h2>
+                        <p class="food-benefit-desc">Packed with punicalagins, offering powerful anti-inflammatory effects and cardiovascular support for a healthy heart.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Punicalagin Power</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 12. Brazil Nuts -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-brazil-nuts.png" class="food-img" alt="Brazil Nuts"></div>
+                    <div class="food-info">
+                        <span class="food-label">SELENIUM & THYROID</span>
+                        <h2 class="food-name">Brazil Nuts</h2>
+                        <p class="food-benefit-desc">Nature's richest source of selenium. Just two nuts meeting your daily requirement for thyroid health and metabolism.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Rich in Selenium</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 13. Kimchi -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-kimchi.png" class="food-img" alt="Kimchi"></div>
+                    <div class="food-info">
+                        <span class="food-label">PROBIOTICS & GUT</span>
+                        <h2 class="food-name">Kimchi</h2>
+                        <p class="food-benefit-desc">A fermented superfood containing 'good' bacteria that boost digestion, improve immunity, and aid weight management.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Live Probiotic Culture</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 14. Asparagus -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-asparagus.png" class="food-img" alt="Asparagus"></div>
+                    <div class="food-info">
+                        <span class="food-label">FOLATE & PREBIOTICS</span>
+                        <h2 class="food-name">Asparagus</h2>
+                        <p class="food-benefit-desc">A great source of folate. Acts as a prebiotic, feeding beneficial bacteria in your gut for better nutrient absorption.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>High Folate Content</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 15. Goji Berries -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-goji-berries.png" class="food-img" alt="Goji Berries"></div>
+                    <div class="food-info">
+                        <span class="food-label">VISION & VITALITY</span>
+                        <h2 class="food-name">Goji Berries</h2>
+                        <p class="food-benefit-desc">High levels of zeaxanthin support eye health and provide dense vitamins A and C for overall body vitality.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Eye Health Support</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 16. Avocado -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-avocado.webp" class="food-img" alt="Avocado"></div>
+                    <div class="food-info">
+                        <span class="food-label">HEALTHY FATS</span>
+                        <h2 class="food-name">Avocado</h2>
+                        <p class="food-benefit-desc">Packed with monounsaturated fats that lower bad cholesterol and support heart health and healthy skin.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Healthy Mono-Fats</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 17. Blueberries -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-blueberries.webp" class="food-img" alt="Blueberries"></div>
+                    <div class="food-info">
+                        <span class="food-label">BRAIN POWER</span>
+                        <h2 class="food-name">Blueberries</h2>
+                        <p class="food-benefit-desc">'Brain Berries' loaded with anthocyanins that delay brain aging and improve memory focus and cognitive health.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Cognitive Support</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 18. Ginger -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-ginger.webp" class="food-img" alt="Ginger"></div>
+                    <div class="food-info">
+                        <span class="food-label">ANTI-INFLAMMATORY</span>
+                        <h2 class="food-name">Ginger</h2>
+                        <p class="food-benefit-desc">Natural immune booster that aids digestion and reduces muscle pain through its active compound, gingerol.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Immune System Booster</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 19. Walnuts -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-walnut.webp" class="food-img" alt="Walnuts"></div>
+                    <div class="food-info">
+                        <span class="food-label">COGNITIVE FOCUS</span>
+                        <h2 class="food-name">Walnuts</h2>
+                        <p class="food-benefit-desc">Higher antioxidant activity than any common nut. Significantly improves brain function and supports heart health.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Brain-Healthy Fats</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 20. Spinach -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-spinach.webp" class="food-img" alt="Spinach"></div>
+                    <div class="food-info">
+                        <span class="food-label">IRON & STRENGTH</span>
+                        <h2 class="food-name">Spinach</h2>
+                        <p class="food-benefit-desc">Essential for energy production and maintaining healthy blood pressure levels. Rich in iron, lutein, and Vitamin K.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Iron & Vitamin Rich</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 21. Turmeric -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-turmeric.webp" class="food-img" alt="Turmeric"></div>
+                    <div class="food-info">
+                        <span class="food-label">MEDICINAL SPICE</span>
+                        <h2 class="food-name">Turmeric</h2>
+                        <p class="food-benefit-desc">Contains curcumin, a powerful compound that fights chronic inflammation and boosts brain hormones and joint health.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Potent Curcumin</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 22. Broccoli -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-broccoli.webp" class="food-img" alt="Broccoli"></div>
+                    <div class="food-info">
+                        <span class="food-label">FIBER & DETOX</span>
+                        <h2 class="food-name">Broccoli</h2>
+                        <p class="food-benefit-desc">High in sulforaphane, supporting the body's natural detox and digestive health and protecting cells.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Sulforaphane Source</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 23. Almonds -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-almonds.webp" class="food-img" alt="Almonds"></div>
+                    <div class="food-info">
+                        <span class="food-label">SKIN & VITAMIN E</span>
+                        <h2 class="food-name">Almonds</h2>
+                        <p class="food-benefit-desc">Fantastic source of Vitamin E and antioxidants that protect skin from aging and support a healthy heart.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>High Vitamin E</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 24. Chia Seeds -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-chia.webp" class="food-img" alt="Chia Seeds"></div>
+                    <div class="food-info">
+                        <span class="food-label">SUPER FIBER</span>
+                        <h2 class="food-name">Chia Seeds</h2>
+                        <p class="food-benefit-desc">Absorb 10x their weight in water. Provide sustained energy and are loaded with bone-healthy minerals and Omega-3.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Ultra Fiber Source</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 25. Oats -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-oats.webp" class="food-img" alt="Oats"></div>
+                    <div class="food-info">
+                        <span class="food-label">CHOLESTEROL HERO</span>
+                        <h2 class="food-name">Oats</h2>
+                        <p class="food-benefit-desc">Contains beta-glucan fiber, known to lower cholesterol, stabilize blood sugar, and keep you full longer.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Beta-Glucan Fiber</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 26. Salmon -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-salmon.webp" class="food-img" alt="Salmon"></div>
+                    <div class="food-info">
+                        <span class="food-label">BRAIN & HEART</span>
+                        <h2 class="food-name">Salmon</h2>
+                        <p class="food-benefit-desc">Rich in Omega-3 fatty acids, essential for reducing inflammation, boosting cognition, and maintaining heart health.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Elite Omega-3s</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 27. Greek Yogurt -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-yogurt.webp" class="food-img" alt="Greek Yogurt"></div>
+                    <div class="food-info">
+                        <span class="food-label">PROBIOTICS & PROTEIN</span>
+                        <h2 class="food-name">Greek Yogurt</h2>
+                        <p class="food-benefit-desc">Supports a healthy microbiome and helps maintain muscle mass with high-quality protein and gut-friendly bacteria.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>High Protein Probiotic</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 28. Sweet Potato -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-sweet-potato.webp" class="food-img" alt="Sweet Potato"></div>
+                    <div class="food-info">
+                        <span class="food-label">IMMUNITY & VISION</span>
+                        <h2 class="food-name">Sweet Potato</h2>
+                        <p class="food-benefit-desc">Packed with beta-carotene, converting to Vitamin A for eye health, skin vitality, and a robust immune system.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>High Beta-Carotene</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 29. Dark Chocolate -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-dark-chocolate.webp" class="food-img" alt="Dark Chocolate"></div>
+                    <div class="food-info">
+                        <span class="food-label">GUILT-FREE MOOD</span>
+                        <h2 class="food-name">Dark Chocolate</h2>
+                        <p class="food-benefit-desc">Cocoa flavanols improve blood flow, lower blood pressure, and naturally enhance your mood and focus.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Heart-Healthy Flavanols</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 30. Garlic -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-garlic.webp" class="food-img" alt="Garlic"></div>
+                    <div class="food-info">
+                        <span class="food-label">NATURAL ANTIBIOTIC</span>
+                        <h2 class="food-name">Garlic</h2>
+                        <p class="food-benefit-desc">Contains allicin which fights infections, supports heart health, and can help lower blood pressure and cholesterol.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Immune-Shield Allicin</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 31. Green Tea -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-green-tea.webp" class="food-img" alt="Green Tea"></div>
+                    <div class="food-info">
+                        <span class="food-label">METABOLISM BOOST</span>
+                        <h2 class="food-name">Green Tea</h2>
+                        <p class="food-benefit-desc">Boosts fat burning and provides clean energy focus without the crash, thanks to its unique catechins.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>EGCG Antioxidants</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 32. Quinoa -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-quinoa.webp" class="food-img" alt="Quinoa"></div>
+                    <div class="food-info">
+                        <span class="food-label">COMPLETE PROTEIN</span>
+                        <h2 class="food-name">Quinoa</h2>
+                        <p class="food-benefit-desc">Contains all nine essential amino acids. High in fiber, magnesium, and B vitamins for stamina and muscle repair.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>All Essential Aminos</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 33. Olive Oil -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-olive-oil.webp" class="food-img" alt="Olive Oil"></div>
+                    <div class="food-info">
+                        <span class="food-label">HEART HEALTH</span>
+                        <h2 class="food-name">Olive Oil</h2>
+                        <p class="food-benefit-desc">The 'Liquid Gold' of the Mediterranean diet. Loaded with healthy monounsaturated fats and powerful antioxidants.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Healthy Mono-Fats</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 34. Dragon Fruit -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-dragonfruit.webp" class="food-img" alt="Dragon Fruit"></div>
+                    <div class="food-info">
+                        <span class="food-label">ANTIOXIDANTS</span>
+                        <h2 class="food-name">Dragon Fruit</h2>
+                        <p class="food-benefit-desc">A visually stunning superfruit packed with phytonutrients and magnesium, promoting healthy gut bacteria.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Mineral-Rich Superfruit</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 35. Beetroot -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-beetroot.webp" class="food-img" alt="Beetroot"></div>
+                    <div class="food-info">
+                        <span class="food-label">BLOOD & HEART</span>
+                        <h2 class="food-name">Beetroot</h2>
+                        <p class="food-benefit-desc">Rich in dietary nitrates, beetroot helps improve blood flow, lower blood pressure, and boost physical performance.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Natural Stamina Booster</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 36. Kale -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-kale.webp" class="food-img" alt="Kale"></div>
+                    <div class="food-info">
+                        <span class="food-label">BONE & EYE HEALTH</span>
+                        <h2 class="food-name">Kale</h2>
+                        <p class="food-benefit-desc">The 'King of Greens' is incredibly nutrient-dense, providing massive amounts of Vitamin K, A, and C for overall vitality.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Ultra Vitamin-K Support</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 37. Pumpkin Seeds -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-pumpkinseeds.webp" class="food-img" alt="Pumpkin Seeds"></div>
+                    <div class="food-info">
+                        <span class="food-label">ZINC & MAGNESIUM</span>
+                        <h2 class="food-name">Pumpkin Seeds</h2>
+                        <p class="food-benefit-desc">Tiny but mighty seeds that are an excellent source of zinc and magnesium, essential for immune support and restful sleep.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Zinc & Magnesium Rich</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 38. Camu Camu -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-camu-camu.webp" class="food-img" alt="Camu Camu"></div>
+                    <div class="food-info">
+                        <span class="food-label">IMMUNITY & VITAMIN C</span>
+                        <h2 class="food-name">Camu Camu</h2>
+                        <p class="food-benefit-desc">A small cherry-like fruit from the Amazon with the highest recorded Vitamin C of any plant—up to 60x more than an orange.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Worlds Highest Vitamin C</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 39. Teff -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-teff.webp" class="food-img" alt="Teff"></div>
+                    <div class="food-info">
+                        <span class="food-label">IRON & ENERGY</span>
+                        <h2 class="food-name">Teff</h2>
+                        <p class="food-benefit-desc">An ancient gluten-free grain from Ethiopia. Extremely high in calcium and iron, providing elite stamina and bone health.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Elite Iron & Calcium</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 40. Chaga Mushroom -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-chaga.webp" class="food-img" alt="Chaga Mushroom"></div>
+                    <div class="food-info">
+                        <span class="food-label">ANTIOXIDANTS & IMMUNITY</span>
+                        <h2 class="food-name">Chaga Mushroom</h2>
+                        <p class="food-benefit-desc">Known as the 'Diamond of the Woods', this mushroom is one of the densest sources of antioxidants ever discovered.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Potent SOD Antioxidants</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 41. Jackfruit -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-jackfruit.webp" class="food-img" alt="Jackfruit"></div>
+                    <div class="food-info">
+                        <span class="food-label">FIBER & SUSTAINABILITY</span>
+                        <h2 class="food-name">Jackfruit</h2>
+                        <p class="food-benefit-desc">The world's largest fruit. Its fibrous texture makes it a perfect meat swap, while being high in potassium and Vitamin B6.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Sustainable Meat Swap</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+
+                <!-- 42. Prickly Pear -->
+                <div class="food-item-card">
+                    <div class="food-img-container"><img src="assets/food-prickly-pear.webp" class="food-img" alt="Prickly Pear"></div>
+                    <div class="food-info">
+                        <span class="food-label">ANTI-INFLAMMATORY & DETOX</span>
+                        <h2 class="food-name">Prickly Pear</h2>
+                        <p class="food-benefit-desc">The fruit of the Nopal cactus. Rich in unique betalain antioxidants that help fight inflammation and support liver health.</p>
+                        <div class="food-check-list"><div class="check-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Rare betalain antioxidants</div></div>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartsupermarket.app" class="btn-add-list" target="_blank">Add to List +</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center; padding: 4rem 0;">
+            <p style="color: var(--text-muted);">&copy; 2026 ListKart. Built for a healthier world.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
